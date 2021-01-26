@@ -1825,13 +1825,13 @@
 										  Player.Forwarding | Player.Rewinding | 
 			                              Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml)]</expression>
 										  
-	<expression name="TopBarIconLabelShouldShow">Skin.HasSetting(VerticalHome) + Window.Is(home) + [Skin.HasSetting(IconShowLabel.InTopBar) | 
+	<expression name="TopBarIconLabelShouldShow">Skin.HasSetting(VerticalHome) + Window.Is(home) + Skin.HasSetting(Vertical.IconOnly) + [Skin.HasSetting(IconShowLabel.InTopBar) | 
 	                                             [!Skin.HasSetting(IconShowLabel.InTopBar) + $EXP[widgetsAreShowing] + [String.IsEqual(Container(300).ListItem.Property(horizontalWidgetPos),High) | 
 												                                                                        [Container(300).ListItem.Property(widgetThreeShelves) + Container(300).ListItem.Property(widgetThreeShelvesLarge)]]]] + 
 												 [!Player.HasMedia | 
 					                             [Player.HasMedia + [Skin.HasSetting(Hide.TitleBarNowPlaying) | ![$EXP[widgetsAreShowing]]]]]</expression>
 
-    <expression name="BelowIconLabelShouldShow">Skin.HasSetting(VerticalHome) + Window.Is(home) + !Skin.HasSetting(IconShowLabel.InTopBar) + [![$EXP[widgetsAreShowing]] | 
+    <expression name="BelowIconLabelShouldShow">Skin.HasSetting(VerticalHome) + Window.Is(home) + Skin.HasSetting(Vertical.IconOnly) + !Skin.HasSetting(IconShowLabel.InTopBar) + [![$EXP[widgetsAreShowing]] | 
 	                                            [$EXP[widgetsAreShowing] + !String.IsEqual(Container(300).ListItem.Property(horizontalWidgetPos),High) + 
 												 !Container(300).ListItem.Property(widgetThreeShelves) + !Container(300).ListItem.Property(widgetThreeShelvesLarge)]]</expression>
 	
