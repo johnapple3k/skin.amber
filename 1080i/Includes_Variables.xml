@@ -1726,8 +1726,8 @@
 	</variable>
 	
 	<variable name="IconMenuLabelVar">
-	    <value condition="Control.HasFocus(300)">[B]$INFO[Container(300).ListItem.Label][/B]</value>
 		<value condition="Control.HasFocus(9001)">[B]$INFO[Container(300).ListItem.Label][/B]  •  [B]$INFO[Container(9001).ListItem.Label][/B]</value>
+		<value>[B]$INFO[Container(300).ListItem.Label][/B]</value>
 	</variable>
 	
     <expression name="WidgetFanartVisible">String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart)) + ControlGroup(700).HasFocus</expression>
@@ -1829,6 +1829,10 @@
 	                                             [!Skin.HasSetting(IconShowLabel.InTopBar) + $EXP[widgetsAreShowing] + [String.IsEqual(Container(300).ListItem.Property(horizontalWidgetPos),High) | 
 												                                                                        [Container(300).ListItem.Property(widgetThreeShelves) + Container(300).ListItem.Property(widgetThreeShelvesLarge)]]]] + 
 												 [!Player.HasMedia | 
-					                             [Player.HasMedia + [Skin.HasSetting(Hide.TitleBarNowPlaying) | ![$EXP[widgetsAreShowing]]]]]</expression>									  
+					                             [Player.HasMedia + [Skin.HasSetting(Hide.TitleBarNowPlaying) | ![$EXP[widgetsAreShowing]]]]]</expression>
+
+    <expression name="BelowIconLabelShouldShow">Skin.HasSetting(VerticalHome) + Window.Is(home) + !Skin.HasSetting(IconShowLabel.InTopBar) + [![$EXP[widgetsAreShowing]] | 
+	                                            [$EXP[widgetsAreShowing] + !String.IsEqual(Container(300).ListItem.Property(horizontalWidgetPos),High) + 
+												 !Container(300).ListItem.Property(widgetThreeShelves) + !Container(300).ListItem.Property(widgetThreeShelvesLarge)]]</expression>
 	
 </includes>
