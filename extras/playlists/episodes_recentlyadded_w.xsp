@@ -2,7 +2,7 @@
 <smartplaylist type="episodes"> 
     <name>Episodes Recently Added (inc. watched)</name> 
     <match>all</match> 
-    <limit>50</limit> 
+    <limit>100</limit> 
     <order direction="descending">dateadded</order> 
 </smartplaylist> 
 
