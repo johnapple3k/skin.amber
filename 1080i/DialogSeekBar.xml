@@ -60,9 +60,9 @@
 			    </control>
 			    <control type="label">
 			        <top>5</top>
-				    <posx>30</posx>
+				    <posx>10</posx>
 				    <height>60</height>
-			        <width>1570</width>
+			        <width>1900</width>
 			        <align>center</align>
 				    <aligny>center</aligny>
 			        <label>$VAR[FullScreenTitle]</label>
@@ -75,9 +75,9 @@
 				<top>-90</top>
 			    <control type="label">
 			        <top>0</top>
-				    <posx>30</posx>
+				    <posx>10</posx>
 				    <height>60</height>
-			        <width>1570</width>
+			        <width>1900</width>
 			        <align>center</align>
 				    <aligny>center</aligny>
 			        <label>$VAR[FullScreenTitle]</label>
