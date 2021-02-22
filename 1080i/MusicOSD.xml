@@ -7,7 +7,7 @@
     <include>OSDFade</include>
     <controls>
         
-		<control type="slider" id="87">
+<!--		<control type="slider" id="87">
             <description>Seek Slider</description>
             <posx>30</posx>
             
@@ -23,7 +23,7 @@
             <textureslidernib>OSD/ScrollbarNibNF.png</textureslidernib>
             <textureslidernibfocus colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
             <visible>Player.SeekEnabled</visible>
-        </control>
+        </control> -->
 		
 		<control type="group">
 		
