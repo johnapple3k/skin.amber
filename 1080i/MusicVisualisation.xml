@@ -79,7 +79,7 @@
             <height>1200</height>
             <texture border="0,30,0,30">OSD/FS_OSDBackground.png</texture>
             <colordiffuse>ccE2E2E2</colordiffuse>
-            <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+            <visible>Window.IsVisible(script-cu-lrclyrics-main.xml) + Skin.HasSetting(Music.DimWithLyrics)</visible>
         </control>
 		
         <control type="group">
@@ -129,7 +129,7 @@
             </include>
 			
             <control type="image" description="Dim icon for lyrics visibility if active">
-                <visible>Window.IsVisible(script-cu-lrclyrics-main.xml) + !Skin.HasSetting(enable.bottomseekbar)</visible>
+                <visible>Window.IsVisible(script-cu-lrclyrics-main.xml) + !Skin.HasSetting(enable.bottomseekbar) + Skin.HasSetting(Music.DimWithLyrics)</visible>
                 <include>VisibleFadeEffectDelay</include>
                 <top>682r</top>
                 <left>555r</left>
@@ -141,7 +141,7 @@
             </control>
 			
 			<control type="image" description="Dim icon for lyrics visibility if active">
-                <visible>Window.IsVisible(script-cu-lrclyrics-main.xml) + Skin.HasSetting(enable.bottomseekbar)</visible>
+                <visible>Window.IsVisible(script-cu-lrclyrics-main.xml) + Skin.HasSetting(enable.bottomseekbar) + Skin.HasSetting(Music.DimWithLyrics)</visible>
                 <include>VisibleFadeEffectDelay</include>
                 <top>-422</top>
                 <left>555r</left>
