@@ -3290,3 +3290,7 @@ msgstr ""
 msgctxt "#32368"
 msgid "Dim Background and Album Cover when Showing Lyrics"
 msgstr ""
+
+msgctxt "#32369"
+msgid "Use Alternate Favourites Layout"
+msgstr ""
