@@ -53,6 +53,7 @@
 				<label>$INFO[System.Time]</label>
 			</control>
 			
+			<!-- Additional info, if option is enabled -->
 			<control type="group">
 			    <visible>Skin.HasSetting(ShowInfoWithSeekBar) + !Skin.HasSetting(enable.bottomseekbar) + !Window.isVisible(Custom_1123_PausedOverlay.xml) + ![Window.isVisible(VideoOSD) | Window.IsVisible(MusicOSD)]</visible>
 				<top>130</top>
@@ -273,28 +274,26 @@
 				<!-- Seek bar controls for non PVR -->
 				<control type="group">
 				    <visible>!VideoPlayer.Content(livetv)</visible>
-                    
-					<control type="group">
+					<control type="progress" description="Buffer Bar">
 					    <left>30</left>
 					    <top>3</top>
-						<control type="progress" description="Buffer Bar">
-					        <width>1570</width>
-					        <height>18</height>
-					        <texturebg border="15,0,15,0">OSD/ProgressBG.png</texturebg>
-					        <midtexture border="15,0,15,0">OSD/ProgressBar.png</midtexture>
-					        <colordiffuse>Diffuse2</colordiffuse>
-					        <info>Player.ProgressCache</info>
-				        </control>
-				        <control type="progress" description="Progress Bar">
-					        <width>1570</width>
-					        <height>18</height>
-					        <texturebg border="15,0,15,0">OSD/ProgressBG.png</texturebg>
-					        <midtexture border="15,0,15,0">OSD/ProgressBar.png</midtexture>
-					        <colordiffuse>$VAR[HighlightColor]</colordiffuse>
-					        <info>Player.Progress</info>
-				        </control>
-					</control>
-				    
+					    <width>1570</width>
+					    <height>18</height>
+					    <texturebg border="15,0,15,0">OSD/ProgressBG.png</texturebg>
+					    <midtexture border="15,0,15,0">OSD/ProgressBar.png</midtexture>
+					    <colordiffuse>Diffuse2</colordiffuse>
+					    <info>Player.ProgressCache</info>
+				    </control>
+				    <control type="progress" description="Progress Bar">
+					    <left>30</left>
+					    <top>3</top>
+						<width>1570</width>
+					    <height>18</height>
+					    <texturebg border="15,0,15,0">OSD/ProgressBG.png</texturebg>
+					    <midtexture border="15,0,15,0">OSD/ProgressBar.png</midtexture>
+					    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+					    <info>Player.Progress</info>
+				    </control>
 					<control type="slider" id="401">
 					    <description>Seek Slider</description>
 					    <left>30</left>
@@ -304,6 +303,7 @@
 					    <texturesliderbar>OSD/seekslider.png</texturesliderbar>
 					    <textureslidernib>OSD/ScrollbarNibNF.png</textureslidernib>
 					    <textureslidernibfocus colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+						<visible>Player.SeekEnabled</visible>
 				    </control>
 				    
 					<!-- left side labels -->
