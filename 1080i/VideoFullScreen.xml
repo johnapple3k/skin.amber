@@ -13,6 +13,7 @@
 	<onload condition="Skin.HasSetting(ShowSeekBarOnPlayback) + Skin.String(SeekBarInit,ten)">AlarmClock(ShowOSD,ClearProperty(ShowOSD,home),00:10,silent)</onload>
 	<onload condition="Skin.HasSetting(ShowSeekBarOnPlayback) + Skin.String(SeekBarInit,fifteen)">AlarmClock(ShowOSD,ClearProperty(ShowOSD,home),00:15,silent)</onload>
 	<onload condition="Skin.HasSetting(ShowSeekBarOnPlayback) + Skin.String(SeekBarInit,twenty)">AlarmClock(ShowOSD,ClearProperty(ShowOSD,home),00:20,silent)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(OSDinfodialogButtonActive))">ClearProperty(OSDinfodialogButtonActive,home)</onload>
 	<controls>
 		<control type="group" id="1">
 			<visible>!String.IsEmpty(Player.SeekNumeric)</visible>
@@ -85,9 +86,9 @@
 			</control>
 			    
 			<control type="image" id="24">
-			    <left>539r</left>
+			    <left>459r</left>
 			    <top>-406</top>
-			    <width>509</width>
+			    <width>439</width>
 			    <height>636</height>
 			    <texture>$VAR[VideoPlayerIcon]</texture>
 			    <aspectratio align="center" aligny="bottom">keep</aspectratio>
@@ -95,9 +96,9 @@
 				<visible>Skin.HasSetting(enable.bottomseekbar)</visible>
 			</control>
 			<control type="image" id="25">
-			    <left>555r</left>
+			    <left>465r</left>
 			    <top>-422</top>
-			    <width>509</width>
+			    <width>439</width>
 			    <height>636</height>
 			    <texture>$VAR[VideoPlayerIcon]</texture>
 			    <aspectratio align="center" aligny="bottom">keep</aspectratio>
@@ -105,9 +106,9 @@
 			</control>
 			
 			<control type="image" id="24">
-			    <posx>539r</posx>
+			    <posx>459r</posx>
 			    <posy>666r</posy>
-			    <width>509</width>
+			    <width>439</width>
 			    <height>636</height>
 			    <texture>$VAR[VideoPlayerIcon]</texture>
 			    <aspectratio align="center" aligny="bottom">keep</aspectratio>
@@ -115,9 +116,9 @@
 				<visible>!Skin.HasSetting(enable.bottomseekbar)</visible>
 			</control>
 			<control type="image" id="25">
-			    <posx>555r</posx>
+			    <posx>465r</posx>
 			    <posy>682r</posy>
-			    <width>509</width>
+			    <width>439</width>
 			    <height>636</height>
 			    <texture>$VAR[VideoPlayerIcon]</texture>
 			    <aspectratio align="center" aligny="bottom">keep</aspectratio>
@@ -136,18 +137,53 @@
 				<textcolor>grey</textcolor>
 			</control>
 			<control type="grouplist" id="3">
-				<top>50</top>
-				<posx>708</posx>
-				<height>35</height>
-				<width>605</width>
+				<visible>!Skin.HasSetting(Show.ColorRangeFlags) | ![$EXP[PlayerIsHDR]]</visible>
+				<top>20</top>
+				<posx>960</posx>
+				<height>65</height>
+				<width>405</width>
 				<orientation>horizontal</orientation>
 				<itemgap>15</itemgap>
 				<align>right</align>
 				<onup>101</onup>
 			    <ondown>101</ondown>
 				<include content="PlayerMediaFlagItems">
-					<param name="itemheight" value="35"/>
-     				<param name="itemwidth" value="85"/>
+					<param name="itemheight" value="65"/>
+     				<param name="itemwidth" value="70"/>
+					<param name="diffuse">$VAR[LabelTextColor]</param>
+				</include>
+			</control>
+			<control type="grouplist" id="3">
+				<visible>Skin.HasSetting(Show.ColorRangeFlags) + $EXP[PlayerIsHDR] + !Skin.HasSetting(coloredflags)</visible>
+				<top>30</top>
+				<posx>970</posx>
+				<height>65</height>
+				<width>505</width>
+				<orientation>horizontal</orientation>
+				<itemgap>5</itemgap>
+				<align>left</align>
+				<onup>101</onup>
+			    <ondown>101</ondown>
+				<include content="PlayerMediaFlagItems">
+					<param name="itemheight" value="65"/>
+     				<param name="itemwidth" value="70"/>
+					<param name="diffuse">$VAR[LabelTextColor]</param>
+				</include>
+			</control>
+			<control type="grouplist" id="3">
+				<visible>Skin.HasSetting(Show.ColorRangeFlags) + $EXP[PlayerIsHDR] + Skin.HasSetting(coloredflags)</visible>
+				<top>30</top>
+				<posx>970</posx>
+				<height>65</height>
+				<width>505</width>
+				<orientation>horizontal</orientation>
+				<itemgap>5</itemgap>
+				<align>left</align>
+				<onup>101</onup>
+			    <ondown>101</ondown>
+				<include content="PlayerMediaFlagItems">
+					<param name="itemheight" value="65"/>
+     				<param name="itemwidth" value="70"/>
 					<param name="diffuse">$VAR[LabelTextColor]</param>
 				</include>
 			</control>

@@ -1944,6 +1944,10 @@
         <param name="showflags">true</param>
 		<param name="footertop">920</param>
 		<param name="footerheight">155</param>
+		<param name="flagitemheight">80</param>
+		<param name="flagitemwidth">85</param>
+		<param name="lowflagitemheight">50</param>
+		<param name="lowflagitemwidth">90</param>
         <definition>
             <control type="grouplist" id="4000" description="Media Info Panel">
                 <include>OpenClose</include>
@@ -2151,33 +2155,25 @@
                 <posy>$PARAM[footertop]</posy>
                 <width>$PARAM[width]</width>
 				<height>$PARAM[footerheight]</height>
-				<itemgap>5</itemgap>
+				<itemgap>7</itemgap>
                 <orientation>vertical</orientation>	
+				<usecontrolcoords>true</usecontrolcoords>
 				<control type="label" description="Footer">
                     <visible>[Container.Content(movies) | Container.Content(sets) | Container.Content(musicvideos)]</visible>
                     <width>$PARAM[width]</width>
-                    <height>30</height>
+                    <height>25</height>
                     <font>ListDetails</font>
                     <label>$VAR[panelfooter2]</label>
                 </control>				
                 <control type="label" description="Footer">
-                    <visible>$PARAM[showfooter] + !$PARAM[lowpanel]</visible>
-                    <width>$PARAM[width]</width>
-                    <height>60</height>
-                    <font>ListDetails</font>
-                    <label>$PARAM[footer]</label>
-                    <wrapmultiline>true</wrapmultiline>
-				    <aligny>top</aligny>
-					<visible>!Container.Content(episodes)</visible>
-                </control>
-				<control type="label" description="Footer">
-                    <visible>$PARAM[showfooter] + $PARAM[lowpanel]</visible>
+                    <visible>$PARAM[showfooter]</visible>
                     <width>$PARAM[width]</width>
                     <height>30</height>
                     <font>ListDetails</font>
                     <label>$PARAM[footer]</label>
+													   
 				    <aligny>top</aligny>
-					<visible>!Container.Content(episodes)</visible>
+					<visible>![Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows)]</visible>
                 </control>
 				<control type="label" description="Footer">
                     <visible>$PARAM[showfooter]</visible>
@@ -2187,22 +2183,103 @@
                     <label>$PARAM[footer]</label>
                     <wrapmultiline>true</wrapmultiline>
 				    <aligny>top</aligny>
-					<visible>Container.Content(episodes)</visible>
+					<visible>[Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows)] + !Skin.HasSetting(coloredflags)</visible>
+                </control>
+				<control type="label" description="Footer">
+                    <visible>$PARAM[showfooter]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>60</height>
+                    <font>ListDetails</font>
+                    <label>$PARAM[footer]</label>
+                    <wrapmultiline>true</wrapmultiline>
+				    <aligny>top</aligny>
+					<visible>[Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows)] + Skin.HasSetting(coloredflags)</visible>
                 </control>
                 <control type="grouplist" description="Flags">
-                    <visible>$PARAM[showflags]</visible>
+                    <visible>$PARAM[showflags] + !$PARAM[lowpanel] + !Skin.HasSetting(coloredflags)</visible>
                     <include>ContentFade</include>
                     <width>$PARAM[width]</width>
-                    <height>40</height>
-                    <itemgap>20</itemgap>
+                    <height>$PARAM[flagitemheight]</height>
+                    <itemgap>10</itemgap>
                     <orientation>horizontal</orientation>
                     <align>left</align>
                     <include condition="Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
                         <param name="diffuse">$VAR[LabelTextColor]</param>
-						<param name="itemwidth">69</param>
+						<param name="itemwidth">$PARAM[flagitemwidth]</param>
+						<param name="itemheight">$PARAM[flagitemheight]</param>
+						<param name="showratingbadge">false</param>
                     </include>
 					<include condition="!Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
                         <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemwidth">$PARAM[flagitemwidth]</param>
+						<param name="itemheight">$PARAM[flagitemheight]</param>
+                    </include>
+                </control>
+				<control type="grouplist" description="Flags">
+                    <visible>$PARAM[showflags] + !$PARAM[lowpanel] + Skin.HasSetting(coloredflags)</visible>
+                    <include>ContentFade</include>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[flagitemheight]</height>
+                    <itemgap>10</itemgap>
+                    <orientation>horizontal</orientation>
+                    <align>left</align>
+					<usecontrolcoords>true</usecontrolcoords>
+                    <include condition="Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemwidth">$PARAM[flagitemwidth]</param>
+						<param name="itemheight">$PARAM[flagitemheight]</param>
+						<param name="showratingbadge">false</param>
+                    </include>
+					<include condition="!Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemwidth">$PARAM[flagitemwidth]</param>
+						<param name="itemheight">$PARAM[flagitemheight]</param>
+                    </include>
+                </control>
+				<control type="grouplist" description="Flags">
+                    <visible>$PARAM[showflags] + $PARAM[lowpanel] + !Skin.HasSetting(coloredflags)</visible>
+                    <include>ContentFade</include>
+                    <width>$PARAM[width]</width>
+                    <height>50</height>
+                    <itemgap>10</itemgap>
+                    <orientation>horizontal</orientation>
+                    <align>left</align>
+					<top>4</top>
+					<usecontrolcoords>true</usecontrolcoords>
+                    <include condition="Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemheight">40</param>
+						<param name="itemwidth">$PARAM[lowflagitemwidth]</param>
+						<param name="showratingbadge">false</param>
+						
+                    </include>
+					<include condition="!Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemwidth">$PARAM[lowflagitemwidth]</param>
+						<param name="itemheight">40</param>
+						<param name="showratingbadge">false</param>
+                    </include>
+                </control>
+				<control type="grouplist" description="Flags">
+                    <visible>$PARAM[showflags] + $PARAM[lowpanel] + Skin.HasSetting(coloredflags)</visible>
+                    <width>$PARAM[width]</width>
+                    <height>55</height>
+                    <itemgap>10</itemgap>
+                    <orientation>horizontal</orientation>
+                    <align>left</align>
+					<top>-3</top>
+					<usecontrolcoords>true</usecontrolcoords>
+					<include condition="Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemheight">45</param>
+						<param name="itemwidth">$PARAM[lowflagitemwidth]</param>
+						<param name="showratingbadge">false</param>
+                    </include>
+					<include condition="!Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemwidth">$PARAM[lowflagitemwidth]</param>
+						<param name="itemheight">45</param>
+						<param name="showratingbadge">false</param>
                     </include>
                 </control>
 			</control>	
@@ -2586,16 +2663,17 @@
                     </control>
                 </control>
 		        <control type="grouplist" description="Flags">
-			        <top>995</top>
+			        <top>975</top>
 			        <left>40</left>
 			        <width>$PARAM[labelwidth]</width>
-			        <height>45</height>
-			        <itemgap>30</itemgap>
+			        <height>80</height>
+			        <itemgap>20</itemgap>
 			        <orientation>horizontal</orientation>
 			        <align>center</align>
 			        <include content="MediaFlagItems">
 					    <param name="diffuse">$VAR[LabelTextColor]</param>
 				        <param name="showratingbadge">false</param>
+						<param name="itemwidth">95</param>
 			        </include>
 		        </control>                
             </control>
@@ -2610,6 +2688,8 @@
         <param name="visibility">true</param>
         <param name="showratingbadge">true</param>
 		<param name="itemwidth">90</param>
+		<param name="itemgap">20</param>
+		<param name="usecontrolcoords">false</param>
         <definition>
             <control type="grouplist" description="Flags">
                 <posy>$PARAM[top]</posy>
@@ -2618,9 +2698,10 @@
                 <include>ContentFade</include>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
-                <itemgap>20</itemgap>
+                <itemgap>$PARAM[itemgap]</itemgap>
                 <orientation>horizontal</orientation>
                 <align>center</align>
+				<usecontrolcoords>$PARAM[usecontrolcoords]</usecontrolcoords>
                 <include content="MediaFlagItems">
                     <param name="diffuse">$VAR[LabelTextColor]</param>
                     <param name="showratingbadge">$PARAM[showratingbadge]</param>
@@ -3080,25 +3161,27 @@
     </include>
 
     <include name="TouchButtons">
-        <control type="grouplist" id="700">
+        <control type="grouplist" id="7900">
             <orientation>horizontal</orientation>
             <visible>Skin.HasSetting(Show.Options.Button)</visible>
             <itemgap>20</itemgap>
             <top>0</top>
             <left>860</left>
-            <width>180</width>
+            <width>280</width>
             <height>40</height>
             <onup>noop</onup>
-            <ondown>9000</ondown>
+            <ondown condition="!Window.IsActive(Home)">9000</ondown>
+			<ondown condition="Window.IsActive(Home)">300</ondown>
             <align>justify</align>
             <usecontrolcoords>true</usecontrolcoords>
             <control type="button" id="10000">
-                <description>Go Back</description>
+                <description>Home</description>
                 <width>40</width>
                 <height>40</height>
                 <texturefocus colordiffuse="$VAR[HighlightColor]">icons/home.png</texturefocus>
                 <texturenofocus colordiffuse="$VAR[LabelTextColor]">icons/home.png</texturenofocus>
                 <onclick>ActivateWindow(home)</onclick>
+				<visible>!Window.IsActive(Home)</visible>
             </control>
             <control type="button" id="10001">
                 <description>Go Back</description>
@@ -3116,6 +3199,7 @@
                 <texturenofocus colordiffuse="$VAR[LabelTextColor]">icons/settings.png</texturenofocus>
                 <onclick condition="!Skin.HasSetting(KioskMode.Enabled)">SetFocus(9000)</onclick>
                 <onclick condition="Skin.HasSetting(KioskMode.Enabled)">noop</onclick>
+				<visible>!Window.IsActive(Home)</visible>
             </control>
         </control>
     </include>
@@ -3737,6 +3821,34 @@
                 <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
             </control>
         </control>
+	</include>
+	
+	<include name="SkinSettingsArrows">
+	    <param name="panelid">9101</param>
+		<definition>
+		    <control type="group">
+			    <visible>Control.IsVisible($PARAM[panelid])</visible>
+				<control type="image">
+				    <top>80</top>
+					<left>490</left>
+					<height>30</height>
+					<width>30</width>
+					<texture flipy="true">icons/arrowdown.png</texture>
+					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
+					<visible>Container($PARAM[panelid]).HasPrevious</visible>
+					
+				</control>
+				<control type="image">
+				    <top>980</top>
+					<left>490</left>
+					<height>30</height>
+					<width>30</width>
+					<texture>icons/arrowdown.png</texture>
+					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
+					<visible>Container($PARAM[panelid]).HasNext</visible>
+				</control>
+			</control>
+		</definition>
 	</include>
 	
 

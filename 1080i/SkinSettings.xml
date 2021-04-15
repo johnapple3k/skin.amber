@@ -142,12 +142,15 @@
 			</control>
 			<control type="group" id="9100">
 				<!--9000 1 General Options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9101</param>
+				</include>
 				<control type="panel" id="9101">
 					<visible>Container(9000).HasFocus(1)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9101</onup>
 					<ondown>9101</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
 						<item id="1" description="Set Default Font Size">
@@ -156,32 +159,33 @@
 							<onclick>SetProperty(CustomSelectDefaultFont,True)</onclick>
 							<onclick>ActivateWindow(1121)</onclick>
 						</item>
-						<item id="2" description="Lyrics">
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="2"/>
+							<param name="itemlabel" value="$LOCALIZE[32376]"/>
+							<param name="skinsetting" value="Disable.Lyrics"/>
+						</include>
+						<item id="3" description="Lyrics">
 							<label>$LOCALIZE[24020] $LOCALIZE[31132]</label>
 							<label2>$INFO[Skin.String(LyricPath)]</label2>
 							<onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
+							<visible>!Skin.HasSetting(Disable.Lyrics)</visible>
 						</item>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="3"/>
+							<param name="itemid" value="4"/>
 							<param name="itemlabel" value="$LOCALIZE[32357]"/>
 							<param name="skinsetting" value="Enable.VideoLyrics"/>
-							<param name="itemvisibility" value="System.HasAddon(script.cu.lrclyrics)"/>
-						</include>
-						<include content="YesNoSettingItem">
-							<param name="itemid" value="4"/>
-							<param name="itemlabel" value="$LOCALIZE[32368]"/>
-							<param name="skinsetting" value="Music.DimWithLyrics"/>
-							<param name="itemvisibility" value="System.HasAddon(script.cu.lrclyrics)"/>
+							<param name="itemvisibility" value="!Skin.HasSetting(Disable.Lyrics) + System.HasAddon(script.cu.lrclyrics)"/>
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="5"/>
-							<param name="itemlabel" value="$LOCALIZE[31959]"/>
-							<param name="skinsetting" value="FullscreenMusic"/>
+							<param name="itemlabel" value="$LOCALIZE[32368]"/>
+							<param name="skinsetting" value="Music.DimWithLyrics"/>
+							<param name="itemvisibility" value="!Skin.HasSetting(Disable.Lyrics) + System.HasAddon(script.cu.lrclyrics)"/>
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="6"/>
-							<param name="itemlabel" value="$LOCALIZE[32122]"/>
-							<param name="skinsetting" value="ShowABinContextMenu"/>
+							<param name="itemlabel" value="$LOCALIZE[31959]"/>
+							<param name="skinsetting" value="FullscreenMusic"/>
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="7"/>
@@ -251,25 +255,38 @@
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="19"/>
+							<param name="itemlabel" value="$LOCALIZE[32378]"/>
+							<param name="skinsetting" value="coloredflags"/>
+						</include>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="19"/>
 							<param name="itemlabel" value="$LOCALIZE[31996]"/>
 							<param name="skinsetting" value="holiday"/>
 						</include>
 					</content>
 				</control>
-                <!-- 9000 2 - Home Menu optiuons -->
+				<!-- 9000 2 - Home Menu optiuons -->
 				<control type="panel" id="9102">
 					<visible>Container(9000).HasFocus(2)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9102</onup>
 					<ondown>9102</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
-						<include content="YesNoSettingItem">
-							<param name="itemid" value="1"/>
-							<param name="itemlabel" value="[B]$LOCALIZE[31994][/B]"/>
-							<param name="skinsetting" value="VerticalHome"/>
-						</include>
+						<item id="1">
+                            <visible>Skin.HasSetting(VerticalHome)</visible>
+                            <label>[B]$LOCALIZE[31994][/B]</label>
+                            <label2>$LOCALIZE[107]</label2>
+                            <onclick>Skin.ToggleSetting(VerticalHome)</onclick>
+							<onclick>Skin.Reset(Enable.BottomShortcuts)</onclick>
+                        </item>
+                        <item id="1">
+                            <visible>!Skin.HasSetting(VerticalHome)</visible>
+                            <label>[B]$LOCALIZE[31994][/B]</label>
+                            <label2>$LOCALIZE[106]</label2>
+                            <onclick>Skin.ToggleSetting(VerticalHome)</onclick>
+                        </item>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="2"/>
 							<param name="itemlabel" value="      $LOCALIZE[31363]"/>
@@ -328,54 +345,84 @@
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="10"/>
+							<param name="itemlabel" value="$LOCALIZE[32055]"/>
+							<param name="skinsetting" value="HorizontalNavWrap"/>
+							<param name="itemvisibility" value="!Skin.HasSetting(VerticalHome)"/>
+						</include>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="11"/>
 							<param name="itemlabel" value="$LOCALIZE[31920]"/>
 							<param name="skinsetting" value="Hide.AllShelves"/>
 						</include>
+						<item id="12">
+                            <visible>Skin.HasSetting(Enable.BottomShortcuts)</visible>
+                            <label>[B]$LOCALIZE[31637][/B]</label>
+                            <label2>$LOCALIZE[107]</label2>
+                            <onclick>Skin.ToggleSetting(Enable.BottomShortcuts)</onclick>
+							<visible>!Skin.HasSetting(VerticalHome)</visible>
+                        </item>
+                        <item id="12">
+                            <visible>!Skin.HasSetting(Enable.BottomShortcuts)</visible>
+                            <label>[B]$LOCALIZE[31637][/B]</label>
+                            <label2>$LOCALIZE[106]</label2>
+                            <onclick>Skin.ToggleSetting(Enable.BottomShortcuts)</onclick>
+							<onclick>Skin.Reset(Zoom.VideoPreview)</onclick>
+							<visible>!Skin.HasSetting(VerticalHome)</visible>
+                        </item>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="13"/>
+							<param name="itemlabel" value="      $LOCALIZE[32374]"/>
+							<param name="skinsetting" value="UseBackgroundBottomShortcuts"/>
+							<param name="itemvisibility" value="Skin.HasSetting(Enable.BottomShortcuts)"/>
+						</include>
                         <include content="YesNoSettingItem">
-							<param name="itemid" value="11"/>
+							<param name="itemid" value="14"/>
 							<param name="itemlabel" value="[B]$LOCALIZE[32249][/B]"/>
 							<param name="skinsetting" value="ShowInfoLine"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="12"/>
+							<param name="itemid" value="15"/>
 							<param name="itemlabel" value="      $LOCALIZE[32250]"/>
 							<param name="skinsetting" value="ShowInfoLineShelf"/>
 							<param name="itemvisibility" value="Skin.HasSetting(ShowInfoLine)"/>
 						</include>
                         <include content="YesNoSettingItem">
-							<param name="itemid" value="13"/>
+							<param name="itemid" value="16"/>
 							<param name="itemlabel" value="      $LOCALIZE[32261]"/>
 							<param name="skinsetting" value="UseEHInfoLine"/>
 							<param name="itemvisibility" value="Skin.HasSetting(ShowInfoLine) + Skin.HasSetting(Enable.EmbuaryHelper)"/>
 						</include>
                         <include content="YesNoSettingItem">
-							<param name="itemid" value="14"/>
+							<param name="itemid" value="17"/>
 							<param name="itemlabel" value="$LOCALIZE[32358]"/>
 							<param name="skinsetting" value="Shelf.PlayAlbum"/>
 							<param name="itemvisibility" value="System.HasAddon(script.playalbum)"/>
 						</include>                        
-						<item id="15" description="Set Favourite Addons">
+						<item id="18" description="Set Favourite Addons">
 							<label>$LOCALIZE[32062]</label>
 							<onclick>SetProperty(CustomSelectFavouriteAddons,True)</onclick>
 							<onclick>ActivateWindow(1125)</onclick>
 						</item>
-						<item id="16" description="Customize Home Menu">
+						<item id="19" description="Customize Home Menu">
 							<label>$LOCALIZE[32043]</label>
 							<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 						</item>
-                        <item id="17" description="Customize Power Menu">
+                        <item id="20" description="Customize Power Menu">
 							<label>$LOCALIZE[32166]</label>
 							<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
 						</item>
 					</content>
 				</control>
                 <!-- 9000 3 Background options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9103</param>
+				</include>
 				<control type="panel" id="9103">
 					<visible>Container(9000).HasFocus(3)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9103</onup>
 					<ondown>9103</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
 						<include content="YesNoSettingItem">
@@ -454,87 +501,92 @@
 					</content>
 				</control>
 				<!--9000 4 Media Views Options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9104</param>
+				</include>
 				<control type="panel" id="9104">
 					<visible>Container(9000).HasFocus(4)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9104</onup>
 					<ondown>9104</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
-						<item id="34" description="Use New View Selector - SkinVariables present">
+						<item id="1" description="Use New View Selector - SkinVariables present">
                             <visible>Skin.HasSetting(Enable.NewViewSelector) + System.HasAddon(script.skinvariables)</visible>
                             <label>[B]$LOCALIZE[32272][/B]</label>
                             <label2>$LOCALIZE[107]</label2>
 							<onclick>Skin.Reset(Enable.NewViewSelector)</onclick>
                         </item>
-                        <item id="34" description="Use New View Selector - SkinVariables not present">
+                        <item id="1" description="Use New View Selector - SkinVariables not present">
                             <visible>!Skin.HasSetting(Enable.NewViewSelector) | !System.HasAddon(script.skinvariables)</visible>
                             <label>[B]$LOCALIZE[32272][/B]</label>
                             <label2>$LOCALIZE[106]</label2>
-                            <onclick condition="!System.HasAddon(script.skinvariables)">SetProperty(TextViewerHeader,$LOCALIZE[32255],Home)</onclick>
-                            <onclick condition="!System.HasAddon(script.skinvariables)">SetProperty(TextViewerSubHeader,$LOCALIZE[32273],[I],[/I]],Home)</onclick>
-					        <onclick condition="!System.HasAddon(script.skinvariables)">SetProperty(TextViewerContent,$LOCALIZE[32274],Home)</onclick>
-                            <onclick condition="!System.HasAddon(script.skinvariables)">ActivateWindow(1124)</onclick>
+                            <onclick condition="!System.HasAddon(script.skinvariables)">InstallAddon(script.skinvariables)</onclick>
                             <onclick condition="System.HasAddon(script.skinvariables) + !Skin.HasSetting(Enable.NewViewSelector)">Skin.SetBool(Enable.NewViewSelector)</onclick>
                         </item>
-						<item id="35" description="Configure Media Views">
+						<item id="2" description="Configure Media Views">
 							<label>      $LOCALIZE[32275]</label>
 							<onclick>RunScript(script.skinvariables,action=buildviews,configure)</onclick>
 							<visible>Skin.HasSetting(Enable.NewViewSelector)</visible>
 						</item>
-						<item id="2" description="Select Extra Art for Media Views">
+						<item id="3" description="Select Extra Art for Media Views">
 						    <label>$LOCALIZE[32335]</label>
 						    <label2>$VAR[MediaViewsExtraArtLabelVar]</label2>
 						    <onclick>SetProperty(CustomSelectMediaViewsExtraArt,True)</onclick>
 						    <onclick>ActivateWindow(1121)</onclick>
 		                </item>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="3"/>
+							<param name="itemid" value="4"/>
 							<param name="itemlabel" value="$LOCALIZE[32223]"/>
 							<param name="skinsetting" value="ShowAudioSub"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="4"/>
+							<param name="itemid" value="5"/>
 							<param name="itemlabel" value="$LOCALIZE[32233]"/>
 							<param name="skinsetting" value="ShowRatingUser"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="5"/>
+							<param name="itemid" value="6"/>
 							<param name="itemlabel" value="$LOCALIZE[32234]"/>
 							<param name="skinsetting" value="ShowRatingMain"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="6"/>
+							<param name="itemid" value="7"/>
 							<param name="itemlabel" value="$LOCALIZE[32236]"/>
 							<param name="skinsetting" value="ShowMPAA"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="7"/>
+							<param name="itemid" value="8"/>
 							<param name="itemlabel" value="$LOCALIZE[32254]"/>
 							<param name="skinsetting" value="HideTop250MediaViews"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="30"/>
+							<param name="itemid" value="9"/>
 							<param name="itemlabel" value="$LOCALIZE[32263]"/>
 							<param name="skinsetting" value="ShowSetCount"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="31"/>
+							<param name="itemid" value="10"/>
 							<param name="itemlabel" value="$LOCALIZE[32264]"/>
 							<param name="skinsetting" value="ShowSpecialFanart"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="32"/>
+							<param name="itemid" value="11"/>
 							<param name="itemlabel" value="$LOCALIZE[32265]"/>
 							<param name="skinsetting" value="ShowPlayCount"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="33"/>
+							<param name="itemid" value="12"/>
+							<param name="itemlabel" value="$LOCALIZE[32373]"/>
+							<param name="skinsetting" value="ShowEndTime"/>
+						</include>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="13"/>
 							<param name="itemlabel" value="$LOCALIZE[32270]"/>
 							<param name="skinsetting" value="FanartCenterFocus"/>
 						</include>
-						<item id="8">
+						<item id="14">
                             <visible>Skin.HasSetting(DisableListPanel)</visible>
                             <label>$LOCALIZE[32225]</label>
                             <label2>$LOCALIZE[107]</label2>
@@ -567,7 +619,7 @@
 							<onclick>Skin.Reset(501_Images_DisablePanel)</onclick>
 							<onclick>Skin.Reset(501_Others_DisablePanel)</onclick>
                         </item>
-                        <item id="8">
+                        <item id="14">
                             <visible>!Skin.HasSetting(DisableListPanel)</visible>
                             <label>$LOCALIZE[32225]</label>
                             <label2>$LOCALIZE[106]</label2>
@@ -600,7 +652,7 @@
 							<onclick>Skin.SetBool(501_Images_DisablePanel)</onclick>
 							<onclick>Skin.SetBool(501_Others_DisablePanel)</onclick>
                         </item>
-						<item id="9">
+						<item id="15">
                             <visible>Skin.HasSetting(SwapListPanel) + !Skin.HasSetting(DisableListPanel)</visible>
                             <label>$LOCALIZE[32243]</label>
                             <label2>$LOCALIZE[107]</label2>
@@ -642,7 +694,7 @@
 							<onclick>Skin.Reset(501_Images_SwapPanel)</onclick>
 							<onclick>Skin.Reset(501_Others_SwapPanel)</onclick>
                         </item>
-                        <item id="9">
+                        <item id="15">
                             <visible>!Skin.HasSetting(SwapListPanel) + !Skin.HasSetting(DisableListPanel)</visible>
                             <label>$LOCALIZE[32243]</label>
                             <label2>$LOCALIZE[106]</label2>
@@ -685,148 +737,151 @@
 							<onclick>Skin.SetBool(501_Others_SwapPanel)</onclick>
                         </item>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="10"/>
+							<param name="itemid" value="16"/>
 							<param name="itemlabel" value="$LOCALIZE[32020]"/>
 							<param name="skinsetting" value="Hide.Label2.Lists"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="11"/>
+							<param name="itemid" value="17"/>
 							<param name="itemlabel" value="$LOCALIZE[32056]"/>
 							<param name="skinsetting" value="Show.MoreItems.List"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="12"/>
+							<param name="itemid" value="18"/>
 							<param name="itemlabel" value="$LOCALIZE[32217]"/>
 							<param name="skinsetting" value="ListCenterFocus"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="13"/>
+							<param name="itemid" value="19"/>
 							<param name="itemlabel" value="$LOCALIZE[20189]"/>
 							<param name="skinsetting" value="AutoScroll"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="14"/>
+							<param name="itemid" value="20"/>
 							<param name="itemlabel" value="$LOCALIZE[31514]"/>
 							<param name="skinsetting" value="EpisodesUsePoster"/>
 						</include>
                         <include content="YesNoSettingItem">
-							<param name="itemid" value="140"/>
+							<param name="itemid" value="21"/>
 							<param name="itemlabel" value="$LOCALIZE[32251]"/>
 							<param name="skinsetting" value="ShowTopRightOverlays"/>
 						</include>						
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="15"/>
+							<param name="itemid" value="22"/>
 							<param name="itemlabel" value="$LOCALIZE[31981]"/>
 							<param name="itemicon" value="OverlayWatched.png"/>
 							<param name="skinsetting" value="Hide_Watched_Marks"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="16"/>
+							<param name="itemid" value="23"/>
 							<param name="itemlabel" value="$LOCALIZE[31980]"/>
 							<param name="itemicon" value="OverlayUnwatched.png"/>
 							<param name="skinsetting" value="Hide_Unwatched_Marks"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="17"/>
+							<param name="itemid" value="24"/>
 							<param name="itemlabel" value="$LOCALIZE[31972]"/>
 							<param name="itemicon" value="OverlayInProgress.png"/>
 							<param name="skinsetting" value="Hide_InProgress_Marks"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="18"/>
+							<param name="itemid" value="25"/>
 							<param name="itemlabel" value="$LOCALIZE[32239]"/>
 							<param name="itemicon" value="Collection.png"/>
 							<param name="skinsetting" value="Hide_Collection_Marks"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="19"/>
+							<param name="itemid" value="26"/>
 							<param name="itemlabel" value="$LOCALIZE[32252]"/>
 							<param name="skinsetting" value="Hide_Episode_Marks"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="20"/>
+							<param name="itemid" value="27"/>
 							<param name="itemlabel" value="$LOCALIZE[31035]"/>
 							<param name="skinsetting" value="Hide.MediaFlagsVideo"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="37"/>
+							<param name="itemid" value="28"/>
 							<param name="itemlabel" value="$LOCALIZE[32291]"/>
 							<param name="skinsetting" value="Show.ColorRangeFlags"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="11"/>
+							<param name="itemid" value="29"/>
 							<param name="itemlabel" value="$LOCALIZE[31150]"/>
 							<param name="skinsetting" value="hide.listview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="21"/>
+							<param name="itemid" value="30"/>
 							<param name="itemlabel" value="$LOCALIZE[31154]"/>
 							<param name="skinsetting" value="hide.lowlistview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="22"/>
+							<param name="itemid" value="31"/>
 							<param name="itemlabel" value="$LOCALIZE[31152]"/>
 							<param name="skinsetting" value="hide.biglistview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="23"/>
+							<param name="itemid" value="32"/>
 							<param name="itemlabel" value="$LOCALIZE[32059]"/>
 							<param name="skinsetting" value="hide.talllistview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="24"/>
+							<param name="itemid" value="33"/>
 							<param name="itemlabel" value="$LOCALIZE[31151]"/>
 							<param name="skinsetting" value="hide.panelview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="25"/>
+							<param name="itemid" value="34"/>
 							<param name="itemlabel" value="$LOCALIZE[32247]"/>
 							<param name="skinsetting" value="hide.panel2view"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="26"/>
+							<param name="itemid" value="35"/>
 							<param name="itemlabel" value="$LOCALIZE[31155]"/>
 							<param name="skinsetting" value="hide.bigpanelview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="27"/>
+							<param name="itemid" value="36"/>
 							<param name="itemlabel" value="$LOCALIZE[32248]"/>
 							<param name="skinsetting" value="hide.bigpanel2view"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="28"/>
+							<param name="itemid" value="37"/>
 							<param name="itemlabel" value="$LOCALIZE[31153]"/>
 							<param name="skinsetting" value="hide.iconsview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="29"/>
+							<param name="itemid" value="38"/>
 							<param name="itemlabel" value="$LOCALIZE[31156]"/>
 							<param name="skinsetting" value="hide.fanartview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="36"/>
+							<param name="itemid" value="39"/>
 							<param name="itemlabel" value="$LOCALIZE[31633]"/>
 							<param name="skinsetting" value="hide.simplelistview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="37"/>
+							<param name="itemid" value="40"/>
 							<param name="itemlabel" value="$LOCALIZE[31158]"/>
 							<param name="skinsetting" value="hide.tripleview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="38"/>
+							<param name="itemid" value="41"/>
 							<param name="itemlabel" value="$LOCALIZE[31160]"/>
 							<param name="skinsetting" value="hide.logoview"/>
 						</include>
 					</content>
 				</control>
                 <!--9000 5 Top Bar Options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9105</param>
+				</include>
 				<control type="panel" id="9105">
 					<visible>Container(9000).HasFocus(5)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9105</onup>
 					<ondown>9105</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
 					    <item id="1">
@@ -877,9 +932,14 @@
 					</content>
 				</control>
 				<!-- 9000 6 Now Playing Options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9106</param>
+				</include>
 				<control type="grouplist" id="9106">
 					<visible>Container(9000).HasFocus(6)</visible>
-                    <posx>495</posx>
+                    <onright>500</onright>
+					<pagecontrol>500</pagecontrol>
+					<posx>495</posx>
                     <posy>120</posy>
                     <width>1350</width>
                     <height>860</height>
@@ -951,7 +1011,7 @@
 			            <label2>$LOCALIZE[106]</label2>
 					    <visible>!Skin.HasSetting(Show_MusicVizBackground)</visible>
 		            </control>
-				    <control type="button" id="9106104">
+				    <control type="button" id="910605">
 				        <width>1350</width>
 				        <height>60</height>
 				        <texturenofocus />
@@ -959,9 +1019,9 @@
 		                <onclick>Skin.ToggleSetting(Zoom.VideoPreview)</onclick>
 		                <label>$LOCALIZE[32334]</label>
 		                <label2>$LOCALIZE[107]</label2>
-				        <visible>Skin.HasSetting(Zoom.VideoPreview)</visible>
+				        <visible>Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(Enable.BottomShortcuts)</visible>
 	                </control>
-				    <control type="button" id="9106105">
+				    <control type="button" id="910606">
 				        <width>1350</width>
 				        <height>60</height>
 				        <texturenofocus />
@@ -969,9 +1029,9 @@
 		                <onclick>Skin.ToggleSetting(Zoom.VideoPreview)</onclick>
 		                <label>$LOCALIZE[32334]</label>
 		                <label2>$LOCALIZE[106]</label2>
-				        <visible>!Skin.HasSetting(Zoom.VideoPreview)</visible>
+				        <visible>!Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(Enable.BottomShortcuts)</visible>
 	                </control>
-					<control type="button" id="9106106">
+					<control type="button" id="910607">
 				        <width>1350</width>
 				        <height>60</height>
 				        <texturenofocus />
@@ -981,7 +1041,7 @@
 		                <label2>$LOCALIZE[107]</label2>
 				        <visible>Skin.HasSetting(DisableNowPlayingFanart)</visible>
 	                </control>
-				    <control type="button" id="9106107">
+				    <control type="button" id="910608">
 				        <width>1350</width>
 				        <height>60</height>
 				        <texturenofocus />
@@ -991,7 +1051,27 @@
 		                <label2>$LOCALIZE[106]</label2>
 				        <visible>!Skin.HasSetting(DisableNowPlayingFanart)</visible>
 	                </control>
-					<control type="button" id="910605">
+					<control type="button" id="910609">
+				        <width>1350</width>
+				        <height>60</height>
+				        <texturenofocus />
+				        <textoffsetx>30</textoffsetx>
+		                <onclick>Skin.ToggleSetting(NowPlaying.ArtistSlideshow)</onclick>
+		                <label>$LOCALIZE[32375]</label>
+		                <label2>$LOCALIZE[107]</label2>
+				        <visible>System.HasAddon(script.artistslideshow) + Skin.HasSetting(NowPlaying.ArtistSlideshow)</visible>
+	                </control>
+					<control type="button" id="910610">
+				        <width>1350</width>
+				        <height>60</height>
+				        <texturenofocus />
+				        <textoffsetx>30</textoffsetx>
+		                <onclick>Skin.ToggleSetting(NowPlaying.ArtistSlideshow)</onclick>
+		                <label>$LOCALIZE[32375]</label>
+		                <label2>$LOCALIZE[106]</label2>
+				        <visible>System.HasAddon(script.artistslideshow) + !Skin.HasSetting(NowPlaying.ArtistSlideshow)</visible>
+	                </control>
+					<control type="button" id="910611">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1002,7 +1082,7 @@
 						<onclick>ActivateWindow(1128)</onclick>
 						<visible>!Skin.HasSetting(Hide.NowPlaying)</visible>
 		            </control>
-					<control type="button" id="910606">
+					<control type="button" id="910612">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1013,7 +1093,7 @@
 						<onclick>ActivateWindow(1128)</onclick>
 						<visible>!Skin.HasSetting(Hide.NowPlaying)</visible>
 		            </control>
-					<control type="button" id="910607">
+					<control type="button" id="910613">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1024,7 +1104,7 @@
 						<onclick>ActivateWindow(1128)</onclick>
 						<visible>!Skin.HasSetting(Hide.NowPlaying)</visible>
 		            </control>
-					<control type="button" id="910608">
+					<control type="button" id="910614">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1036,7 +1116,7 @@
 						<onclick>Skin.Reset(NowPlaying.VideoDiscArt)</onclick>
 					    <visible>Skin.HasSetting(NowPlaying.ExtraArtVideo) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 		            </control>
-					<control type="button" id="910609">
+					<control type="button" id="910615">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1046,19 +1126,19 @@
 			            <label2>$LOCALIZE[106]</label2>
 					    <visible>!Skin.HasSetting(NowPlaying.ExtraArtVideo) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 		            </control>
-					<control type="radiobutton" id="910610">
+					<control type="radiobutton" id="910616">
 					    <label>      $LOCALIZE[32322]</label>
 					    <onclick>Skin.ToggleSetting(NowPlaying.VideoLogo)</onclick>
 					    <selected>Skin.HasSetting(NowPlaying.VideoLogo)</selected>
 						<visible>Skin.HasSetting(NowPlaying.ExtraArtVideo) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 					</control>
-					<control type="radiobutton" id="910612">
+					<control type="radiobutton" id="910617">
 					    <label>      [B]$LOCALIZE[32324][/B]</label>
 					    <onclick>Skin.ToggleSetting(NowPlaying.VideoDiscArt)</onclick>
 					    <selected>Skin.HasSetting(NowPlaying.VideoDiscArt)</selected>
 						<visible>Skin.HasSetting(NowPlaying.ExtraArtVideo) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 					</control>
-					<control type="button" id="910613">
+					<control type="button" id="910618">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1069,7 +1149,7 @@
 						<onclick>ActivateWindow(1128)</onclick>
 					    <visible>Skin.HasSetting(NowPlaying.ExtraArtVideo) + Skin.HasSetting(NowPlaying.VideoDiscArt) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 		            </control>
-					<control type="button" id="910614">
+					<control type="button" id="910619">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1081,7 +1161,7 @@
 			            <label2>$LOCALIZE[107]</label2>
 					    <visible>Skin.HasSetting(NowPlaying.ExtraArtMusic) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 		            </control>
-					<control type="button" id="910615">
+					<control type="button" id="910620">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1091,19 +1171,19 @@
 			            <label2>$LOCALIZE[106]</label2>
 					    <visible>!Skin.HasSetting(NowPlaying.ExtraArtMusic) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 		            </control>
-					<control type="radiobutton" id="910616">
+					<control type="radiobutton" id="910621">
 					    <label>      $LOCALIZE[32322]</label>
 					    <onclick>Skin.ToggleSetting(NowPlaying.MusicLogo)</onclick>
 					    <selected>Skin.HasSetting(NowPlaying.MusicLogo)</selected>
 						<visible>Skin.HasSetting(NowPlaying.ExtraArtMusic) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 					</control>
-					<control type="radiobutton" id="910617">
+					<control type="radiobutton" id="910622">
 					    <label>      [B]$LOCALIZE[32324][/B]</label>
 					    <onclick>Skin.ToggleSetting(NowPlaying.MusicDiscArt)</onclick>
 					    <selected>Skin.HasSetting(NowPlaying.MusicDiscArt)</selected>
 						<visible>Skin.HasSetting(NowPlaying.ExtraArtMusic) + !Skin.HasSetting(Hide.NowPlaying)</visible>
 					</control>
-					<control type="button" id="910618">
+					<control type="button" id="910623">
 					    <width>1350</width>
 					    <height>60</height>
 					    <texturenofocus />
@@ -1116,12 +1196,15 @@
 		            </control>
 				</control>
                 <!-- 9000 7 Full Screen/OSD options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9107</param>
+				</include>
 				<control type="panel" id="9107">
 					<visible>Container(9000).HasFocus(7)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9107</onup>
 					<ondown>9107</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
                         <include content="YesNoSettingItem">
@@ -1139,7 +1222,19 @@
 							<param name="itemlabel" value="$LOCALIZE[32224]"/>
 							<param name="skinsetting" value="SubtitleOpensSettings"/>
 						</include>
-						<item id="4">
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="4"/>
+							<param name="itemlabel" value="[B]$LOCALIZE[32371][/B]"/>
+							<param name="skinsetting" value="InfoOpensVideoInfo"/>
+							<param name="itemvisibility" value="System.HasAddon(service.library.data.provider)"/>
+						</include>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="5"/>
+							<param name="itemlabel" value="      $LOCALIZE[32372]"/>
+							<param name="skinsetting" value="PauseOnVideoInfo"/>
+							<param name="itemvisibility" value="Skin.HasSetting(InfoOpensVideoInfo)"/>
+						</include>
+						<item id="6">
 			                <onclick>Skin.ToggleSetting(AutoClose.VideoOSD)</onclick>
 						    <onclick>Skin.Reset(SkinInfo.AutoCloseVideoOSD)</onclick>
 							<onclick>Skin.Reset(OSDTimeout)</onclick>
@@ -1147,26 +1242,26 @@
 			                <label2>$LOCALIZE[107]</label2>
 						    <visible>Skin.HasSetting(AutoClose.VideoOSD)</visible>
 		                </item>
-					    <item id="4">
+					    <item id="6">
 			                <onclick>Skin.ToggleSetting(AutoClose.VideoOSD)</onclick>
 			                <label>[B]$LOCALIZE[32342][/B]</label>
 			                <label2>$LOCALIZE[106]</label2>
 					        <visible>!Skin.HasSetting(AutoClose.VideoOSD)</visible>
 		                </item>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="5"/>
+							<param name="itemid" value="7"/>
 							<param name="itemlabel" value="   [B]$LOCALIZE[32341][/B]"/>
 							<param name="skinsetting" value="AutoClose.withInfoService"/>
 							<param name="itemvisibility" value="System.HasAddon(script.skin.info.service) + Skin.HasSetting(AutoClose.VideoOSD)"/>
 						</include>
-						<item id="6" description="Select Interval for Auto Closing OSD">
+						<item id="8" description="Select Interval for Auto Closing OSD">
 						    <label>      $LOCALIZE[32337]</label>
 						    <label2>$VAR[OSDTimeout2LabelVar]</label2>
 						    <onclick>SetProperty(CustomSelectOSDTimeout2,True)</onclick>
 						    <onclick>ActivateWindow(1121)</onclick>
 							<visible>Skin.HasSetting(AutoClose.VideoOSD) + System.HasAddon(script.skin.info.service) + Skin.HasSetting(AutoClose.withInfoService)</visible>
 		                </item>
-						<item id="6" description="Select Interval for Auto Closing OSD">
+						<item id="8" description="Select Interval for Auto Closing OSD">
 						    <label>   $LOCALIZE[32337]</label>
 						    <label2>$VAR[OSDTimeoutLabelVar]</label2>
 						    <onclick>SetProperty(CustomSelectOSDTimeout,True)</onclick>
@@ -1174,21 +1269,21 @@
 							<visible>Skin.HasSetting(AutoClose.VideoOSD) + ![System.HasAddon(script.skin.info.service) + Skin.HasSetting(AutoClose.withInfoService)]</visible>
 		                </item>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="7"/>
+							<param name="itemid" value="9"/>
 							<param name="itemlabel" value="$LOCALIZE[32354]"/>
 							<param name="skinsetting" value="Hide.SeekBarWhenPaused"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="8"/>
+							<param name="itemid" value="10"/>
 							<param name="itemlabel" value="$LOCALIZE[32363]"/>
 							<param name="skinsetting" value="ShowInfoWithSeekBar"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="9"/>
+							<param name="itemid" value="11"/>
 							<param name="itemlabel" value="[B]$LOCALIZE[32364][/B]"/>
 							<param name="skinsetting" value="ShowSeekBarOnPlayback"/>
 						</include>
-						<item id="10" description="Select Interval for Seek Bar on Playback">
+						<item id="12" description="Select Interval for Seek Bar on Playback">
 						    <label>      $LOCALIZE[32365]</label>
 						    <label2>$VAR[SeekBarInitLabelVar]</label2>
 						    <onclick>SetProperty(CustomSelectSeekBarInit,True)</onclick>
@@ -1196,19 +1291,22 @@
 							<visible>Skin.HasSetting(ShowSeekBarOnPlayback)</visible>
 		                </item>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="11"/>
+							<param name="itemid" value="13"/>
 							<param name="itemlabel" value="$LOCALIZE[32367]"/>
 							<param name="skinsetting" value="NoFallbackThumbOSD"/>
 						</include>
 					</content>
 				</control>				
                 <!-- 9000 8 Video Info options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9108</param>
+				</include>
 				<control type="panel" id="9108">
 					<visible>Container(9000).HasFocus(8)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9108</onup>
 					<ondown>9108</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
                         <include content="YesNoSettingItem">
@@ -1238,13 +1336,10 @@
                             <visible>!Skin.HasSetting(Enable.BlurredVideoInfo) | !Skin.HasSetting(Enable.TMDbHelper)</visible>
                             <label>[B]$LOCALIZE[32156][/B]</label>
                             <label2>$LOCALIZE[106]</label2>
-                            <onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(TextViewerHeader,$LOCALIZE[32255],Home)</onclick>
-                            <onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(TextViewerSubHeader,$LOCALIZE[32256],[I],[/I]],Home)</onclick>
-					        <onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(TextViewerContent,$LOCALIZE[32257],Home)</onclick>
-                            <onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">ActivateWindow(1124)</onclick>
-							<onclick condition="Skin.HasSetting(Enable.TMDbHelper) + !Skin.HasSetting(Enable.BlurredVideoInfo)">Skin.SetBool(TMDbHelper.EnableBlur)</onclick>
-                            <onclick condition="Skin.HasSetting(Enable.TMDbHelper) + !Skin.HasSetting(Enable.BlurredVideoInfo)">SetProperty(TMDbHelper.Blur.SourceImage,fanart,Home)</onclick>
-                            <onclick condition="Skin.HasSetting(Enable.TMDbHelper) + !Skin.HasSetting(Enable.BlurredVideoInfo)">Skin.SetBool(Enable.BlurredVideoInfo)</onclick>
+                            <onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">InstallAddon(plugin.video.themoviedb.helper)</onclick>
+							<onclick condition="System.HasAddon(plugin.video.themoviedb.helper) + Skin.HasSetting(Enable.TMDbHelper) + !Skin.HasSetting(Enable.BlurredVideoInfo)">Skin.SetBool(TMDbHelper.EnableBlur)</onclick>
+                            <onclick condition="System.HasAddon(plugin.video.themoviedb.helper) + Skin.HasSetting(Enable.TMDbHelper) + !Skin.HasSetting(Enable.BlurredVideoInfo)">SetProperty(TMDbHelper.Blur.SourceImage,fanart,Home)</onclick>
+                            <onclick condition="System.HasAddon(plugin.video.themoviedb.helper) + Skin.HasSetting(Enable.TMDbHelper) + !Skin.HasSetting(Enable.BlurredVideoInfo)">Skin.SetBool(Enable.BlurredVideoInfo)</onclick>
                         </item>
                         <item id="7" description="Blur Poster">
                             <visible>Skin.HasSetting(Enable.BlurredVideoInfo) + Skin.HasSetting(Blur.UsePoster)</visible>
@@ -1283,9 +1378,13 @@
 					</content>
 				</control>
 				<!-- 9000 9 - Color Options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9109</param>
+				</include>
 				<control type="grouplist" id="9109">
 					<visible>Container(9000).HasFocus(9)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
                     <posx>495</posx>
                     <posy>120</posy>
                     <width>1350</width>
@@ -1449,9 +1548,9 @@
 				<control type="panel" id="9110">
 					<visible>Container(9000).HasFocus(10)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9110</onup>
 					<ondown>9110</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
 						<include content="YesNoSettingItemAddon">
@@ -1473,12 +1572,15 @@
 					</content>
 				</control>
 				<!-- 9000 11 Advanced options -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9111</param>
+				</include>
 				<control type="panel" id="9111">
 					<visible>Container(9000).HasFocus(11)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9111</onup>
 					<ondown>9111</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
 						<include content="YesNoSettingItem">
@@ -1577,9 +1679,9 @@
 				<control type="panel" id="9112">
 					<visible>Container(9000).HasFocus(12)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
 					<onup>9112</onup>
 					<ondown>9112</ondown>
-					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
 						<item id="1" description="Backup Skin Settings">
@@ -1609,9 +1711,13 @@
 					</content>
 				</control>                
 				<!-- 9000 13 - Manage Dependencies -->
+				<include content="SkinSettingsArrows">
+				    <param name="panelid">9113</param>
+				</include>
 				<control type="grouplist" id="9113">
 					<visible>Container(9000).HasFocus(13)</visible>
 					<onright>500</onright>
+					<pagecontrol>500</pagecontrol>
                     <include>SettingsListCommons</include>
 					<onup>9113</onup>
 					<ondown>9113</ondown>                    
@@ -1641,19 +1747,12 @@
 						<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 						<selected>System.HasAddon(script.globalsearch)</selected>
 					</control>
-					<control type="radiobutton" id="91126">
+<!--					<control type="radiobutton" id="91126">
 						<label>script.tv.show.next.aired</label>
 						<label2>$INFO[System.AddonVersion(script.tv.show.next.aired)]             </label2>
 						<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
 						<onclick condition="!System.HasAddon(script.tv.show.next.aired)">InstallAddon(script.tv.show.next.aired)</onclick>
 						<selected>System.HasAddon(script.tv.show.next.aired)</selected>
-					</control>
-					<control type="radiobutton" id="91127">
-						<label>service.skin.widgets</label>
-						<label2>$INFO[System.AddonVersion(service.skin.widgets)]             </label2>
-						<onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
-						<onclick condition="!System.HasAddon(service.skin.widgets)">InstallAddon(service.skin.widgets)</onclick>
-						<selected>System.HasAddon(service.skin.widgets)</selected>
 					</control>
 					<control type="radiobutton" id="91128">
 						<label>script.skin.helper.widgets</label>
@@ -1661,14 +1760,7 @@
 						<onclick>Addon.OpenSettings(script.skin.helper.widgets)</onclick>
 						<onclick condition="!System.HasAddon(service.skin.widgets)">InstallAddon(script.skin.helper.widgets)</onclick>
 						<selected>System.HasAddon(script.skin.helper.widgets)</selected>
-					</control>
-					<control type="radiobutton" id="91129">
-						<label>script.artwork.beef</label>
-						<label2>$INFO[System.AddonVersion(script.artwork.beef)]             </label2>
-						<onclick>Addon.OpenSettings(script.artwork.beef)</onclick>
-						<onclick condition="!System.HasAddon(script.artwork.beef)">InstallAddon(script.artwork.beef)</onclick>
-						<selected>System.HasAddon(script.artwork.beef)</selected>
-					</control>
+					</control> -->
 					<control type="radiobutton" id="911211">
 						<label>script.cu.lrclyrics</label>
 						<label2>$INFO[System.AddonVersion(script.cu.lrclyrics)]             </label2>
@@ -1683,13 +1775,13 @@
 						<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
 						<selected>System.HasAddon(script.artistslideshow)</selected>
 					</control>
-					<control type="radiobutton" id="911213">
+<!--					<control type="radiobutton" id="911213">
 						<label>plugin.video.specialfeatures</label>
 						<label2>$INFO[System.AddonVersion(plugin.video.specialfeatures)]             </label2>
 						<onclick>Addon.OpenSettings(plugin.video.specialfeatures)</onclick>
 						<onclick condition="!System.HasAddon(plugin.video.specialfeatures)">InstallAddon(plugin.video.specialfeatures)</onclick>
 						<selected>System.HasAddon(plugin.video.specialfeatures)</selected>
-					</control>
+					</control> -->
 					<control type="radiobutton" id="911214">
 						<label>service.upnext</label>
 						<label2>$INFO[System.AddonVersion(service.upnext)]             </label2>
@@ -1761,6 +1853,19 @@
 					</control>
 				</control>
 			</control>
+		</control>
+		<control type="scrollbar" id="500">
+			<left>1845</left>
+			<top>100</top>
+			<width>36</width>
+			<height>900</height>
+			<texturesliderbackground></texturesliderbackground>
+			<texturesliderbar></texturesliderbar>
+			<texturesliderbarfocus></texturesliderbarfocus>
+			<textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+			<textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+			<orientation>vertical</orientation>
+			<onleft>9100</onleft>
 		</control>
 		<control type="group" description="Holiday theme">
 			<visible>Skin.HasSetting(holiday)</visible>

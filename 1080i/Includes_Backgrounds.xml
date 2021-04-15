@@ -338,7 +338,8 @@
         <control type="multiimage">
             <visible>![Player.HasVideo + Skin.HasSetting(Show_VideoBackground)]</visible>
 			<visible>[!Control.IsVisible(56) | [Control.IsVisible(56) + ![$EXP[56_FanartViewNetflix]]]]</visible>
-            <include>Dimensions_Fullscreen</include>
+            <width>100%</width>
+            <height>100%</height>
             <timeperimage>8000</timeperimage>
             <fadetime>400</fadetime>
             <imagepath background="true">$VAR[SubBackground]</imagepath>
@@ -816,20 +817,6 @@
 			<info>Player.Art(albumartist.fanart19)</info>
 			<info>Player.Art(albumartist.fanart20)</info>
 		</control>
-		<!-- Now Playing Extra Fanart: Movies, in extrafanart folder -->
-		<control type="multiimage" id="5045">
-			<top>-100</top>
-			<width>2560</width>
-			<height>0</height>
-			<imagepath background="true">$INFO[Player.FolderPath]extrafanart/</imagepath>
-		</control>
-		<!-- Now Playing Extra Fanart: Episodes, in extrafanart folder -->
-		<control type="multiimage" id="5046">
-			<top>-100</top>
-			<width>2560</width>
-			<height>0</height>
-			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
-		</control>				
 	</include>
 	
 	<include name="HomeEHBackgroundLists">
@@ -1064,8 +1051,9 @@
             <visible>[[String.IsEqual(Container(300).ListItem.Property(background),nodeBackground) | String.IsEqual(Container(300).ListItem.Property(background),playlistBackground) | String.EndsWith(Container(300).ListItem.Property(background),.Fanart)] + !String.IsEqual(Container(300).ListItem.Property(background),Weather.Fanart)] | 
 			         [ControlGroup(700).HasFocus + String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart)) + String.IsEqual(Container(300).ListItem.Property(widgetType),custom) + 
 					  [[String.IsEqual(Container.ListItem.Property(background),nodeBackground) | String.IsEqual(Container.ListItem.Property(background),playlistBackground) | String.EndsWith(Container.ListItem.Property(background),.Fanart)] + !String.IsEqual(Container(300).ListItem.Property(background),Weather.Fanart)]]</visible>
-		    <visible>[Skin.HasSetting(VerticalHome) + [!Container(300).ListItem.Property(widgetThreeShelvesLarge) | [Container(300).ListItem.Property(widgetThreeShelvesLarge) + [Control.HasFocus(300) | Control.HasFocus(9001)] + Container(300).ListItem.Property(widgetsHide)]]] | 
-			         [!Skin.HasSetting(VerticalHome) + [![$EXP[tripleWidgetIsShowing]]] + [!Container(300).ListItem.Property(widgetThreeShelves) | [Container(300).ListItem.Property(widgetThreeShelves) + [Control.HasFocus(300) | Control.HasFocus(9001)] + Container(300).ListItem.Property(widgetsHide)]]]</visible>
+		    <visible>[Skin.HasSetting(Enable.Bottomshortcuts) + !Skin.HasSetting(VerticalHome)] | [Skin.HasSetting(VerticalHome) + [!Container(300).ListItem.Property(widgetThreeShelvesLarge) | [Container(300).ListItem.Property(widgetThreeShelvesLarge) + [Control.HasFocus(300) | Control.HasFocus(9001)] + Container(300).ListItem.Property(widgetsHide)]]] | 
+			         [!Skin.HasSetting(VerticalHome) + [![$EXP[tripleWidgetIsShowing]]] + [!Container(300).ListItem.Property(widgetThreeShelves) | [Container(300).ListItem.Property(widgetThreeShelves) + [[[Control.HasFocus(300) | Control.HasFocus(9001)] + Container(300).ListItem.Property(widgetsHide)] | 
+					                                                                                                                                                                                       [String.IsEqual(Container(300).ListItem.Property(widgetType.2),none) | String.IsEqual(Container(300).ListItem.Property(widgetType.3),none)]]]]]</visible>
 			<control type="image">
                 <left>0</left>
                 <top>41.3</top>

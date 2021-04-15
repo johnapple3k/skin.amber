@@ -3322,6 +3322,22 @@ msgctxt "#32374"
 msgid "Show Dark Background Behind Shortcuts"
 msgstr ""
 
+msgctxt "#32375"
+msgid "Use Artist Slideshow for Audio Fanart"
+msgstr ""
+
+msgctxt "#32376"
+msgid "Disable Lyrics"
+msgstr ""
+
+msgctxt "#32377"
+msgid "Activate Lyrics"
+msgstr ""
+
+msgctxt "#32378"
+msgid "Use Color Flags"
+msgstr ""
+
 #~ msgctxt "#31309"
 #~ msgid "Memory Used:"
 #~ msgstr "Memoria usata:"
