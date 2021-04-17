@@ -10,9 +10,9 @@
 			<animation effect="fade" time="250">WindowOpen</animation>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<control type="image" description="Left Menu background">
-				<left>60</left>
+				<left>20</left>
 				<top>60</top>
-				<width>412</width>
+				<width>462</width>
 				<height>980</height>
 				<texture border="45">dialogs/TinyDialog.png</texture>
 				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
@@ -27,7 +27,7 @@
 			</control>
 			<!-- Left Content -->
 			<control type="label">
-				<posx>100</posx>
+				<posx>65</posx>
 				<posy>80</posy>
 				<textcolor>$VAR[HighlightColor]</textcolor>
 				<label>[B]$VAR[SkinShortcutsLeftLabelVar][/B]</label>
@@ -35,9 +35,9 @@
 
 			<!-- List of Menu/Submenu items -->
 			<control type="list" id="211">
-				<posx>105</posx>
+				<posx>65</posx>
 				<posy>180</posy>
-				<width>322</width>
+				<width>382</width>
 				<height>780</height>
 
 				<onright condition="String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))">90001</onright>
@@ -48,67 +48,71 @@
 				<onright condition="String.IsEqual(Window(Home).Property(skinshortcuts-Widget),5)">7000</onright>
 				<onright condition="String.IsEqual(Window(Home).Property(skinshortcuts-Widget),6)">8000</onright>                
                 
-				<itemlayout width="322" height="60">
+				<itemlayout width="382" height="60">
 					<control type="image">
-						<width>322</width>
+						<width>382</width>
 						<height>60</height>
 						<texture border="3">buttons/ButtonNF.png</texture>
 					</control>
 					<control type="label" description="Main Label">
 						<posx>10</posx>
-						<width>301</width>
+						<width>292</width>
 						<height>60</height>
                         <font>ListDetails</font>
 						<label>$VAR[ShortcutsDisabled]$INFO[ListItem.Label]</label>
 						<visible>!Skin.HasSetting(VerticalHome) | !Skin.HasSetting(Vertical.IconOnly) | String.IsEmpty(Window.Property(groupname)) | String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+						<scroll>false</scroll>
 					</control>
 					<control type="label" description="Main Label">
 						<posx>10</posx>
-						<width>251</width>
+						<width>292</width>
 						<height>60</height>
                         <font>ListDetails</font>
 						<label>$VAR[ShortcutsDisabled]$INFO[ListItem.Label]</label>
 						<visible>[!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu)] | [Skin.HasSetting(VerticalHome) + Skin.HasSetting(Vertical.IconOnly)]</visible>
+						<scroll>false</scroll>
 					</control>
 					<control type="image">
 						<visible>[!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu)] | [Skin.HasSetting(VerticalHome) + Skin.HasSetting(Vertical.IconOnly)]</visible>
-						<posx>251</posx>
+						<posx>321</posx>
 						<posy>5</posy>
 						<width>50</width>
 						<height>50</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout width="322" height="60">
+				<focusedlayout width="382" height="60">
 					<control type="image" description="fa overlay">
 						<animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(211)">Conditional</animation>
-						<width>322</width>
+						<width>382</width>
 						<height>60</height>
 						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 					</control>
 					<control type="label" description="Main Label">
 						<posx>10</posx>
-						<width>301</width>
+						<width>292</width>
 						<height>60</height>
 						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
                         <font>ListDetails</font>
 						<label>$VAR[ShortcutsDisabled]$INFO[ListItem.Label]</label>
 						<visible>!Skin.HasSetting(VerticalHome) | !Skin.HasSetting(Vertical.IconOnly) | String.IsEmpty(Window.Property(groupname)) | String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+						<scroll>false</scroll>
 					</control>
 					<control type="label" description="Main Label">
 						<posx>10</posx>
-						<width>251</width>
+						<width>292</width>
 						<height>60</height>
 						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
                         <font>ListDetails</font>
 						<label>$VAR[ShortcutsDisabled]$INFO[ListItem.Label]</label>
 						<visible>[!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu)] | [Skin.HasSetting(VerticalHome) + Skin.HasSetting(Vertical.IconOnly)]</visible>
+						<scroll>false</scroll>
 					</control>
 					<control type="image">
 						<visible>[!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu)] | [Skin.HasSetting(VerticalHome) + Skin.HasSetting(Vertical.IconOnly)]</visible>
-						<posx>251</posx>
+						<posx>321</posx>
 						<posy>5</posy>
 						<width>50</width>
 						<height>50</height>
