@@ -1540,7 +1540,7 @@
 		<property name="textbackheight4">'54' if (type4 in 'movies' or type4 in 'tvshows' or type4 in 'episodes') and (path4 in 'tags' or path4 in 'genres' or path4 in 'studios' or path4 in 'actors' or path4 in 'directors' or path4 in 'country' or path4 in 'years') else '56' if (type4 in 'movies' or type4 in 'tvshows' or type4 in 'episodes' or type4 in 'musicvideos' or type4 in 'albums' or type4 in 'songs') and (artwork4 in 'Square') else '45' if (triple4 in 'true' and triplelarge in 'false') else '65' if (triple4 in 'true' and triplelarge in 'true') else '74'</property>
         <!-- Content -->
 		<property name="textboxfont4">'Shelf_Label' if (type4 in 'movies' or type4 in 'tvshows' or type4 in 'episodes') and (path4 in 'tags' or path4 in 'genres' or path4 in 'studios' or path4 in 'actors' or path4 in 'directors' or path4 in 'country' or path4 in 'years') else 'ListDetailsSmall' if (type4 in 'movies' or type4 in 'tvshows' or type4 in 'episodes' or type4 in 'musicvideos' or type4 in 'albums' or type4 in 'songs') and (artwork4 in 'Square') else 'ListDetailsSmall' if (type4 in 'favourites') else 'Shelf_Label'</property>
-		<property name="aspect4">'keep' if (artwork4 in 'Banner' or artwork4 in 'Landscape' or artwork4 in 'ClearArt' or artwork4 in 'ClearLogo' or artwork4 in 'CharacterArt' or artwork4 in 'DiscArt') else 'scale' if (artwork4 in 'FanArt' or artwork4 in 'Thumb') else 'keep' if (path4 in 'tags' or path4 in 'genres' or path4 in 'studios' or path4 in 'actors' or path4 in 'directors' or path4 in 'country' or path4 in 'years') else 'keep' if (target4 in 'pvr' or target4 in 'radioguide' or target4 in 'tvguide') else 'scale' if (type4 in 'musicvideos' and artwork4 in 'Poster') else 'stretch'</property>
+		<property name="aspect4">'keep' if (artwork4 in 'Banner' or artwork4 in 'Landscape' or artwork4 in 'ClearArt' or artwork4 in 'ClearLogo' or artwork4 in 'CharacterArt' or artwork4 in 'DiscArt') else 'scale' if (artwork4 in 'FanArt' or artwork4 in 'Thumb') else 'keep' if (path4 in 'tags' or path4 in 'genres' or path4 in 'studios' or path4 in 'actors' or path4 in 'directors' or path4 in 'country' or path4 in 'years') else 'keep' if (target4 in 'pvr' or target4 in 'radioguide' or target4 in 'tvguide' or type4 in 'favourites') else 'scale' if (type4 in 'musicvideos' and artwork4 in 'Poster') else 'stretch'</property>
 		
 		<property name="labelvar4" tag="property" attribute="name|widgetArtwork.4" value="Poster">$VAR[SeasonEpisodeLabel]</property> 
 		<property name="labelvar4">$VAR[ShelfSeasonEpisodeLabel]</property>
@@ -1947,7 +1947,7 @@
 		<property name="textbackheight5">'54' if (type5 in 'movies' or type5 in 'tvshows' or type5 in 'episodes') and (path5 in 'tags' or path5 in 'genres' or path5 in 'studios' or path5 in 'actors' or path5 in 'directors' or path5 in 'country' or path5 in 'years') else '56' if (type5 in 'movies' or type5 in 'tvshows' or type5 in 'episodes' or type5 in 'musicvideos' or type5 in 'albums' or type5 in 'songs') and (artwork5 in 'Square') else '45' if (triple5 in 'true' and triplelarge in 'false') else '65' if (triple5 in 'true' and triplelarge in 'true') else '74'</property>
         <!-- Content -->
 		<property name="textboxfont5">'Shelf_Label' if (type5 in 'movies' or type5 in 'tvshows' or type5 in 'episodes') and (path5 in 'tags' or path5 in 'genres' or path5 in 'studios' or path5 in 'actors' or path5 in 'directors' or path5 in 'country' or path5 in 'years') else 'ListDetailsSmall' if (type5 in 'movies' or type5 in 'tvshows' or type5 in 'episodes' or type5 in 'musicvideos' or type5 in 'albums' or type5 in 'songs') and (artwork5 in 'Square') else 'ListDetailsSmall' if (type5 in 'favourites') else 'Shelf_Label'</property>
-		<property name="aspect5">'keep' if (artwork5 in 'Banner' or artwork5 in 'Landscape' or artwork5 in 'ClearArt' or artwork5 in 'ClearLogo' or artwork5 in 'CharacterArt' or artwork5 in 'DiscArt') else 'scale' if (artwork5 in 'FanArt' or artwork5 in 'Thumb') else 'keep' if (path5 in 'tags' or path5 in 'genres' or path5 in 'studios' or path5 in 'actors' or path5 in 'directors' or path5 in 'country' or path5 in 'years') else 'keep' if (target5 in 'pvr' or target5 in 'radioguide' or target5 in 'tvguide') else 'scale' if (type5 in 'musicvideos' and artwork5 in 'Poster') else 'stretch'</property>
+		<property name="aspect5">'keep' if (artwork5 in 'Banner' or artwork5 in 'Landscape' or artwork5 in 'ClearArt' or artwork5 in 'ClearLogo' or artwork5 in 'CharacterArt' or artwork5 in 'DiscArt') else 'scale' if (artwork5 in 'FanArt' or artwork5 in 'Thumb') else 'keep' if (path5 in 'tags' or path5 in 'genres' or path5 in 'studios' or path5 in 'actors' or path5 in 'directors' or path5 in 'country' or path5 in 'years') else 'keep' if (target5 in 'pvr' or target5 in 'radioguide' or target5 in 'tvguide' or type5 in 'favourites') else 'scale' if (type5 in 'musicvideos' and artwork5 in 'Poster') else 'stretch'</property>
 		
 		<property name="labelvar5" tag="property" attribute="name|widgetArtwork.5" value="Poster">$VAR[SeasonEpisodeLabel]</property> 
 		<property name="labelvar5">$VAR[ShelfSeasonEpisodeLabel]</property>
@@ -2358,7 +2358,7 @@
 		<property name="textbackheight6">'54' if (type6 in 'movies' or type6 in 'tvshows' or type6 in 'episodes') and (path6 in 'tags' or path6 in 'genres' or path6 in 'studios' or path6 in 'actors' or path6 in 'directors' or path6 in 'country' or path6 in 'years') else '56' if (type6 in 'movies' or type6 in 'tvshows' or type6 in 'episodes' or type6 in 'musicvideos' or type6 in 'albums' or type6 in 'songs') and (artwork6 in 'Square') else '45' if (triple6 in 'true' and triplelarge in 'false') else '65' if (triple6 in 'true' and triplelarge in 'true') else '74'</property>
         <!-- Content -->
 		<property name="textboxfont6">'Shelf_Label' if (type6 in 'movies' or type6 in 'tvshows' or type6 in 'episodes') and (path6 in 'tags' or path6 in 'genres' or path6 in 'studios' or path6 in 'actors' or path6 in 'directors' or path6 in 'country' or path6 in 'years') else 'ListDetailsSmall' if (type6 in 'movies' or type6 in 'tvshows' or type6 in 'episodes' or type6 in 'musicvideos' or type6 in 'albums' or type6 in 'songs') and (artwork6 in 'Square') else 'ListDetailsSmall' if (type6 in 'favourites') else 'Shelf_Label'</property>
-		<property name="aspect6">'keep' if (artwork6 in 'Banner' or artwork6 in 'Landscape' or artwork6 in 'ClearArt' or artwork6 in 'ClearLogo' or artwork6 in 'CharacterArt' or artwork6 in 'DiscArt') else 'scale' if (artwork6 in 'FanArt' or artwork6 in 'Thumb') else 'keep' if (path6 in 'tags' or path6 in 'genres' or path6 in 'studios' or path6 in 'actors' or path6 in 'directors' or path6 in 'country' or path6 in 'years') else 'keep' if (target6 in 'pvr' or target6 in 'radioguide' or target6 in 'tvguide') else 'scale' if (type6 in 'musicvideos' and artwork6 in 'Poster') else 'stretch'</property>
+		<property name="aspect6">'keep' if (artwork6 in 'Banner' or artwork6 in 'Landscape' or artwork6 in 'ClearArt' or artwork6 in 'ClearLogo' or artwork6 in 'CharacterArt' or artwork6 in 'DiscArt') else 'scale' if (artwork6 in 'FanArt' or artwork6 in 'Thumb') else 'keep' if (path6 in 'tags' or path6 in 'genres' or path6 in 'studios' or path6 in 'actors' or path6 in 'directors' or path6 in 'country' or path6 in 'years') else 'keep' if (target6 in 'pvr' or target6 in 'radioguide' or target6 in 'tvguide' or type6 in 'favourites') else 'scale' if (type6 in 'musicvideos' and artwork6 in 'Poster') else 'stretch'</property>
 		
 		<property name="labelvar6" tag="property" attribute="name|widgetArtwork.6" value="Poster">$VAR[SeasonEpisodeLabel]</property> 
 		<property name="labelvar6">$VAR[ShelfSeasonEpisodeLabel]</property>
@@ -2641,6 +2641,7 @@
         <property name="triplelarge" tag="property" attribute="name|widgetThreeShelvesLarge" />
 		<property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="double1" tag="property" attribute="name|widgetDouble" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget" />
         <!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.2" value="none">false</property>
 		<property name="onup">true</property>
@@ -2719,7 +2720,7 @@
 		<!-- Below textbox background height -->
 		<property name="textbackheight1">'56' if (triple1 in 'true' and triplelarge in 'false') else '64' if (triplelarge in 'true' and triple1 in 'true') else '74'</property>
 		<!-- Icon Properties -->
-		<property name="iconheight1">'315' if (type1 in 'nextaired' or type1 in 'swrecommendedeps') and (triplelarge in 'true' or triple1 in 'false') else '252' if (type1 in 'nextaired' or type1 in 'swrecommendedeps') and (triplelarge in 'false' and triple1 in 'true') else '228' if (type1 in 'system' or type1 in 'favouriteaddons' or type1 in 'favourite' or type1 in 'weatherdaily' or type1 in 'weatherhourly') and (triplelarge in 'true' or triple1 in 'false') else '182'</property>
+		<property name="iconheight1">'315' if (type1 in 'nextaired' or type1 in 'swrecommendedeps') and (triplelarge in 'true' or triple1 in 'false') else '252' if (type1 in 'nextaired' or type1 in 'swrecommendedeps') and (triplelarge in 'false' and triple1 in 'true') else '228' if (type1 in 'system' or type1 in 'favouriteaddons' or type1 in 'favourite' or type1 in 'weatherdaily' or type1 in 'weatherhourly' or type1 in 'shortweatherdaily' or type1 in 'shortweatherhourly') and (triplelarge in 'true' or triple1 in 'false') else '182'</property>
         <property name="aspect1" tag="property" attribute="name|widgetType" value="system|nextaired">keep</property>
         <property name="aspect1">scale</property>
         <!-- Below Textbox -->
@@ -2735,7 +2736,7 @@
 		<property name="labelfont1" tag="property" attribute="name|widgetTriple" value="true">ListDetailsSmall</property>
 		<property name="labelfont1">Shelf_Label</property>
 		<!-- Panel Content -->
-        <property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -2812,7 +2813,7 @@
 						<param name="isTripleRow">false</param>
 					</include>
 					
-					<include content="$SKINSHORTCUTS[content1]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type1 in 'system' or type1 in 'favouriteaddons' or type1 in 'favourite' or type1 in 'weatherdaily' or type1 in 'weatherhourly']">
+					<include content="$SKINSHORTCUTS[content1]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type1 in 'system' or type1 in 'favouriteaddons' or type1 in 'favourite' or type1 in 'weatherdaily' or type1 in 'weatherhourly' or type1 in 'shortweatherdaily' or type1 in 'shortweatherhourly']">
 						<param name="id1">1600$SKINSHORTCUTS[id]1</param>
                         <param name="iconheight">228</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
@@ -2862,6 +2863,7 @@
 		<property name="triple2" tag="property" attribute="name|widgetTriple.2" />
 		<property name="double2" tag="property" attribute="name|widgetDouble.2" />
         <property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.2" />
 		<!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.3" value="none">false</property>
 		<property name="onup">true</property>
@@ -2940,7 +2942,7 @@
 		<!-- Below textbox background height -->
 		<property name="textbackheight2">'56' if (triple2 in 'true' and triplelarge in 'false') else '64' if (triplelarge in 'true' and triple2 in 'true') else '74'</property>
 		<!-- Icon Properties -->
-		<property name="iconheight2">'315' if (type2 in 'nextaired' or type2 in 'swrecommendedeps') and (triplelarge in 'true' or triple2 in 'false') else '252' if (type2 in 'nextaired' or type2 in 'swrecommendedeps') and (triplelarge in 'false' and triple2 in 'true') else '228' if (type2 in 'system' or type2 in 'favouriteaddons' or type2 in 'favourite' or type2 in 'weatherdaily' or type2 in 'weatherhourly') and (triplelarge in 'true' or triple2 in 'false') else '182'</property>
+		<property name="iconheight2">'315' if (type2 in 'nextaired' or type2 in 'swrecommendedeps') and (triplelarge in 'true' or triple2 in 'false') else '252' if (type2 in 'nextaired' or type2 in 'swrecommendedeps') and (triplelarge in 'false' and triple2 in 'true') else '228' if (type2 in 'system' or type2 in 'favouriteaddons' or type2 in 'favourite' or type2 in 'weatherdaily' or type2 in 'weatherhourly' or type2 in 'shortweatherdaily' or type2 in 'shortweatherhourly') and (triplelarge in 'true' or triple2 in 'false') else '182'</property>
         <property name="aspect2" tag="property" attribute="name|widgetType.2" value="system|nextaired">keep</property>
         <property name="aspect2">scale</property>
         <!-- Below Textbox -->
@@ -2955,7 +2957,7 @@
         <!-- Overlay label font -->
 		<property name="labelfont2" tag="property" attribute="name|widgetTriple.2" value="true">ListDetailsSmall</property>
 		<property name="labelfont2">Shelf_Label</property>        
-        <property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -3034,7 +3036,7 @@
 						<param name="isTripleRow">false</param>
 					</include>
 					
-					<include content="$SKINSHORTCUTS[content2]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type2 in 'system' or type2 in 'favouriteaddons' or type2 in 'favourite' or type2 in 'weatherdaily' or type2 in 'weatherhourly']">
+					<include content="$SKINSHORTCUTS[content2]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type2 in 'system' or type2 in 'favouriteaddons' or type2 in 'favourite' or type2 in 'weatherdaily' or type2 in 'weatherhourly' or type2 in 'shortweatherdaily' or type2 in 'shortweatherhourly']">
 						<param name="id1">1600$SKINSHORTCUTS[id]2</param>
                         <param name="iconheight">228</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
@@ -3084,7 +3086,8 @@
 		<property name="triplelarge" tag="property" attribute="name|widgetThreeShelvesLarge" />
 		<property name="triple3" tag="property" attribute="name|widgetTriple.3" />
 		<property name="double3" tag="property" attribute="name|widgetDouble.3" />
-        <property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />      
+        <property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />  
+        <property name="shortstatic" tag="property" attribute="name|shortStaticWidget.3" />		
 	   <!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.4" value="none">false</property>
 		<property name="onup">true</property>
@@ -3163,7 +3166,7 @@
 		<!-- Below textbox background height -->
 		<property name="textbackheight3">'56' if (triple3 in 'true' and triplelarge in 'false') else '64' if (triplelarge in 'true' and triple3 in 'true') else '74'</property>
 		<!-- Icon Properties -->
-		<property name="iconheight3">'315' if (type3 in 'nextaired' or type3 in 'swrecommendedeps') and (triplelarge in 'true' or triple3 in 'false') else '252' if (type3 in 'nextaired' or type3 in 'swrecommendedeps') and (triplelarge in 'false' and triple3 in 'true') else '228' if (type3 in 'system' or type3 in 'favouriteaddons' or type3 in 'favourite' or type3 in 'weatherdaily' or type3 in 'weatherhourly') and (triplelarge in 'true' or triple3 in 'false') else '182'</property>
+		<property name="iconheight3">'315' if (type3 in 'nextaired' or type3 in 'swrecommendedeps') and (triplelarge in 'true' or triple3 in 'false') else '252' if (type3 in 'nextaired' or type3 in 'swrecommendedeps') and (triplelarge in 'false' and triple3 in 'true') else '228' if (type3 in 'system' or type3 in 'favouriteaddons' or type3 in 'favourite' or type3 in 'weatherdaily' or type3 in 'weatherhourly' or type3 in 'shortweatherdaily' or type3 in 'shortweatherhourly') and (triplelarge in 'true' or triple3 in 'false') else '182'</property>
         <property name="aspect3" tag="property" attribute="name|widgetType.3" value="system|nextaired">keep</property>
         <property name="aspect3">scale</property>
         <!-- Below Textbox -->
@@ -3178,7 +3181,7 @@
         <!-- Overlay label font -->
 		<property name="labelfont3" tag="property" attribute="name|widgetTriple.3" value="true">ListDetailsSmall</property>
 		<property name="labelfont3">Shelf_Label</property>        
-        <property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content3">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -3257,7 +3260,7 @@
 						<param name="isTripleRow">false</param>
 					</include>
 					
-					<include content="$SKINSHORTCUTS[content3]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type3 in 'system' or type3 in 'favouriteaddons' or type3 in 'favourite' or type3 in 'weatherdaily' or type3 in 'weatherhourly']">
+					<include content="$SKINSHORTCUTS[content3]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type3 in 'system' or type3 in 'favouriteaddons' or type3 in 'favourite' or type3 in 'weatherdaily' or type3 in 'weatherhourly' or type3 in 'shortweatherdaily' or type3 in 'shortweatherhourly']">
 						<param name="id1">1600$SKINSHORTCUTS[id]3</param>
                         <param name="iconheight">228</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect3]</param>
@@ -3308,6 +3311,7 @@
 		<property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="triple4" tag="property" attribute="name|widgetTriple.4" />
 		<property name="double4" tag="property" attribute="name|widgetDouble.4" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.4" />
 		<!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.5" value="none">false</property>
 		<property name="onup">true</property>
@@ -3386,7 +3390,7 @@
 		<!-- Below textbox background height -->
 		<property name="textbackheight4">'56' if (triple4 in 'true' and triplelarge in 'false') else '64' if (triplelarge in 'true' and triple4 in 'true') else '74'</property>
 		<!-- Icon Properties -->
-		<property name="iconheight4">'315' if (type4 in 'nextaired' or type4 in 'swrecommendedeps') and (triplelarge in 'true' or triple4 in 'false') else '252' if (type4 in 'nextaired' or type4 in 'swrecommendedeps') and (triplelarge in 'false' and triple4 in 'true') else '228' if (type4 in 'system' or type4 in 'favouriteaddons' or type4 in 'favourite' or type4 in 'weatherdaily' or type4 in 'weatherhourly') and (triplelarge in 'true' or triple4 in 'false') else '182'</property>
+		<property name="iconheight4">'315' if (type4 in 'nextaired' or type4 in 'swrecommendedeps') and (triplelarge in 'true' or triple4 in 'false') else '252' if (type4 in 'nextaired' or type4 in 'swrecommendedeps') and (triplelarge in 'false' and triple4 in 'true') else '228' if (type4 in 'system' or type4 in 'favouriteaddons' or type4 in 'favourite' or type4 in 'weatherdaily' or type4 in 'weatherhourly' or type4 in 'shortweatherdaily' or type4 in 'shortweatherhourly') and (triplelarge in 'true' or triple4 in 'false') else '182'</property>
         <property name="aspect4" tag="property" attribute="name|widgetType.4" value="system|nextaired">keep</property>
         <property name="aspect4">scale</property>
         <!-- Below Textbox -->
@@ -3401,7 +3405,7 @@
         <!-- Overlay label font -->
 		<property name="labelfont4" tag="property" attribute="name|widgetTriple.4" value="true">ListDetailsSmall</property>
 		<property name="labelfont4">Shelf_Label</property>        
-        <property name="content4" tag="property" attribute="name|widgetType.4" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content4" tag="property" attribute="name|widgetType.4" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content4">Shelf_GenericStatic</property>
 		
 		<property name="containertype4" propertyValue="wraplist">
@@ -3500,7 +3504,7 @@
 						<param name="isTripleRow">false</param>
 					</include>
 					
-					<include content="$SKINSHORTCUTS[content4]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type4 in 'system' or type4 in 'favouriteaddons' or type4 in 'favourite' or type4 in 'weatherdaily' or type4 in 'weatherhourly']">
+					<include content="$SKINSHORTCUTS[content4]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type4 in 'system' or type4 in 'favouriteaddons' or type4 in 'favourite' or type4 in 'weatherdaily' or type4 in 'weatherhourly' or type4 in 'shortweatherdaily' or type4 in 'shortweatherhourly']">
 						<param name="id1">1600$SKINSHORTCUTS[id]4</param>
                         <param name="iconheight">228</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect4]</param>
@@ -3552,6 +3556,7 @@
 		<property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="triple5" tag="property" attribute="name|widgetTriple.5" />
 		<property name="double5" tag="property" attribute="name|widgetDouble.5" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.5" />
         <!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.6" value="none">false</property>
 		<property name="onup">true</property>
@@ -3630,7 +3635,7 @@
 		<!-- Below textbox background height -->
 		<property name="textbackheight5">'56' if (triple5 in 'true' and triplelarge in 'false') else '64' if (triplelarge in 'true' and triple5 in 'true') else '74'</property>
 		<!-- Icon Properties -->
-		<property name="iconheight5">'315' if (type5 in 'nextaired' or type5 in 'swrecommendedeps') and (triplelarge in 'true' or triple5 in 'false') else '252' if (type5 in 'nextaired' or type5 in 'swrecommendedeps') and (triplelarge in 'false' and triple5 in 'true') else '228' if (type5 in 'system' or type5 in 'favouriteaddons' or type5 in 'favourite' or type5 in 'weatherdaily' or type5 in 'weatherhourly') and (triplelarge in 'true' or triple5 in 'false') else '182'</property>
+		<property name="iconheight5">'315' if (type5 in 'nextaired' or type5 in 'swrecommendedeps') and (triplelarge in 'true' or triple5 in 'false') else '252' if (type5 in 'nextaired' or type5 in 'swrecommendedeps') and (triplelarge in 'false' and triple5 in 'true') else '228' if (type5 in 'system' or type5 in 'favouriteaddons' or type5 in 'favourite' or type5 in 'weatherdaily' or type5 in 'weatherhourly' or type5 in 'shortweatherdaily' or type5 in 'shortweatherhourly') and (triplelarge in 'true' or triple5 in 'false') else '182'</property>
         <property name="aspect5" tag="property" attribute="name|widgetType.5" value="system|nextaired">keep</property>
         <property name="aspect5">scale</property>
         <!-- Below Textbox -->
@@ -3645,7 +3650,7 @@
         <!-- Overlay label font -->
 		<property name="labelfont5" tag="property" attribute="name|widgetTriple.5" value="true">ListDetailsSmall</property>
 		<property name="labelfont5">Shelf_Label</property>        
-        <property name="content5" tag="property" attribute="name|widgetType.5" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content5" tag="property" attribute="name|widgetType.5" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content5">Shelf_GenericStatic</property>
 		
 		<property name="containertype5" propertyValue="wraplist">
@@ -3744,7 +3749,7 @@
 						<param name="isTripleRow">false</param>
 					</include>
 					
-					<include content="$SKINSHORTCUTS[content5]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type5 in 'system' or type5 in 'favouriteaddons' or type5 in 'favourite' or type5 in 'weatherdaily' or type5 in 'weatherhourly']">
+					<include content="$SKINSHORTCUTS[content5]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type5 in 'system' or type5 in 'favouriteaddons' or type5 in 'favourite' or type5 in 'weatherdaily' or type5 in 'weatherhourly' or type5 in 'shortweatherdaily' or type5 in 'shortweatherhourly']">
 						<param name="id1">1600$SKINSHORTCUTS[id]5</param>
                         <param name="iconheight">228</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect5]</param>
@@ -3797,6 +3802,7 @@
 		<property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="triple6" tag="property" attribute="name|widgetTriple.6" />
 		<property name="double6" tag="property" attribute="name|widgetDouble.6" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.6" />
 		<!-- Top -->
 		<property name="top" propertyValue="10">
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="High" />
@@ -3872,7 +3878,7 @@
 		<!-- Below textbox background height -->
 		<property name="textbackheight6">'56' if (triple6 in 'true' and triplelarge in 'false') else '64' if (triplelarge in 'true' and triple6 in 'true') else '74'</property>
 		<!-- Icon Properties -->
-		<property name="iconheight6">'315' if (type6 in 'nextaired' or type6 in 'swrecommendedeps') and (triplelarge in 'true' or triple6 in 'false') else '252' if (type6 in 'nextaired' or type6 in 'swrecommendedeps') and (triplelarge in 'false' and triple6 in 'true') else '228' if (type6 in 'system' or type6 in 'favouriteaddons' or type6 in 'favourite' or type6 in 'weatherdaily' or type6 in 'weatherhourly') and (triplelarge in 'true' or triple6 in 'false') else '182'</property>
+		<property name="iconheight6">'315' if (type6 in 'nextaired' or type6 in 'swrecommendedeps') and (triplelarge in 'true' or triple6 in 'false') else '252' if (type6 in 'nextaired' or type6 in 'swrecommendedeps') and (triplelarge in 'false' and triple6 in 'true') else '228' if (type6 in 'system' or type6 in 'favouriteaddons' or type6 in 'favourite' or type6 in 'weatherdaily' or type6 in 'weatherhourly' or type6 in 'shortweatherdaily' or type6 in 'shortweatherhourly') and (triplelarge in 'true' or triple6 in 'false') else '182'</property>
         <property name="aspect6" tag="property" attribute="name|widgetType.6" value="system|nextaired">keep</property>
         <property name="aspect6">scale</property>
         <!-- Below Textbox -->
@@ -3887,7 +3893,7 @@
         <!-- Overlay label font -->
 		<property name="labelfont6" tag="property" attribute="name|widgetTriple.6" value="true">ListDetailsSmall</property>
 		<property name="labelfont6">Shelf_Label</property>        
-        <property name="content6" tag="property" attribute="name|widgetType.6" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content6" tag="property" attribute="name|widgetType.6" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content6">Shelf_GenericStatic</property>
 		
 		<property name="containertype6" propertyValue="wraplist">
@@ -3984,7 +3990,7 @@
 						<param name="isTripleRow">false</param>
 					</include>
 					
-					<include content="$SKINSHORTCUTS[content6]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type6 in 'system' or type6 in 'favouriteaddons' or type6 in 'favourite' or type6 in 'weatherdaily' or type6 in 'weatherhourly']">
+					<include content="$SKINSHORTCUTS[content6]" condition="[Skin.HasSetting(Enable.BottomShortcuts) + !Skin.HasSetting(VerticalHome)] + $PYTHON[type6 in 'system' or type6 in 'favouriteaddons' or type6 in 'favourite' or type6 in 'weatherdaily' or type6 in 'weatherhourly' or type6 in 'shortweatherdaily' or type6 in 'shortweatherhourly']">
 						<param name="id1">1600$SKINSHORTCUTS[id]6</param>
                         <param name="iconheight">228</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect6]</param>
@@ -4860,6 +4866,7 @@
 		<property name="sortby1" tag="property" attribute="name|widgetSortBy" />
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget" />
 		
 		<!-- Top when only widget 1 has items -->
 		<!-- Widgets in standard position -->
@@ -4923,7 +4930,7 @@
         <property name="labelvisibility1">false</property>
         <property name="textboxvisibility1" tag="property" attribute="name|widgetType" value="nextaired">false</property>
         <property name="textboxvisibility1">true</property>        
-        <property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -4997,6 +5004,7 @@
 		<property name="sortby2" tag="property" attribute="name|widgetSortBy.2" />
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.2" />
 		
 		<!-- Top when both widgets have items -->
 		<!-- Widget 1 is small -->
@@ -5033,7 +5041,7 @@
         <property name="labelvisibility2">false</property>
         <property name="textboxvisibility2" tag="property" attribute="name|widgetType.2" value="nextaired">false</property>
         <property name="textboxvisibility2">true</property>        
-        <property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -6014,8 +6022,8 @@
 		<!-- Widget 3 is big, widget 2 is small, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowMediumLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6026,8 +6034,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -6039,8 +6047,8 @@
 		<!-- Widget 3 is big, widget 2 is big, widget 1 is small -->
 		<!-- Widgets in the low position -->
 		<property name="ShowMediumLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6051,8 +6059,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -6062,8 +6070,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6073,8 +6081,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -6085,8 +6093,8 @@
 		<!-- Widget 3 is big, widget 2 is small, widget 1 is big -->
 		<!-- Widgets in low position -->
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6097,8 +6105,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -6107,8 +6115,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6118,8 +6126,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -6131,8 +6139,8 @@
 		<!-- Widget 3 is small, widget 2 is small, widget 1 is small -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMediumLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6144,8 +6152,8 @@
         </property>
 		<!-- Widget 3 is small, widget 2 is big, widget 1 is big -->
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -6155,8 +6163,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -6165,8 +6173,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -6175,8 +6183,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -6187,8 +6195,8 @@
 		
 		<!-- Widget 3 is big, widget 2 is big, widget 1 is big -->
 		<property name="ShowNoLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -6198,8 +6206,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowNoLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
@@ -6208,8 +6216,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowNoLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -6218,8 +6226,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowNoLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
@@ -6227,8 +6235,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowNoLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -6237,8 +6245,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowNoLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
@@ -6246,8 +6254,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowNoLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" /><rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" /><rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -6347,8 +6355,8 @@
 		<!-- Widget 3 is small, widget 2 is small, widget 1 is big -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6359,8 +6367,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6372,8 +6380,8 @@
 		<!-- Widget 3 is small, widget 2 is big, widget 1 is small -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6384,8 +6392,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6402,8 +6410,8 @@
 		<!-- Widget 3 is small, widget 2 is small, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6524,8 +6532,8 @@
 		<!-- Widget 3 is small, widget 2 is small, widget 1 is big -->
 		<!-- Widgets in low position -->
 		<property name="ShowLarge2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6547,8 +6555,8 @@
 		<!-- Widget 3 is small, widget 2 is big, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowLarge2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -6559,8 +6567,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowLarge2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -9951,6 +9959,7 @@
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
 		<property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget" />
 		<!-- Panel height -->
 		<property name="panelheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
 		<property name="panelheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
@@ -10109,7 +10118,7 @@
         </property>
 		<property name="textbackheight1">56</property>
 		<!-- Content -->
-		<property name="iconheight1">'315' if (type1 in 'nextaired' or type1 in 'swrecommendedeps') and (type2 in 'none' or type3 in 'none') else '228' if (type1 in 'system' or type1 in 'favouriteaddons' or type1 in 'favourite' or type1 in 'weatherdaily' or type1 in 'weatherhourly') and (type2 in 'none' or type3 in 'none') else '220' if (type1 in 'nextaired' or type1 in 'swrecommendedeps') else '159'</property>
+		<property name="iconheight1">'315' if (type1 in 'nextaired' or type1 in 'swrecommendedeps') and (type2 in 'none' or type3 in 'none') else '228' if (type1 in 'system' or type1 in 'favouriteaddons' or type1 in 'favourite' or type1 in 'weatherdaily' or type1 in 'weatherhourly' or type1 in 'shortweatherdaily' or type1 in 'shortweatherhourly') and (type2 in 'none' or type3 in 'none') else '220' if (type1 in 'nextaired' or type1 in 'swrecommendedeps') else '159'</property>
 		<property name="aspect1" tag="property" attribute="name|widgetType" value="system|nextaired">keep</property>
         <property name="aspect1">scale</property>
         <!-- Overlay Label and Below Icon Textbox -->
@@ -10131,7 +10140,7 @@
         </property>
 		<property name="isTripleRowLarge1">false</property> 
 		
-		<property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+		<property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -10247,6 +10256,7 @@
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
 		<property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.2" />
 		<!-- Panel height -->
 		<property name="panelheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
 		<property name="panelheight">220</property>
@@ -10286,7 +10296,7 @@
 		<property name="textbackheight2" tag="property" attribute="name|widgetType.3" value="none">74</property>
 		<property name="textbackheight2">56</property>
 		<!-- Content -->
-		<property name="iconheight2">'315' if (type2 in 'nextaired' or type2 in 'swrecommendedeps') and (type3 in 'none') else '228' if (type2 in 'system' or type2 in 'favouriteaddons' or type2 in 'favourite' or type2 in 'weatherdaily' or type2 in 'weatherhourly') and (type3 in 'none') else '220' if (type2 in 'nextaired' or type2 in 'swrecommendedeps') else '159'</property>
+		<property name="iconheight2">'315' if (type2 in 'nextaired' or type2 in 'swrecommendedeps') and (type3 in 'none') else '228' if (type2 in 'system' or type2 in 'favouriteaddons' or type2 in 'favourite' or type2 in 'weatherdaily' or type2 in 'weatherhourly' or type2 in 'shortweatherdaily' or type2 in 'shortweatherhourly') and (type3 in 'none') else '220' if (type2 in 'nextaired' or type2 in 'swrecommendedeps') else '159'</property>
         <property name="aspect2" tag="property" attribute="name|widgetType.2" value="system|nextaired">keep</property>
         <property name="aspect2">scale</property>
         <!-- Overlay Label and Below Icon Textbox -->
@@ -10307,7 +10317,7 @@
 		<property name="isTripleRowLarge2" tag="property" attribute="name|widgetType.3" value="none">true</property>
 		<property name="isTripleRowLarge2">false</property> 
 		
-		<property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+		<property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -10422,6 +10432,7 @@
 		<property name="sortby3" tag="property" attribute="name|widgetSortBy.3" />
 		<property name="sortorder3" tag="property" attribute="name|widgetSortOrder.3" />
 		<property name="limit3" tag="property" attribute="name|widgetLimit.3" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.3" />
 		<!-- Panel height -->
 		<property name="panelheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
 		<property name="panelheight">220</property>
@@ -10448,7 +10459,7 @@
 		<property name="textbackheight3" tag="property" attribute="name|widgetType.2" value="none">74</property>
 		<property name="textbackheight3">56</property>
 		<!-- Content -->
-		<property name="iconheight3">'315' if (type3 in 'nextaired' or type3 in 'swrecommendedeps') and (type2 in 'none') else '228' if (type3 in 'system' or type3 in 'favouriteaddons' or type3 in 'favourite' or type3 in 'weatherdaily' or type3 in 'weatherhourly') and (type2 in 'none') else '220' if (type3 in 'nextaired' or type3 in 'swrecommendedeps') else '159'</property>
+		<property name="iconheight3">'315' if (type3 in 'nextaired' or type3 in 'swrecommendedeps') and (type2 in 'none') else '228' if (type3 in 'system' or type3 in 'favouriteaddons' or type3 in 'favourite' or type3 in 'weatherdaily' or type3 in 'weatherhourly' or type3 in 'shortweatherdaily' or type3 in 'shortweatherhourly') and (type2 in 'none') else '220' if (type3 in 'nextaired' or type3 in 'swrecommendedeps') else '159'</property>
         <property name="aspect3" tag="property" attribute="name|widgetType.3" value="system|nextaired">keep</property>
         <property name="aspect3">scale</property>
         <!-- Overlay Label and Below Icon Textbox -->
@@ -10467,7 +10478,7 @@
 		<property name="isTripleRowLarge3" tag="property" attribute="name|widgetType.2" value="none">true</property>
 		<property name="isTripleRowLarge3">false</property> 
 		
-		<property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+		<property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content3">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -11258,7 +11269,7 @@
 		<!-- Only widget 2 and widget 1 have items -->
 		<!-- Widget 2 is big, widget 1 is big -->
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
@@ -11267,7 +11278,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
@@ -11275,7 +11286,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
@@ -11283,7 +11294,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -11293,7 +11304,7 @@
 		<!-- Only widget 3 and widget 1 have items -->
 		<!-- Widget 3 is big, widget 1 is big -->
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
@@ -11302,7 +11313,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
@@ -11310,7 +11321,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
@@ -11318,7 +11329,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -11329,8 +11340,8 @@
 		<!-- Widget 3 is big, widget 2 is small, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowMediumLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11341,8 +11352,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11354,8 +11365,8 @@
 		<!-- Widget 3 is big, widget 2 is big, widget 1 is small -->
 		<!-- Widgets in the low position -->
 		<property name="ShowMediumLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11366,8 +11377,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -11377,8 +11388,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11388,8 +11399,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -11400,8 +11411,8 @@
 		<!-- Widget 3 is big, widget 2 is small, widget 1 is big -->
 		<!-- Widgets in low position -->
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11412,8 +11423,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11422,8 +11433,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11433,8 +11444,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMediumLogo" propertyValue="true">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11446,8 +11457,8 @@
 		<!-- Widget 3 is small, widget 2 is small, widget 1 is small -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMediumLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11466,7 +11477,7 @@
 		<!-- Widget 2 is big, widget 1 is small -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -11476,7 +11487,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -11487,7 +11498,7 @@
 		<!-- Widget 2 is small, widget 1 is big -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11497,7 +11508,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11510,7 +11521,7 @@
 		<!-- Widget 3 is big, widget 1 is small -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11520,7 +11531,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
@@ -11531,7 +11542,7 @@
 		<!-- Widget 3 is small, widget 1 is big -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11541,7 +11552,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11554,8 +11565,8 @@
 		<!-- Widget 3 is small, widget 2 is small, widget 1 is big -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11566,8 +11577,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11579,8 +11590,8 @@
 		<!-- Widget 3 is small, widget 2 is big, widget 1 is small -->
 		<!-- Widgets in standard position -->
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11591,8 +11602,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowMedium2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11609,8 +11620,8 @@
 		<!-- Widget 3 is small, widget 2 is small, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11625,7 +11636,7 @@
 		<!-- Widget 2 is small, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11637,7 +11648,7 @@
 		<!-- Widget 2 is big, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -11647,7 +11658,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -11658,7 +11669,7 @@
 		<!-- Widget 2 is small, widget 1 is big -->
 		<!-- Widgets in low position -->
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11668,7 +11679,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11681,7 +11692,7 @@
 		<!-- Widget 3 is small, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11693,7 +11704,7 @@
 		<!-- Widget 3 is big, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11703,7 +11714,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
@@ -11714,7 +11725,7 @@
 		<!-- Widget 3 is small, widget 1 is big -->
 		<!-- Widgets in low position -->
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11724,7 +11735,7 @@
 			<match>all</match>
         </property>
 		<property name="ShowLargeLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11765,8 +11776,8 @@
 		<!-- Widget 3 is small, widget 2 is small, widget 1 is big -->
 		<!-- Widgets in low position -->
 		<property name="ShowLarge2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11788,8 +11799,8 @@
 		<!-- Widget 3 is small, widget 2 is big, widget 1 is small -->
 		<!-- Widgets in low position -->
 		<property name="ShowLarge2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11800,8 +11811,8 @@
 			<match>all</match>
         </property>
 		<property name="ShowLarge2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -11815,7 +11826,7 @@
 		<!-- Widget 2 is small, widget 1 is small -->
 		<!-- Widgets in standard position -->
 		<property name="ShowLarge2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -11829,7 +11840,7 @@
 		<!-- Widget 3 is small, widget 1 is small -->
 		<!-- Widgets in standard position -->
 		<property name="ShowLarge2Logo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+	        <rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
@@ -13060,6 +13071,7 @@
 		<property name="sortby1" tag="property" attribute="name|widgetSortBy" />
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget" />
         <!-- Itemlayout/Focusedlayout Height/Width -->
 		<property name="layoutheight">315</property>
 		<property name="layoutwidth">228</property>
@@ -13068,8 +13080,8 @@
 		<!-- All three widgets have items -->
 		<!-- Widget 3 is big, widget 2 is big -->
 		<property name="paneltop" propertyValue="640">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -13077,32 +13089,32 @@
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="640">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="640">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="640">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<match>all</match>
         </property>
 		<!-- Widget 3 is small, widget 2 is big -->
 		<property name="paneltop" propertyValue="615">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
@@ -13110,8 +13122,8 @@
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="615">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
@@ -13119,8 +13131,8 @@
         </property>
 		<!-- Widget 3 is big, widget 2 is small -->
 		<property name="paneltop" propertyValue="595">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -13128,8 +13140,8 @@
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="595">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
@@ -13137,8 +13149,8 @@
         </property>
 		<!-- Widget 3 is small, widget 2 is small -->
 		<property name="paneltop" propertyValue="545">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -13150,7 +13162,7 @@
 		<!-- Widget 2 is small -->
 		<property name="paneltop" propertyValue="360">
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
 			<match>all</match>
@@ -13158,14 +13170,14 @@
 		<!-- Widget 2 is big -->
 		<property name="paneltop" propertyValue="520">
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="520">
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
-			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.2" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<match>all</match>
         </property>
@@ -13173,7 +13185,7 @@
 		<!-- Only widget 3 and widget 1 have items -->
 		<!-- Widget 3 is small -->
 		<property name="paneltop" propertyValue="360">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
@@ -13181,14 +13193,14 @@
         </property>
 		<!-- Widget 3 is big -->
 		<property name="paneltop" propertyValue="520">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="520">
-			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
+			<rule tag="property" attribute="name|widgetType.3" value="picture|games|video|addons|custom|favourite|weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly|system|radio|tv|musicvideos|songs|albums|artists|episodes|tvshows|movies|favouriteaddons|people" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
 			<match>all</match>
@@ -13219,7 +13231,7 @@
         <property name="labelfont1" tag="property" attribute="name|widgetType" value="episodes|people">ListDetailsSmall</property>
 		<property name="labelfont1">Shelf_Label</property>
 		<property name="textboxfont1">Shelf_Label</property>
-		<property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+		<property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -13288,6 +13300,7 @@
 		<property name="sortby2" tag="property" attribute="name|widgetSortBy.2" />
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.2" />
 		<!-- Itemlayout/Focusedlayout Height/Width -->
 		<property name="layoutheight">315</property>
 		<property name="layoutwidth">228</property>
@@ -13346,7 +13359,7 @@
         <property name="textboxvisibility2" tag="property" attribute="name|widgetType.2" value="nextaired">false</property>
         <property name="textboxvisibility2">true</property>        
 		<property name="textboxfont2">Shelf_Label</property>
-		<property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+		<property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -13415,6 +13428,7 @@
 		<property name="sortby3" tag="property" attribute="name|widgetSortBy.3" />
 		<property name="sortorder3" tag="property" attribute="name|widgetSortOrder.3" />
 		<property name="limit3" tag="property" attribute="name|widgetLimit.3" />
+		<property name="shortstatic" tag="property" attribute="name|shortStaticWidget.3" />
 		<!-- Itemlayout/Focusedlayout Height/Width -->
 		<property name="layoutheight">315</property>
 		<property name="layoutwidth">228</property>
@@ -13452,7 +13466,7 @@
         <property name="textboxvisibility3" tag="property" attribute="name|widgetType.3" value="nextaired">false</property>
         <property name="textboxvisibility3">true</property>  
 		<property name="textboxfont3">Shelf_Label</property>
-        <property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
+        <property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly|shortweatherdaily|shortweatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content3">Shelf_GenericStatic</property>
 		
 		<controls>
@@ -13737,6 +13751,78 @@
 		    </item>
         </controls>        
 	</other>
+	<!-- Short Hourly Weather -->
+	<other include="ShortWeatherContentHourly">
+        <condition tag="property" attribute="name|widgetType">shortweatherhourly</condition>
+        <condition tag="property" attribute="name|widgetType.2">shortweatherhourly</condition>
+        <condition tag="property" attribute="name|widgetType.3">shortweatherhourly</condition>
+        <condition tag="property" attribute="name|widgetType.4">shortweatherhourly</condition>
+        <condition tag="property" attribute="name|widgetType.5">shortweatherhourly</condition>
+        <condition tag="property" attribute="name|widgetType.6">shortweatherhourly</condition>
+        <match>any</match>
+        <controls>
+		    <item>
+			    <label>$INFO[Window(weather).Property(Hourly.1.Time)] • $INFO[Window(weather).Property(Hourly.1.ShortDate)][CR][B]$INFO[Window(weather).Property(Hourly.1.Temperature)]$INFO[Window(weather).Property(Hourly.1.Precipitation), • ][/B]</label>
+			    <property name="Time">$INFO[Window(weather).Property(Hourly.1.Time)]</property>
+			    <property name="Temperature">$INFO[Window(weather).Property(Hourly.1.Temperature)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Hourly.1.Outlook)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Hourly.1.Cloudiness)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Hourly.1.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Hourly.1.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.1.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Hourly.1.Outlook))</visible>
+		    </item>
+		    <item>
+			    <label>$INFO[Window(weather).Property(Hourly.2.Time)] • $INFO[Window(weather).Property(Hourly.2.ShortDate)][CR][B]$INFO[Window(weather).Property(Hourly.2.Temperature)]$INFO[Window(weather).Property(Hourly.2.Precipitation), • ][/B]</label>
+			    <property name="Time">$INFO[Window(weather).Property(Hourly.2.Time)]</property>
+			    <property name="Temperature">$INFO[Window(weather).Property(Hourly.2.Temperature)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Hourly.2.Outlook)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Hourly.2.Cloudiness)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Hourly.2.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Hourly.2.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.2.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Hourly.2.Outlook))</visible>
+		    </item>
+		    <item>
+    			<label>$INFO[Window(weather).Property(Hourly.3.Time)] • $INFO[Window(weather).Property(Hourly.3.ShortDate)][CR][B]$INFO[Window(weather).Property(Hourly.3.Temperature)]$INFO[Window(weather).Property(Hourly.3.Precipitation), • ][/B]</label>
+			    <property name="Time">$INFO[Window(weather).Property(Hourly.3.Time)]</property>
+			    <property name="Temperature">$INFO[Window(weather).Property(Hourly.3.Temperature)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Hourly.3.Outlook)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Hourly.3.Cloudiness)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Hourly.3.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Hourly.3.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.3.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Hourly.3.Outlook))</visible>
+		    </item>
+		    <item>
+    			<label>$INFO[Window(weather).Property(Hourly.4.Time)] • $INFO[Window(weather).Property(Hourly.4.ShortDate)][CR][B]$INFO[Window(weather).Property(Hourly.4.Temperature)]$INFO[Window(weather).Property(Hourly.4.Precipitation), • ][/B]</label>
+			    <property name="Time">$INFO[Window(weather).Property(Hourly.4.Time)]</property>
+			    <property name="Temperature">$INFO[Window(weather).Property(Hourly.4.Temperature)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Hourly.4.Outlook)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Hourly.4.Cloudiness)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Hourly.4.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Hourly.4.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.4.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Hourly.4.Outlook))</visible>
+		    </item>
+		    <item>
+			    <label>$INFO[Window(weather).Property(Hourly.5.Time)] • $INFO[Window(weather).Property(Hourly.5.ShortDate)][CR][B]$INFO[Window(weather).Property(Hourly.5.Temperature)]$INFO[Window(weather).Property(Hourly.5.Precipitation), • ][/B]</label>
+			    <property name="Time">$INFO[Window(weather).Property(Hourly.5.Time)]</property>
+			    <property name="Temperature">$INFO[Window(weather).Property(Hourly.5.Temperature)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Hourly.5.Outlook)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Hourly.5.Cloudiness)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Hourly.5.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Hourly.5.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.5.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Hourly.5.Outlook))</visible>
+		    </item>
+        </controls>        
+	</other>
     <!-- Daily Weather -->
 	<other include="WeatherContentDaily">
         <condition tag="property" attribute="name|widgetType">weatherdaily</condition>
@@ -13914,6 +14000,78 @@
 			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.14.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.14.Outlook))</visible>
+		    </item>
+        </controls>        
+	</other>
+	<!-- Short Daily Weather -->
+	<other include="ShortWeatherContentDaily">
+        <condition tag="property" attribute="name|widgetType">shortweatherdaily</condition>
+        <condition tag="property" attribute="name|widgetType.2">shortweatherdaily</condition>
+        <condition tag="property" attribute="name|widgetType.3">shortweatherdaily</condition>
+        <condition tag="property" attribute="name|widgetType.4">shortweatherdaily</condition>
+        <condition tag="property" attribute="name|widgetType.5">shortweatherdaily</condition>
+        <condition tag="property" attribute="name|widgetType.6">shortweatherdaily</condition>
+        <match>any</match> 
+        <controls>
+		    <item>
+			    <label>$INFO[Window(weather).Property(Daily.1.ShortDay)] • $INFO[Window(weather).Property(Daily.1.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.1.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.1.LowTemperature)][/COLOR][/B]</label>
+			    <property name="LongDay">$INFO[Window(weather).Property(Daily.1.LongDay)]</property>
+			    <property name="TempDay">$INFO[Window(weather).Property(Daily.1.TempDay)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.1.Cloudiness)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Daily.1.Outlook)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.1.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.1.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.1.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Daily.1.Outlook))</visible>
+		    </item>
+		    <item>
+			    <label>$INFO[Window(weather).Property(Daily.2.ShortDay)] • $INFO[Window(weather).Property(Daily.2.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.2.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.2.LowTemperature)][/COLOR][/B]</label>
+			    <property name="LongDay">$INFO[Window(weather).Property(Daily.2.LongDay)]</property>
+			    <property name="TempDay">$INFO[Window(weather).Property(Daily.2.TempDay)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.2.Cloudiness)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Daily.2.Outlook)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.2.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.2.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.2.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Daily.2.Outlook))</visible>
+		    </item>
+		    <item>
+			    <label>$INFO[Window(weather).Property(Daily.3.ShortDay)] • $INFO[Window(weather).Property(Daily.3.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.3.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.3.LowTemperature)][/COLOR][/B]</label>
+			    <property name="LongDay">$INFO[Window(weather).Property(Daily.3.LongDay)]</property>
+			    <property name="TempDay">$INFO[Window(weather).Property(Daily.3.TempDay)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.3.Cloudiness)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Daily.3.Outlook)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.3.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.3.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.3.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Daily.3.Outlook))</visible>
+		    </item>
+		    <item>
+			    <label>$INFO[Window(weather).Property(Daily.4.ShortDay)] • $INFO[Window(weather).Property(Daily.4.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.4.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.4.LowTemperature)][/COLOR][/B]</label>
+			    <property name="LongDay">$INFO[Window(weather).Property(Daily.4.LongDay)]</property>
+			    <property name="TempDay">$INFO[Window(weather).Property(Daily.4.TempDay)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.4.Cloudiness)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Daily.4.Outlook)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.4.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.4.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.4.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Daily.4.Outlook))</visible>
+		    </item>
+		    <item>
+			    <label>$INFO[Window(weather).Property(Daily.5.ShortDay)] • $INFO[Window(weather).Property(Daily.5.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.5.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.5.LowTemperature)][/COLOR][/B]</label>
+			    <property name="LongDay">$INFO[Window(weather).Property(Daily.5.LongDay)]</property>
+			    <property name="TempDay">$INFO[Window(weather).Property(Daily.5.TempDay)]</property>
+			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.5.Cloudiness)]</property>
+			    <property name="Outlook">$INFO[Window(weather).Property(Daily.5.Outlook)]</property>
+			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.5.ShortDate)]</property>
+			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.5.FanartCode)]</property>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.5.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <onclick>noop</onclick>
+			    <visible>!String.IsEmpty(Window(weather).Property(Daily.5.Outlook))</visible>
 		    </item>
         </controls>        
 	</other>
@@ -14794,7 +14952,7 @@
 	</propertyGroup>
 	
 	<propertyGroup name="widgetArtCommon">
-	    <property name="aspect1">'keep' if (artwork1 in 'Banner' or artwork1 in 'Landscape' or artwork1 in 'ClearArt' or artwork1 in 'ClearLogo' or artwork1 in 'CharacterArt' or artwork1 in 'DiscArt') else 'scale' if (artwork1 in 'FanArt' or artwork1 in 'Thumb') else 'keep' if (path1 in 'tags' or path1 in 'genres' or path1 in 'studios' or path1 in 'actors' or path1 in 'directors' or path1 in 'country' or path1 in 'years') else 'keep' if (target1 in 'pvr' or target1 in 'radioguide' or target1 in 'tvguide') else 'scale' if (type1 in 'musicvideos' and artwork1 in 'Poster') else 'stretch'</property>
+	    <property name="aspect1">'keep' if (artwork1 in 'Banner' or artwork1 in 'Landscape' or artwork1 in 'ClearArt' or artwork1 in 'ClearLogo' or artwork1 in 'CharacterArt' or artwork1 in 'DiscArt') else 'scale' if (artwork1 in 'FanArt' or artwork1 in 'Thumb') else 'keep' if (path1 in 'tags' or path1 in 'genres' or path1 in 'studios' or path1 in 'actors' or path1 in 'directors' or path1 in 'country' or path1 in 'years') else 'keep' if (target1 in 'pvr' or target1 in 'radioguide' or target1 in 'tvguide' or type1 in 'favourites') else 'scale' if (type1 in 'musicvideos' and artwork1 in 'Poster') else 'stretch'</property>
 		
 		
 		<property name="labelvar1" tag="property" attribute="name|widgetArtwork" value="Poster">$VAR[SeasonEpisodeLabel]</property> 
@@ -14920,7 +15078,7 @@
 	</propertyGroup>
 	
 	<propertyGroup name="widget2ArtCommon">
-		<property name="aspect2">'keep' if (artwork2 in 'Banner' or artwork2 in 'Landscape' or artwork2 in 'ClearArt' or artwork2 in 'ClearLogo' or artwork2 in 'CharacterArt' or artwork2 in 'DiscArt') else 'scale' if (artwork2 in 'FanArt' or artwork2 in 'Thumb') else 'keep' if (path2 in 'tags' or path2 in 'genres' or path2 in 'studios' or path2 in 'actors' or path2 in 'directors' or path2 in 'country' or path2 in 'years') else 'keep' if (target2 in 'pvr' or target2 in 'radioguide' or target2 in 'tvguide') else 'scale' if (type2 in 'musicvideos' and artwork2 in 'Poster') else 'stretch'</property>
+		<property name="aspect2">'keep' if (artwork2 in 'Banner' or artwork2 in 'Landscape' or artwork2 in 'ClearArt' or artwork2 in 'ClearLogo' or artwork2 in 'CharacterArt' or artwork2 in 'DiscArt') else 'scale' if (artwork2 in 'FanArt' or artwork2 in 'Thumb') else 'keep' if (path2 in 'tags' or path2 in 'genres' or path2 in 'studios' or path2 in 'actors' or path2 in 'directors' or path2 in 'country' or path2 in 'years') else 'keep' if (target2 in 'pvr' or target2 in 'radioguide' or target2 in 'tvguide' or type2 in 'favourites') else 'scale' if (type2 in 'musicvideos' and artwork2 in 'Poster') else 'stretch'</property>
 		
 		<property name="labelvar2" tag="property" attribute="name|widgetArtwork.2" value="Poster">$VAR[SeasonEpisodeLabel]</property> 
 		<property name="labelvar2">$VAR[ShelfSeasonEpisodeLabel]</property>
@@ -15046,7 +15204,7 @@
 	</propertyGroup>
 	
     <propertyGroup name="widget3ArtCommon">
-		<property name="aspect3">'keep' if (artwork3 in 'Banner' or artwork3 in 'Landscape' or artwork3 in 'ClearArt' or artwork3 in 'ClearLogo' or artwork3 in 'CharacterArt' or artwork3 in 'DiscArt') else 'scale' if (artwork3 in 'FanArt' or artwork3 in 'Thumb') else 'keep' if (path3 in 'tags' or path3 in 'genres' or path3 in 'studios' or path3 in 'actors' or path3 in 'directors' or path3 in 'country' or path3 in 'years') else 'keep' if (target3 in 'pvr' or target3 in 'radioguide' or target3 in 'tvguide') else 'scale' if (type3 in 'musicvideos' and artwork3 in 'Poster') else 'stretch'</property>
+		<property name="aspect3">'keep' if (artwork3 in 'Banner' or artwork3 in 'Landscape' or artwork3 in 'ClearArt' or artwork3 in 'ClearLogo' or artwork3 in 'CharacterArt' or artwork3 in 'DiscArt') else 'scale' if (artwork3 in 'FanArt' or artwork3 in 'Thumb') else 'keep' if (path3 in 'tags' or path3 in 'genres' or path3 in 'studios' or path3 in 'actors' or path3 in 'directors' or path3 in 'country' or path3 in 'years') else 'keep' if (target3 in 'pvr' or target3 in 'radioguide' or target3 in 'tvguide' or type3 in 'favourites') else 'scale' if (type3 in 'musicvideos' and artwork3 in 'Poster') else 'stretch'</property>
 		
 		<property name="labelvar3" tag="property" attribute="name|widgetArtwork.3" value="Poster">$VAR[SeasonEpisodeLabel]</property> 
 		<property name="labelvar3">$VAR[ShelfSeasonEpisodeLabel]</property>

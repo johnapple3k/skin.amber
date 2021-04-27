@@ -1590,7 +1590,11 @@ msgid "Show Bottom Shortcuts for this Menu Item"
 msgstr ""
 
 msgctxt "#31639"
-msgid "Short Static Shelf (only 5 items)"
+msgid "Short Daily Weather"
+msgstr ""
+
+msgctxt "#31640"
+msgid "Short Hourly Weather"
 msgstr ""
 
 msgctxt "#31901"
@@ -3344,7 +3348,11 @@ msgid "Episodes with Plot containing"
 msgstr ""
 
 msgctxt "#32383"
-msgid "With Plot containing"
+msgid "With Plot Containing"
+msgstr ""
+
+msgctxt "#32384"
+msgid "Show Title in Footer"
 msgstr ""
 
 #~ msgctxt "#32065"
