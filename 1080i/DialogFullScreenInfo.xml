@@ -55,7 +55,7 @@
 							<param name="diffuse">$VAR[LabelTextColor]</param>
 						</include>
 					</control>
-					<control type="grouplist" description="Flags">
+<!--					<control type="grouplist" description="Flags">
 						<top>245</top>
 						<width>1305</width>
 						<height>48</height>
@@ -98,7 +98,7 @@
 							<font>InfoPlot</font>
 							<label>$LOCALIZE[19008]</label>
 						</control>
-					</control>
+					</control> -->
 				</control>
 			</control>
 		</control>
