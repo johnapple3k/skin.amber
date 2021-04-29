@@ -1862,7 +1862,7 @@
 		<value condition="!VideoPlayer.Content(livetv) + VideoPlayer.Content(movies) + !String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
 		<value condition="!VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes) + !Skin.HasSetting(EpisodesUsePoster) + !String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 		<value condition="!VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes) + !Skin.HasSetting(EpisodesUsePoster) + String.IsEmpty(Player.Art(thumb)) + !String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
-		<value condition="!VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes) + Skin.HasSetting(EpisodesUsePoster) + !String.IsEmpty(Player.Art(season.poster))">$INFO[Player.Art(season.poster)]</value>																																																	
+		<value condition="!VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes) + Skin.HasSetting(EpisodesUsePoster) + !String.IsEmpty(Player.Art(season.poster))">$INFO[Player.Art(season.poster)]</value>
 		<value condition="!VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes) + Skin.HasSetting(EpisodesUsePoster) + !String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Player.Icon) + [[String.Contains(Player.Icon,default) + !Skin.HasSetting(NoFallbackThumbOSD)] | !String.Contains(Player.Icon,default)]">$INFO[Player.Icon]</value>
 		<value></value>
@@ -1967,6 +1967,6 @@
     <expression name="BelowIconLabelShouldShow">Skin.HasSetting(VerticalHome) + Window.Is(home) + Skin.HasSetting(Vertical.IconOnly) + !Skin.HasSetting(IconShowLabel.InTopBar) + [![$EXP[widgetsAreShowing]] | 
 	                                            [$EXP[widgetsAreShowing] + !String.IsEqual(Container(300).ListItem.Property(horizontalWidgetPos),High) + 
 												 !Container(300).ListItem.Property(widgetThreeShelves) + !Container(300).ListItem.Property(widgetThreeShelvesLarge)]]</expression>
-	<expression name="canShowVideoinfooSD">!String.IsEmpty(Container(43260).ListItem.Label) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.IsEmpty(VideoPlayer.DBID)</expression>																																																			   
+	<expression name="canShowVideoinfooSD">!String.IsEmpty(Container(43260).ListItem.Label) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.IsEmpty(VideoPlayer.DBID)</expression>								  
 	
 </includes>

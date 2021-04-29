@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 
-    <visible>[!Player.Paused + !String.IsEmpty(Window(home).Property(ShowOSD))] | [Player.Paused + Skin.HasSetting(Hide.SeekBarWhenPaused) + !System.IdleTime(5)] | [Player.Paused + !Skin.HasSetting(Hide.SeekBarWhenPaused)] | Player.Seeking | [!Player.Paused + Player.DisplayAfterSeek] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | Window.IsActive(dialogfullscreeninfo.xml) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput)</visible>
+    <visible>[!Player.Paused + !String.IsEmpty(Window(home).Property(ShowOSD))] | [Player.Paused + Skin.HasSetting(Hide.SeekBarWhenPaused) + !System.IdleTime(5)] | [Player.Paused + !Skin.HasSetting(Hide.SeekBarWhenPaused)] | Player.Seeking | [Player.DisplayAfterSeek + !Skin.HasSetting(Hide.SeekBarRF)] | [[Player.Forwarding | Player.Rewinding] + !Skin.HasSetting(Hide.SeekBarRF)] | Player.ShowInfo | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | Window.IsActive(dialogfullscreeninfo.xml) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput)</visible>
 	<visible>![Window.IsActive(sliderdialog) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrguideinfo)]</visible>
 	<visible>Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)</visible>
-	
-	<include>OSDFade</include>
+ 
+    <include>OSDFade</include>
 	<zorder>0</zorder>
 	<controls>
         <include>PVRChannelNumberInput</include>
 		<control type="group" description="Seek bar">
 		    
-			<visible>!Player.HasGame</visible>
+            <visible>!Player.HasGame</visible>
 			
 			<include condition="!Skin.HasSetting(enable.bottomseekbar) | Window.IsActive(DialogFullScreenInfo.xml)">TopSeekBar</include>
 			<include condition="Skin.HasSetting(enable.bottomseekbar) + !Window.IsActive(DialogFullScreenInfo.xml)">BottomSeekBar</include>
@@ -274,26 +274,28 @@
 				<!-- Seek bar controls for non PVR -->
 				<control type="group">
 				    <visible>!VideoPlayer.Content(livetv)</visible>
-					<control type="progress" description="Buffer Bar">
+                    
+					<control type="group">
 					    <left>30</left>
 					    <top>3</top>
-					    <width>1570</width>
-					    <height>18</height>
-					    <texturebg border="15,0,15,0">OSD/ProgressBG.png</texturebg>
-					    <midtexture border="15,0,15,0">OSD/ProgressBar.png</midtexture>
-					    <colordiffuse>Diffuse2</colordiffuse>
-					    <info>Player.ProgressCache</info>
-				    </control>
-				    <control type="progress" description="Progress Bar">
-					    <left>30</left>
-					    <top>3</top>
-						<width>1570</width>
-					    <height>18</height>
-					    <texturebg border="15,0,15,0">OSD/ProgressBG.png</texturebg>
-					    <midtexture border="15,0,15,0">OSD/ProgressBar.png</midtexture>
-					    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
-					    <info>Player.Progress</info>
-				    </control>
+						<control type="progress" description="Buffer Bar">
+					        <width>1570</width>
+					        <height>18</height>
+					        <texturebg border="15,0,15,0">OSD/ProgressBG.png</texturebg>
+					        <midtexture border="15,0,15,0">OSD/ProgressBar.png</midtexture>
+					        <colordiffuse>Diffuse2</colordiffuse>
+					        <info>Player.ProgressCache</info>
+				        </control>
+				        <control type="progress" description="Progress Bar">
+					        <width>1570</width>
+					        <height>18</height>
+					        <texturebg border="15,0,15,0">OSD/ProgressBG.png</texturebg>
+					        <midtexture border="15,0,15,0">OSD/ProgressBar.png</midtexture>
+					        <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+					        <info>Player.Progress</info>
+				        </control>
+					</control>
+				    
 					<control type="slider" id="401">
 					    <description>Seek Slider</description>
 					    <left>30</left>

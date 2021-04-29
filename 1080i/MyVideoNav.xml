@@ -252,6 +252,14 @@
 					<include>9000ViewButtons</include>
 					<label>$LOCALIZE[31026]</label>
 				</control>
+				<control type="button" id="622">
+					<description>Play Random</description>
+					<include>9000SysButtons</include>
+					<label>$ADDON[script.playrandomvideos 32100]</label>
+					<onclick>RunScript(script.playrandomvideos, "$INFO[Container.FolderPath]", "label=$INFO[Container.FolderName]")</onclick>
+					<visible>System.HasAddon(script.playrandomvideos)</visible>
+					<visible>!String.Contains(Container.FolderPath,plugin) + !String.Contains(Container.FolderPath,addons) + !String.Contains(Container.FolderPath,sources)</visible>
+				</control>
 				<control type="radiobutton" id="16">
 					<description>PartyMode</description>
 					<label>$LOCALIZE[589]</label>
