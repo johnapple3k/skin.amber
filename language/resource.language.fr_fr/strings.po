@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-04-29 17:06+0000\n"
+"PO-Revision-Date: 2021-05-03 09:05+0000\n"
 "Last-Translator: bsoriano <bsoriano@gmail.com>\n"
 "Language-Team: French (France) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-amber/fr_fr/>\n"
 "Language: fr_fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.6\n"
+"X-Generator: Weblate 4.6.1\n"
 
 msgctxt "#31000"
 msgid "Picture Channels"
@@ -1599,19 +1599,19 @@ msgstr "Météo horaire courte"
 
 msgctxt "#31641"
 msgid "Surprise Me"
-msgstr ""
+msgstr "Surprends-moi"
 
 msgctxt "#31642"
 msgid "Surprise Me (Movie)"
-msgstr ""
+msgstr "Surprends-moi (Film)"
 
 msgctxt "#31643"
 msgid "Surprise Me (Episode)"
-msgstr ""
+msgstr "Surprends-moi (Épisode)"
 
 msgctxt "#31644"
 msgid "Surprise Me (Music Video)"
-msgstr ""
+msgstr "Surprends-moi (Vidéo musicale)"
 
 msgctxt "#31901"
 msgid "36 Hour Forecast"
@@ -2025,7 +2025,7 @@ msgstr "Activer les boutons tactiles"
 
 msgctxt "#32039"
 msgid "Timeshift"
-msgstr "Timeshift"
+msgstr "Différé"
 
 msgctxt "#32040"
 msgid "Enable Kiosk Mode"
@@ -3165,7 +3165,7 @@ msgstr "Biographie de l'artiste"
 
 msgctxt "#32333"
 msgid "Hide Shelves when Now Playing is Visible"
-msgstr ""
+msgstr "Masquer les étagères lorsque la lecture en cours est visible"
 
 msgctxt "#32334"
 msgid "Enlarge Video Preview when Idle"
@@ -3173,7 +3173,7 @@ msgstr "Agrandir l'aperçu vidéo en cas d'inactivité"
 
 msgctxt "#32335"
 msgid "Select Extra Art to Show in Applicable Views"
-msgstr "Électionner les illustrations supplémentaires dans les vues applicables"
+msgstr "Sélectionner les illustrations supplémentaires dans les vues applicables"
 
 msgctxt "#32336"
 msgid "Full Screen/OSD"
@@ -3333,7 +3333,7 @@ msgstr "Afficher un arrière-plan sombre derrière les raccourcis"
 
 msgctxt "#32375"
 msgid "Use Artist Slideshow for Audio Fanart"
-msgstr ""
+msgstr "Utiliser le diaporama de l'artiste pour le fanart audio"
 
 msgctxt "#32376"
 msgid "Disable Lyrics"
@@ -3353,15 +3353,15 @@ msgstr "Afficher le sous-menu seulement quand ciblé"
 
 msgctxt "#32380"
 msgid "Movies with Plot containing"
-msgstr ""
+msgstr "Films avec intrigue contenant"
 
 msgctxt "#32381"
 msgid "TV Shows with Plot containing"
-msgstr ""
+msgstr "Séries TV avec intrigue contenant"
 
 msgctxt "#32382"
 msgid "Episodes with Plot containing"
-msgstr ""
+msgstr "Épisodes avec intrigue contenant"
 
 msgctxt "#32383"
 msgid "With Plot Containing"
@@ -3373,6 +3373,10 @@ msgstr "Afficher le titre en bas"
 
 msgctxt "#32385"
 msgid "Hide Seek Bar when Forwarding or Rewinding"
+msgstr "Masquer la barre temporelle lors de l'avance rapide ou du retour rapide"
+
+msgctxt "#32386"
+msgid "Enable Touchscreen Devices Support"
 msgstr ""
 
 #~ msgctxt "#32065"
