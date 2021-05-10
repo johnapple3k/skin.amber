@@ -1,3 +1,7 @@
+3.2.137 (10-05-2021)
+- Option to choose default menu item
+- Misc. fixes
+- Update translations
 3.2.136 (04-05-2021)
 - Fix footer info in custom search window
 3.2.135 (04-05-2021)
