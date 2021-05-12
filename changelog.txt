@@ -1,3 +1,7 @@
+3.2.138 (12-05-2021)
+- Option to hide cast in video info
+- Misc. fixes
+- Update translations
 3.2.137 (10-05-2021)
 - Option to choose default menu item
 - Misc. fixes
