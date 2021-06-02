@@ -190,7 +190,7 @@
 		    <visible>!String.IsEmpty(Window.Property(gallery))</visible>
 		    <animation effect="fade" delay="200" time="300">Visible</animation>
 			<animation effect="fade" time="100">Hidden</animation>
-			<!-- Poster icon and overlay -->
+			<!-- Poster icon and overlays -->
 			<control type="group" description="Thumb">
 			    <posx>40</posx>
 			    <posy>624</posy>
@@ -205,16 +205,18 @@
 					<include>MovieFanartThumb</include>
 			    </control>
 			    <control type="image">
-				    <posx>190</posx>
-				    <posy>291</posy>
+				    <posx>230</posx>
+				    <posy>391</posy>
 				    <width>33</width>
 				    <height>33</height>
 				    <texture>$VAR[Overlay]</texture>
 				    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
+					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 			    </control>
 			    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayGallery"></include>
+				<include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayGallery"></include>
 			</control>
-			<!-- Square icon, no overlay -->
+			<!-- Square icon, rating overlay if enabled -->
 			<control type="group" description="Thumb">
 			    <posx>0</posx>
 			    <posy>644</posy>
@@ -224,6 +226,9 @@
 					<include>SquareFanartThumbDimensions</include>
 					<include>SquareFanartThumb</include>
 				</control>
+				<include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayGallery">
+				    <param name="isSquare">true</param>
+				</include>
 			</control>
 			<!-- Media info -->
 		    <control type="group" description="Media info">
@@ -659,6 +664,220 @@
 			        </control>
 			    </control>
 			</control>	
+		</definition>
+	</include>
+	
+	<include name="RatingOverlayFanart">
+	    <param name="isFocused">false</param>
+		<param name="isLandscape">false</param>
+		<param name="isSquare">false</param>
+		<definition>
+			<control type="group">
+			    <visible>$EXP[canShowRatingOverlay] + !ListItem.IsParentFolder</visible>
+				<!-- Poster -->
+				<control type="group">
+					<visible>!$PARAM[isLandscape] + !$PARAM[isSquare]</visible>
+					<control type="group">
+					    <control type="image">
+				            <visible>!$PARAM[isFocused]</visible>
+				            <texture background="true" flipx="true">overlays/toprightempty2.png</texture>
+				            <posx>225r</posx>
+				            <posy>15</posy>
+				            <height>82</height>
+				            <width>82</width>
+							<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+			            </control>
+				        <control type="image">
+				            <visible>$PARAM[isFocused]</visible>
+				            <texture background="true" flipx="true" colordiffuse="$VAR[MediaWidgetsHighlightColor]">overlays/toprightempty2.png</texture>
+				            <posx>225r</posx>
+				            <posy>15</posy>
+				            <height>82</height>
+				            <width>82</width>
+			            </control>
+					    <control type="label" description="l2">
+					        <visible>$PARAM[isFocused]</visible>
+					        <posx>250r</posx>
+				            <posy>-261</posy>
+					        <height>$PARAM[itemheight]</height>
+					        <width>100</width>
+					        <font>ListDetailsSmall</font>
+					        <align>center</align>
+					        <shadowcolor></shadowcolor>
+					        <label>$VAR[ContainerRatingOverlayVar]</label>
+					        <textcolor>$VAR[MediaWidgetsHighlightColor]</textcolor>
+					        <colordiffuse>$VAR[MediaWidgetsHighlightColor]</colordiffuse>
+				        </control>
+				        <control type="label" description="l2">
+					        <visible>!$PARAM[isFocused]</visible>
+					        <posx>250r</posx>
+				            <posy>-261</posy>
+					        <height>$PARAM[itemheight]</height>
+					        <width>100</width>
+					        <font>ListDetailsSmall</font>
+					        <align>center</align>
+					        <label>$VAR[ContainerRatingOverlayVar]</label>
+					        <textcolor>White2</textcolor>
+							<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+				        </control>
+					</control>
+				</control>
+				<!-- Landscape -->
+				<control type="group">
+					<visible>$PARAM[isLandscape]</visible>
+					<control type="group">
+					    <control type="image">
+				            <visible>!$PARAM[isFocused]</visible>
+				            <texture background="true" flipx="true">overlays/toprightempty2.png</texture>
+				            <posx>452r</posx>
+				            <posy>54</posy>
+				            <height>82</height>
+				            <width>82</width>
+							<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+			            </control>
+				        <control type="image">
+				            <visible>$PARAM[isFocused]</visible>
+				            <texture background="true" flipx="true" colordiffuse="$VAR[MediaWidgetsHighlightColor]">overlays/toprightempty2.png</texture>
+				            <posx>452r</posx>
+				            <posy>54</posy>
+				            <height>82</height>
+				            <width>82</width>
+			            </control>
+					    <control type="label" description="l2">
+					        <visible>$PARAM[isFocused]</visible>
+					        <posx>477r</posx>
+				            <posy>-135</posy>
+					        <height>$PARAM[itemheight]</height>
+					        <width>100</width>
+					        <font>ListDetailsSmall</font>
+					        <align>center</align>
+					        <shadowcolor></shadowcolor>
+					        <label>$VAR[ContainerRatingOverlayVar]</label>
+					        <textcolor>$VAR[MediaWidgetsHighlightColor]</textcolor>
+					        <colordiffuse>$VAR[MediaWidgetsHighlightColor]</colordiffuse>
+				        </control>
+				        <control type="label" description="l2">
+					        <visible>!$PARAM[isFocused]</visible>
+					        <posx>477r</posx>
+				            <posy>-135</posy>
+					        <height>$PARAM[itemheight]</height>
+					        <width>100</width>
+					        <font>ListDetailsSmall</font>
+					        <align>center</align>
+					        <label>$VAR[ContainerRatingOverlayVar]</label>
+					        <textcolor>White2</textcolor>
+							<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+				        </control>
+					</control>
+				</control>
+				<!-- Square -->
+				<control type="group">
+					<visible>$PARAM[isSquare]</visible>
+					<control type="group">
+					    <control type="image">
+				            <visible>!$PARAM[isFocused]</visible>
+				            <texture background="true" flipx="true">overlays/toprightempty2.png</texture>
+				            <posx>330r</posx>
+				            <posy>0</posy>
+				            <height>82</height>
+				            <width>82</width>
+							<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+			            </control>
+				        <control type="image">
+				            <visible>$PARAM[isFocused]</visible>
+				            <texture background="true" flipx="true" colordiffuse="$VAR[MediaWidgetsHighlightColor]">overlays/toprightempty2.png</texture>
+				            <posx>330r</posx>
+				            <posy>0</posy>
+				            <height>82</height>
+				            <width>82</width>
+			            </control>
+					    <control type="label" description="l2">
+					        <visible>$PARAM[isFocused]</visible>
+					        <posx>355r</posx>
+				            <posy>-295</posy>
+					        <height>$PARAM[itemheight]</height>
+					        <width>100</width>
+					        <font>ListDetailsSmall</font>
+					        <align>center</align>
+					        <shadowcolor></shadowcolor>
+					        <label>$VAR[ContainerRatingOverlayVar]</label>
+					        <textcolor>$VAR[MediaWidgetsHighlightColor]</textcolor>
+					        <colordiffuse>$VAR[MediaWidgetsHighlightColor]</colordiffuse>
+				        </control>
+				        <control type="label" description="l2">
+					        <visible>!$PARAM[isFocused]</visible>
+					        <posx>355r</posx>
+				            <posy>-295</posy>
+					        <height>$PARAM[itemheight]</height>
+					        <width>100</width>
+					        <font>ListDetailsSmall</font>
+					        <align>center</align>
+					        <label>$VAR[ContainerRatingOverlayVar]</label>
+					        <textcolor>White2</textcolor>
+							<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+				        </control>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	
+	<include name="RatingOverlayGallery">
+	    <param name="isSquare">false</param>
+		<definition>
+			<control type="group">
+			    <visible>$EXP[canShowRatingOverlay] + !ListItem.IsParentFolder</visible>
+				<!-- Poster -->
+				<control type="group">
+				    <visible>!$PARAM[isSquare]</visible>
+					<control type="group">
+				        <control type="image">
+				            <texture background="true" flipx="true" colordiffuse="$VAR[MediaWidgetsHighlightColor]">overlays/toprightempty2.png</texture>
+				            <posx>1890r</posx>
+				            <posy>15</posy>
+				            <height>82</height>
+				            <width>82</width>
+			            </control>
+					    <control type="label" description="l2">
+					        <posx>1916r</posx>
+				            <posy>-379</posy>
+					        <height>$PARAM[itemheight]</height>
+					        <width>100</width>
+					        <font>ListDetailsSmall</font>
+					        <align>center</align>
+					        <shadowcolor></shadowcolor>
+					        <label>$VAR[RatingOverlayVar]</label>
+					        <textcolor>$VAR[HighlightColor]</textcolor>
+					        <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+				        </control>
+					</control>
+				</control>
+				<!-- Square -->
+				<control type="group">
+					<visible>$PARAM[isSquare]</visible>
+					<control type="group">
+				        <control type="image">
+				            <texture background="true" flipx="true" colordiffuse="$VAR[MediaWidgetsHighlightColor]">overlays/toprightempty2.png</texture>
+				            <posx>1905r</posx>
+				            <posy>0</posy>
+				            <height>82</height>
+				            <width>82</width>
+			            </control>
+					    <control type="label" description="l2">
+					        <posx>1931r</posx>
+				            <posy>-386</posy>
+					        <height>$PARAM[itemheight]</height>
+					        <width>100</width>
+					        <font>ListDetailsSmall</font>
+					        <align>center</align>
+					        <shadowcolor></shadowcolor>
+					        <label>$VAR[RatingOverlayVar]</label>
+					        <textcolor>$VAR[HighlightColor]</textcolor>
+					        <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+				        </control>
+					</control>
+				</control>
+			</control>
 		</definition>
 	</include>
 	
@@ -1413,7 +1632,10 @@
 						    </control>
 						    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
     	                        <param name="isFocused">false</param>
-	    					</include>	
+	    					</include>
+							<include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                        <param name="isFocused">false</param>
+	    					</include>
 						    <control type="image">
 							    <posx>185</posx>
 							    <posy>286</posy>
@@ -1455,6 +1677,9 @@
 							    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
 	                                <param name="isFocused">true</param>
 						        </include>
+								<include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                        <param name="isFocused">true</param>
+	    					</include>
 						    </control>
 					    </focusedlayout>
 						<!-- Poster type items: musicvideos -->
@@ -1472,7 +1697,10 @@
 						    </control>
 						    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
     	                        <param name="isFocused">false</param>
-	    					</include>	
+	    					</include>
+                            <include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                        <param name="isFocused">false</param>
+	    					</include>							
 						    <control type="image">
 							    <posx>185</posx>
 							    <posy>286</posy>
@@ -1518,6 +1746,9 @@
 							    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
 	                                <param name="isFocused">true</param>
 						        </include>
+								<include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                            <param name="isFocused">true</param>
+	    					    </include>
 						    </control>
 					    </focusedlayout>
 						
@@ -1533,7 +1764,11 @@
 						    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
     	                        <param name="isFocused">false</param>
 								<param name="isLandscape">true</param>
-	    					</include>	
+	    					</include>
+                            <include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                        <param name="isFocused">false</param>
+								<param name="isLandscape">true</param>
+	    					</include>							
 						    <control type="image" description="Watched Overlay">
     							<posx>365</posx>
 							    <posy>235</posy>
@@ -1579,6 +1814,10 @@
 	                                <param name="isFocused">true</param>
 									<param name="isLandscape">true</param>
 						        </include>
+								<include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                            <param name="isFocused">true</param>
+								    <param name="isLandscape">true</param>
+	    					    </include>
 						    </control>
 					    </focusedlayout>
 						
@@ -1622,6 +1861,26 @@
 				                <width>72</width>
 							    <visible>Skin.HasSetting(ShowTopRightOverlays)</visible>
 			                </control>
+							<control type="group">
+					            <visible>Skin.HasSetting(ShowRatingOverlays) + $EXP[canShowRatingOverlay]</visible>
+								<control type="image">
+				                    <texture background="true" flipx="true">overlays/toprightempty2.png</texture>
+				                    <posx>464r</posx>
+				                    <posy>0</posy>
+				                    <height>82</height>
+				                    <width>82</width>
+			                    </control>
+				                <control type="label" description="l2">
+					                <posx>489r</posx>
+				                    <posy>-245</posy>
+					                <height>$PARAM[itemheight]</height>
+					                <width>100</width>
+					                <font>ListDetailsSmall</font>
+					                <align>center</align>
+					                <label>$VAR[RatingOverlayVar]</label>
+					                <textcolor>White2</textcolor>
+				                </control>
+					        </control>
 							<control type="image">
 						        <top>-9</top>
 								<left>-9</left>
@@ -1676,6 +1935,28 @@
 									<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 								    <visible>Skin.HasSetting(ShowTopRightOverlays)</visible>
 			                    </control>
+								<control type="group">
+				                    <visible>Skin.HasSetting(ShowRatingOverlays) + $EXP[canShowRatingOverlay]</visible>
+									<control type="image">
+				                        <texture background="true" flipx="true" colordiffuse="$VAR[HighlightColor]">overlays/toprightempty2.png</texture>
+				                        <posx>464r</posx>
+				                        <posy>0</posy>
+				                        <height>82</height>
+				                        <width>82</width>
+			                        </control>
+					                <control type="label" description="l2">
+					                    <posx>489r</posx>
+				                        <posy>-245</posy>
+					                    <height>$PARAM[itemheight]</height>
+					                    <width>100</width>
+					                    <font>ListDetailsSmall</font>
+					                    <align>center</align>
+					                    <shadowcolor></shadowcolor>
+					                    <label>$VAR[RatingOverlayVar]</label>
+					                    <textcolor>$VAR[HighlightColor]</textcolor>
+					                    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+				                    </control>
+					            </control>
 						    </control>
 					    </focusedlayout>
 						
@@ -1688,6 +1969,10 @@
 							<control type="image">
 							    <include>SquareFanartReflection</include>
 						    </control>
+							<include condition="!Container.Content(artists) + Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                        <param name="isFocused">false</param>
+								<param name="isSquare">true</param>
+	    					</include>
 							<control type="image">
 						        <left>7</left>
 						        <top>-10</top>
@@ -1709,6 +1994,10 @@
 							    <control type="image">
 								    <include>SquareFanartReflection</include>
 							    </control>
+								<include condition="!Container.Content(artists) + Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                            <param name="isFocused">true</param>
+								    <param name="isSquare">true</param>
+	    					    </include>
 						    </control>
 					    </focusedlayout>
 						
@@ -1724,7 +2013,11 @@
 							<include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
     	                        <param name="isFocused">false</param>
 								<param name="isSquare">true</param>
-	    					</include>	
+	    					</include>
+                            <include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                        <param name="isFocused">false</param>
+								<param name="isSquare">true</param>
+	    					</include>							
 						    <control type="image">
 							    <posx>265</posx>
 							    <posy>251</posy>
@@ -1757,7 +2050,11 @@
 								<include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
     	                            <param name="isFocused">true</param>
 									<param name="isSquare">true</param>
-	    					    </include>	
+	    					    </include>
+                                <include condition="Skin.HasSetting(ShowRatingOverlays)" content="RatingOverlayFanart">
+    	                            <param name="isFocused">true</param>
+								    <param name="isSquare">true</param>
+	    					    </include>								
 						        <control type="image">
 							        <posx>265</posx>
 							        <posy>251</posy>
@@ -1872,8 +2169,19 @@
 				    <visible>String.IsEmpty(Window.Property(gallery)) + Control.IsVisible(56)</visible>
     			    <animation effect="fade" start="100" end="0" time="50" delay="0" center="120,350" reversible="false">Hidden</animation>
 				    <animation effect="fade" start="0" end="100" time="450" delay="400" center="120,350" reversible="false">Visible</animation>
-				    <include>FooterInfo</include>
+					<include condition="!Skin.HasSetting(Enable.TouchSupport)">FooterInfo</include>
+					<include condition="Skin.HasSetting(Enable.TouchSupport)" content="FooterInfo">
+			            <param name="width">1280</param>
+						<param name="left">280</param>
+			        </include>
 			    </control>
+				
+				<include condition="Skin.HasSetting(Enable.TouchSupport)" content="TouchButtons">
+			        <param name="ButtonsTop">935</param>
+				    <param name="id">56</param>
+				    <param name="left">1535</param>
+			    </include>
+				
 		    </control>
 		</definition>	
 	</include>

@@ -16,7 +16,8 @@
 					<viewtype label="$LOCALIZE[32060]">list</viewtype>
 					<posx>540</posx>
 					<posy>105</posy>
-					<height>949</height>
+					<include condition="!Skin.HasSetting(Enable.TouchSupport)">TallListHeightStandard</include>
+				    <include condition="Skin.HasSetting(Enable.TouchSupport)">TallListHeightTouch</include>
 					<width>1340</width>
 					<pagecontrol>6501</pagecontrol>
 					<onleft condition="!Skin.HasSetting(KioskMode.Enabled)">9000</onleft>
@@ -439,12 +440,14 @@
 					<include content="ShadowedImage">
 						<param name="width">560</param>
 						<param name="height">890</param>
+						<param name="aspect">stretch</param>
 						<param name="texture">$VAR[Poster]</param>
 						<param name="visibility">Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)</param>
 					</include>
 					<include content="ShadowedImage">
 						<param name="width">560</param>
 						<param name="height">890</param>
+						<param name="aspect">stretch</param>
 						<param name="texture">$VAR[Poster]</param>
 						<param name="visibility">Container.Content(episodes) + Skin.HasSetting(EpisodesUsePoster)</param>
 					</include>
@@ -482,7 +485,58 @@
 						<label>$VAR[listmediafooter]</label>
 						<textcolor>$VAR[HighlightColor]</textcolor>
 					</control>
+					
+					<!-- Rating overlay -->
+					<control type="group">
+					    <visible>Skin.HasSetting(ShowRatingOverlays) + $EXP[canShowRatingOverlay]</visible>
+					    <control type="group">
+				            <visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,tvshow) | 
+							          [String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(EpisodesUsePoster)]]</visible>
+							<control type="image">
+				                <texture background="true" flipx="true" colordiffuse="$VAR[HighlightColor]">overlays/toprightempty2.png</texture>
+				                <top>0</top>
+				                <left>0</left>
+				                <height>102</height>
+				                <width>102</width>
+			                </control>
+					        <control type="label" description="l2">
+					            <left>10</left>
+				                <top>10</top>
+					            <height>40</height>
+					            <width>40</width>
+					            <font>font12_title</font>
+					            <align>center</align>
+					            <shadowcolor></shadowcolor>
+					            <label>$VAR[ContainerRatingOverlayVar]</label>
+					            <textcolor>$VAR[HighlightColor]</textcolor>
+					            <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+				            </control>
+						</control>
+                        <control type="group">
+				            <visible>[String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(EpisodesUsePoster)]</visible>
+							<control type="image">
+				                <texture background="true" flipx="true" colordiffuse="$VAR[HighlightColor]">overlays/toprightempty2.png</texture>
+				                <top>259</top>
+				                <left>0</left>
+				                <height>102</height>
+				                <width>102</width>
+			                </control>
+					        <control type="label" description="l2">
+					            <left>10</left>
+				                <top>269</top>
+					            <height>40</height>
+					            <width>40</width>
+					            <font>font12_title</font>
+					            <align>center</align>
+					            <shadowcolor></shadowcolor>
+					            <label>$VAR[ContainerRatingOverlayVar]</label>
+					            <textcolor>$VAR[HighlightColor]</textcolor>
+					            <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+				            </control>
+						</control>						
+					</control>
 				</control>
+				
 				<include content="MediaFlags">
 					<param name="top">995</param>
 					<param name="left">20</param>
@@ -527,6 +581,20 @@
 					<param name="itemwidth">70</param>
 					<param name="itemheight">65</param>
 				</include>
+				
+				<include content="TouchButtons">
+		            <param name="ButtonsTop">980</param>
+			        <param name="id">501</param>
+					<param name="visibility">[![$EXP[TallListPanelIsSwapped]] | $EXP[TallListPanelIsDisabled]]</param>
+		        </include>
+				
+				<include content="TouchButtons">
+		            <param name="ButtonsTop">980</param>
+			        <param name="id">501</param>
+					<param name="left">740</param>
+					<param name="visibility">[$EXP[TallListPanelIsSwapped] + ![$EXP[TallListPanelIsDisabled]]]</param>
+		        </include>
+				
 			</control>
 		</definition>
 	</include>

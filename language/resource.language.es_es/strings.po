@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-05-11 16:43+0000\n"
-"Last-Translator: bsoriano <bsoriano@gmail.com>\n"
+"PO-Revision-Date: 2021-06-02 19:35+0000\n"
+"Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-amber/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
@@ -158,8 +158,8 @@ msgid "Hide weather info in title bar"
 msgstr "Ocultar info meteorológica en la barra de título"
 
 msgctxt "#31035"
-msgid "Hide media flags from views"
-msgstr "Ocultar indicadores de contenido de las vistas"
+msgid "Media Flags"
+msgstr "Indicadores"
 
 msgctxt "#31036"
 msgid "Next tracks"
@@ -463,7 +463,7 @@ msgstr "Info reproductor"
 
 msgctxt "#31139"
 msgid "Video decoder"
-msgstr "Decodificador de Vídeo"
+msgstr "Decodificador de vídeo"
 
 msgctxt "#31140"
 msgid "Pixel format"
@@ -1459,7 +1459,7 @@ msgstr "Widget Personalizado"
 
 msgctxt "#31606"
 msgid "Tall List"
-msgstr "Tall List"
+msgstr "Lista Alta"
 
 msgctxt "#31607"
 msgid "Panel 2"
@@ -1467,7 +1467,7 @@ msgstr "Panel 2"
 
 msgctxt "#31608"
 msgid "Big Panel 2"
-msgstr "Big Panel 2"
+msgstr "Panel Grande 2"
 
 msgctxt "#31609"
 msgid "Shelves Position"
@@ -1515,7 +1515,7 @@ msgstr "Miniatura"
 
 msgctxt "#31620"
 msgid "Landscape"
-msgstr "Landscape"
+msgstr "Apaisado"
 
 msgctxt "#31621"
 msgid "Clear Logo"
@@ -1917,7 +1917,7 @@ msgstr "AB: Todo el Arte"
 
 msgctxt "#32007"
 msgid "Special Features"
-msgstr "Special Features"
+msgstr "Funciones Especiales"
 
 msgctxt "#32008"
 msgid "Enable Special Features"
@@ -2096,8 +2096,8 @@ msgid "Use Larger Font"
 msgstr "Utilizar Font Agrandado"
 
 msgctxt "#32055"
-msgid "Use Wraparaound Navigation"
-msgstr "Usar Navegación Revolvente"
+msgid "Use Wraparound Navigation"
+msgstr ""
 
 msgctxt "#32056"
 msgid "Show more items on List Views"
@@ -2397,7 +2397,7 @@ msgstr "Estrellas Invitadas"
 
 msgctxt "#32130"
 msgid "Posters"
-msgstr "Posters"
+msgstr "Carteles"
 
 msgctxt "#32131"
 msgid "YouTube"
@@ -2736,8 +2736,8 @@ msgid "Enable Label Scrolling in List Views"
 msgstr "Activar Deslizamiento de Etiquetas en Vistas de Lista"
 
 msgctxt "#32223"
-msgid "Show Audio and Subtitle Info"
-msgstr "Mostrar Info de Audio y Subtítulos"
+msgid "Audio and Subtitle Info"
+msgstr "Info de Audio y Subtítulos"
 
 msgctxt "#32224"
 msgid "Subtitle Button Opens Subtitle Settings in Video OSD"
@@ -2775,21 +2775,9 @@ msgctxt "#32232"
 msgid "Main Rating"
 msgstr "Valoración Principal"
 
-msgctxt "#32233"
-msgid "Show User Rating"
-msgstr "Mostrar Valoración de Usuario"
-
-msgctxt "#32234"
-msgid "Show Main Rating"
-msgstr "Mostrar Valoración Principal"
-
 msgctxt "#32235"
 msgid "Certification"
 msgstr "Clasificación"
-
-msgctxt "#32236"
-msgid "Show Certification"
-msgstr "Mostrar Clasificación"
 
 msgctxt "#32237"
 msgid "Up Next in"
@@ -2864,8 +2852,8 @@ msgid "Movies in library"
 msgstr "Películas en Colección"
 
 msgctxt "#32254"
-msgid "Hide IMDb Top 250"
-msgstr "Esconder IMDb Top 250"
+msgid "IMDb Top 250"
+msgstr "Top 250 de IMDb"
 
 msgctxt "#32255"
 msgid "Missing Add-on"
@@ -2900,16 +2888,16 @@ msgid "Use Embuary Helper for Backgrounds"
 msgstr "Utilizar Embuary Helper para Fondos"
 
 msgctxt "#32263"
-msgid "Show Movie Collection Count"
-msgstr "Mostrar Cantidad de Películas en Saga"
+msgid "Movie Collection Count"
+msgstr "Cantidad de Películas en Colección"
 
 msgctxt "#32264"
 msgid "Show Fanart for Special Content"
 msgstr "Mostrar Fanart para Contenido Especial"
 
 msgctxt "#32265"
-msgid "Show Media Play Count"
-msgstr "Mostrar Cantidad de Reproducciones"
+msgid "Media Play Count"
+msgstr "Cantidad de Reproducciones"
 
 msgctxt "#32266"
 msgid "Color Options"
@@ -3008,8 +2996,8 @@ msgid "Show Seek Bar at Bottom"
 msgstr "Mostrar Barra de Búsqueda Debajo"
 
 msgctxt "#32291"
-msgid "Show HDR/SDR and Bit Depth Flags"
-msgstr "Mostrar indicadores de HDR/SDR y profundidad de bits"
+msgid "HDR/SDR and Bit Depth Flags"
+msgstr "Indicadores de Formato HDR"
 
 msgctxt "#32292"
 msgid "File Name Instead of Title"
@@ -3336,8 +3324,8 @@ msgid "Pause Media While Info Dialog is Open"
 msgstr "Pausar reproducción mientras Diálogo de Info esté abierto"
 
 msgctxt "#32373"
-msgid "Show End Time"
-msgstr "Mostrar Hora de Fin"
+msgid "End Time"
+msgstr "Tiempo de Fin"
 
 msgctxt "#32374"
 msgid "Show Dark Background Behind Shortcuts"
@@ -3390,6 +3378,94 @@ msgstr "Esconder Barra de Despalzamiento al FF o RW"
 msgctxt "#32386"
 msgid "Enable Touchscreen Devices Support"
 msgstr "Activar Soporte para Dispositivos Táctiles"
+
+msgctxt "#32387"
+msgid "Show Rating Overlay"
+msgstr "Mostrar Indicador de Valoración"
+
+msgctxt "#32388"
+msgid "Use User Rating for Overlay"
+msgstr "Utilizar Valoración de Usuario"
+
+msgctxt "#32390"
+msgid "Select Items to Show in Views"
+msgstr "Seleccionar Ítems a Mostrar en Vistas"
+
+msgctxt "#32391"
+msgid "Items to Show in Views"
+msgstr "Ítems a Mostrar en Vistas"
+
+msgctxt "#32392"
+msgid "Play Random"
+msgstr "Reproducción Aleatoria"
+
+msgctxt "#32393"
+msgid "List Views Options"
+msgstr "Opciones de Vistas de Lista"
+
+msgctxt "#32394"
+msgid "Marks and Overlays"
+msgstr "Indicadores y Marcas"
+
+msgctxt "#32395"
+msgid "Select View Types to Enable"
+msgstr "Seleccione Vistas Activas"
+
+msgctxt "#32396"
+msgid "View Types to Enable"
+msgstr "Vistas Activas"
+
+msgctxt "#32397"
+msgid "Hide Poster/Thumb in OSD"
+msgstr ""
+
+#~ msgctxt "#32389"
+#~ msgid "Use Alternate Rating Overlay Style"
+#~ msgstr "Usar Estilo Alterno"
+
+#~ msgctxt "#32055"
+#~ msgid "Use Wraparaound Navigation"
+#~ msgstr "Usar Navegación Revolvente"
+
+#~ msgctxt "#31035"
+#~ msgid "Hide media flags from views"
+#~ msgstr "Ocultar indicadores de contenido de las vistas"
+
+#~ msgctxt "#32223"
+#~ msgid "Show Audio and Subtitle Info"
+#~ msgstr "Mostrar Info de Audio y Subtítulos"
+
+#~ msgctxt "#32233"
+#~ msgid "Show User Rating"
+#~ msgstr "Mostrar Valoración de Usuario"
+
+#~ msgctxt "#32234"
+#~ msgid "Show Main Rating"
+#~ msgstr "Mostrar Valoración Principal"
+
+#~ msgctxt "#32236"
+#~ msgid "Show Certification"
+#~ msgstr "Mostrar Clasificación"
+
+#~ msgctxt "#32254"
+#~ msgid "Hide IMDb Top 250"
+#~ msgstr "Esconder IMDb Top 250"
+
+#~ msgctxt "#32263"
+#~ msgid "Show Movie Collection Count"
+#~ msgstr "Mostrar Cantidad de Películas en Saga"
+
+#~ msgctxt "#32265"
+#~ msgid "Show Media Play Count"
+#~ msgstr "Mostrar Cantidad de Reproducciones"
+
+#~ msgctxt "#32291"
+#~ msgid "Show HDR/SDR and Bit Depth Flags"
+#~ msgstr "Mostrar indicadores de HDR/SDR y profundidad de bits"
+
+#~ msgctxt "#32373"
+#~ msgid "Show End Time"
+#~ msgstr "Mostrar Hora de Fin"
 
 #~ msgctxt "#32065"
 #~ msgid "Backup Skin Settings"
