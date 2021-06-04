@@ -5,7 +5,7 @@
     <defaultcontrol></defaultcontrol>
     <controls>
         
-	    <control type="fadelabel" id="4444">
+		<control type="fadelabel" id="4444">
 			<top>-100</top>
 			<width>2560</width>
 			<height>0</height>
@@ -103,6 +103,7 @@
             <texture  background="true">$INFO[Player.Art(artist.clearlogo)]</texture>
 			<aspectratio>keep</aspectratio>
             <visible>!String.IsEmpty(Player.Art(artist.clearlogo)) + Skin.HasSetting(ShowLogoMusicViz) + !Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+			<animation effect="fade" start="100" end="0" time="100" condition="[Window.IsVisible(DialogSeekBar.xml) + !Skin.HasSetting(enable.bottomseekbar)]">Conditional</animation>
         </control>
 		
         <control type="image">
@@ -138,8 +139,8 @@
 				<visible>!Skin.HasSetting(enable.bottomseekbar)</visible>
             </control>
 			
-            <control type="group">
-                <visible>!Skin.HasSetting(HidePosterOSD)</visible>
+			<control type="group">
+                <visible>String.IsEqual(Skin.String(OSDExtraArt),poster)</visible>
 				<include content="ShadowedImage">
                     <param name="top">682r</param>
                     <param name="left">555r</param>
@@ -274,6 +275,22 @@
                 <visible>!Window.IsVisible(MusicOSD)</visible>
             </control>
 			
+        </control>
+		<control type="group">
+		    <visible>!String.IsEqual(Skin.String(OSDExtraArt),none) + !Skin.HasSetting(enable.bottomseekbar) + [[Player.ShowInfo | Window.IsActive(musicosd)] + !Window.IsActive(playerprocessinfo)]</visible>
+			<include content="FullScreenExtraArt">
+			    <param name="arttop">600</param>
+				<param name="disctop">580</param>
+				<param name="artheight">480</param>
+			</include>
+        </control>
+		<control type="group">
+		    <visible>!String.IsEqual(Skin.String(OSDExtraArt),none) + Skin.HasSetting(enable.bottomseekbar) + [[Player.ShowInfo | Window.IsActive(musicosd)] + !Window.IsActive(playerprocessinfo)]</visible>
+			<include content="FullScreenExtraArt">
+			    <param name="arttop">520</param>
+				<param name="disctop">500</param>
+				<param name="artheight">440</param>
+			</include>
         </control>
     </controls>
 </window>
