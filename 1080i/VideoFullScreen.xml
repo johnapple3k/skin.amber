@@ -108,7 +108,7 @@
 			
             <!-- Art: Poster/Thumb/Icon -->			
 			<control type="group" id="1">
-			    <visible>Skin.HasSetting(enable.bottomseekbar) + String.IsEqual(Skin.String(OSDExtraArt),poster)</visible>
+			    <visible>Skin.HasSetting(enable.bottomseekbar) + $EXP[showPosterOSD]</visible>
 				<control type="image" id="24">
 			        <left>459r</left>
 			        <top>-406</top>
@@ -128,7 +128,7 @@
 			    </control>
 			</control>	
 			<control type="group" id="1">
-			    <visible>!Skin.HasSetting(enable.bottomseekbar) + String.IsEqual(Skin.String(OSDExtraArt),poster)</visible>
+			    <visible>!Skin.HasSetting(enable.bottomseekbar) + $EXP[showPosterOSD]</visible>
 			    <control type="image" id="24">
 			        <posx>459r</posx>
 			        <posy>666r</posy>
@@ -278,9 +278,9 @@
             <control type="group" id="1">
 			    <visible>!String.IsEqual(Skin.String(OSDExtraArt),none) + Window.IsVisible(VideoOSD) + Skin.HasSetting(OSDInfo) + Skin.HasSetting(enable.bottomseekbar)</visible>
 				<include content="FullScreenExtraArt">
-				    <param name="arttop">740</param>
+				    <param name="arttop">720</param>
 					<param name="disctop">730</param>
-					<param name="artheight">200</param>
+					<param name="artheight">220</param>
 				</include>
             </control>			
 	</controls>
