@@ -2783,8 +2783,8 @@ msgid "User Rating"
 msgstr "Benutzerbewertung"
 
 msgctxt "#32232"
-msgid "Main Rating"
-msgstr "Haupt-Bewertung anzeigen"
+msgid "Ratings"
+msgstr ""
 
 msgctxt "#32235"
 msgid "Certification"
@@ -3453,6 +3453,30 @@ msgstr ""
 msgctxt "#32403"
 msgid "OSD/Full Screen Art"
 msgstr ""
+
+msgctxt "#32404"
+msgid "N/A"
+msgstr ""
+
+msgctxt "#32405"
+msgid "Show Info Popup"
+msgstr ""
+
+msgctxt "#32406"
+msgid "Popup Delay"
+msgstr ""
+
+msgctxt "#32407"
+msgid "Show Floor"
+msgstr ""
+
+msgctxt "#32408"
+msgid "Fixed List"
+msgstr ""
+
+#~ msgctxt "#32232"
+#~ msgid "Main Rating"
+#~ msgstr "Haupt-Bewertung anzeigen"
 
 #~ msgctxt "#31035"
 #~ msgid "Hide media flags from views"

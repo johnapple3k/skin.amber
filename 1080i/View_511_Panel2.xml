@@ -16,12 +16,13 @@
 				<posx>50</posx>
 				<posy>351</posy>
 				<width>930</width>
-				<height>700</height>
+				<include condition="!Skin.HasSetting(Enable.TouchSupport)">PanelHeightStandard</include>
+				<include condition="Skin.HasSetting(Enable.TouchSupport)">PanelHeightTouch</include>
 				<orientation>vertical</orientation>
 				<onleft condition="!Skin.HasSetting(KioskMode.Enabled)">9000</onleft>
                 <onleft condition="Skin.HasSetting(KioskMode.Enabled)">noop</onleft>
-                <oninfo condition="ListItem.IsCollection + !String.Contains(System.BuildVersion,19.0)">ActivateWindow(1127)</oninfo>
-                <onright condition="!Control.IsVisible(615)">611</onright>
+                <oninfo condition="ListItem.IsCollection + !String.Contains(System.BuildVersion,19)">ActivateWindow(1127)</oninfo>
+                <onright condition="!Control.IsVisible(615) | [Control.IsVisible(615) + Control.IsVisible(611)]">611</onright>
 				<onright condition="Control.IsVisible(615)">615</onright>
 				<onup>511</onup>
 				<ondown>511</ondown>
@@ -265,6 +266,12 @@
 				<param name="cleararttop">64</param>
 				<param name="clearartwidth">463</param>
 				<param name="clearartheight">260</param>
+			</include>
+			
+			<include condition="Skin.HasSetting(Enable.TouchSupport)" content="TouchButtons">
+			    <param name="ButtonsTop">980</param>
+				<param name="id">511</param>
+				<param name="left">20</param>
 			</include>
 			
 		</control>

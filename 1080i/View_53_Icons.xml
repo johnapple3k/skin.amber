@@ -16,8 +16,8 @@
                 <orientation>vertical</orientation>
 				<onleft condition="!Skin.HasSetting(KioskMode.Enabled)">9000</onleft>
                 <onleft condition="Skin.HasSetting(KioskMode.Enabled)">noop</onleft>
-                <oninfo condition="ListItem.IsCollection + !String.Contains(System.BuildVersion,19.0)">ActivateWindow(1127)</oninfo>
-                <onright condition="!Control.IsVisible(615)">63</onright>
+                <oninfo condition="ListItem.IsCollection + !String.Contains(System.BuildVersion,19)">ActivateWindow(1127)</oninfo>
+                <onright condition="!Control.IsVisible(615) | [Control.IsVisible(615) + Control.IsVisible(63)]">63</onright>
 				<onright condition="Control.IsVisible(615)">615</onright>
                 <onup>53</onup>
                 <ondown>53</ondown>
@@ -70,7 +70,13 @@
                 <height>207</height>
                 <texture>OSD/FS_OSDBackground.png</texture>
             </control>
-            <include>FooterInfo</include>
+            
+			<include condition="!Skin.HasSetting(Enable.TouchSupport)">FooterInfo</include>
+			
+			<include condition="Skin.HasSetting(Enable.TouchSupport)" content="FooterInfo">
+			    <param name="width">1280</param>
+				<param name="left">300</param>
+			</include>
             
             <control type="scrollbar" id="63">
                 <animation effect="slide" start="0,0" end="-6,0" time="150">Focus</animation>
@@ -184,6 +190,12 @@
                 <visible>Skin.HasSetting(Show.JumpToLetter) + !Skin.HasSetting(Show.EHJumpToLetter) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
             </control>
             
+			<include condition="Skin.HasSetting(Enable.TouchSupport)" content="TouchButtons">
+			    <param name="ButtonsTop">935</param>
+				<param name="id">53</param>
+				<param name="left">1535</param>
+			</include>
+			
         </control>
     </include>
 </includes>

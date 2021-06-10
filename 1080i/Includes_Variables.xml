@@ -168,7 +168,7 @@
         <value condition="Skin.HasSetting(Hide_InProgress_Marks) + !String.IsEmpty(ListItem.Overlay) + ListItem.IsResumable"></value>
         <value condition="!Skin.HasSetting(Hide_Watched_Marks) + !String.IsEmpty(ListItem.Overlay) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)">$INFO[ListItem.Overlay]</value>
         <value condition="!Skin.HasSetting(Hide_Unwatched_Marks) + !String.IsEmpty(ListItem.Overlay) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + [Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]">OverlayUnwatched.png</value>
-        <value condition="!Skin.HasSetting(Hide_Unwatched_Marks) + !String.IsEmpty(ListItem.Overlay) + String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)">$INFO[ListItem.Overlay]</value>
+        <value condition="!Skin.HasSetting(Hide_Unwatched_Marks) + !String.IsEmpty(ListItem.Overlay) + String.IsEqual(ListItem.Overlay,OverlayUnWatched.png) + ![[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)]">$INFO[ListItem.Overlay]</value>
         <value></value>
     </variable>
 	
@@ -1913,6 +1913,11 @@
 		<value>$INFO[ListItem.Rating]</value>
 	</variable>
 	
+	<variable name="RightListItemType">
+		<value condition="Skin.HasSetting(502_UseBanner)">$LOCALIZE[32400]</value>
+		<value condition="Skin.HasSetting(502_UseLogo)">$LOCALIZE[31621]</value>
+		<value>$LOCALIZE[32399]</value>
+	</variable>
     <expression name="WidgetFanartVisible">String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart)) + ControlGroup(700).HasFocus</expression>
     
     <expression name="SortLetterIsNumber">[String.IsEqual(ListItem.SortLetter,$NUMBER[0]) | String.IsEqual(ListItem.SortLetter,$NUMBER[1]) | String.IsEqual(ListItem.SortLetter,$NUMBER[2]) | String.IsEqual(ListItem.SortLetter,$NUMBER[3]) | String.IsEqual(ListItem.SortLetter,$NUMBER[4]) | String.IsEqual(ListItem.SortLetter,$NUMBER[5]) | String.IsEqual(ListItem.SortLetter,$NUMBER[6]) | String.IsEqual(ListItem.SortLetter,$NUMBER[7]) | String.IsEqual(ListItem.SortLetter,$NUMBER[8]) | String.IsEqual(ListItem.SortLetter,$NUMBER[9])]</expression>

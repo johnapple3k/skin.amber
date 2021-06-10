@@ -602,7 +602,7 @@
     </variable>
     <!-- Local cert. flag -->
     <variable name="CertFlag">
-        <value condition="String.IsEmpty(ListItem.MPAA) | String.Contains(ListItem.MPAA,NR) | String.IsEqual(ListItem.MPAA,Rated) | String.IsEqual(ListItem.MPAA,Rated ) | String.IsEqual(ListItem.MPAA,Not Rated) | String.IsEqual(ListItem.MPAA,Rated Not Rated)">badges/mpaa/NR.png</value>
+        <value condition="[String.IsEmpty(ListItem.MPAA) | String.Contains(ListItem.MPAA,NR) | String.IsEqual(ListItem.MPAA,Rated) | String.IsEqual(ListItem.MPAA,Rated ) | String.IsEqual(ListItem.MPAA,Not Rated) | String.IsEqual(ListItem.MPAA,Rated Not Rated)]">badges/mpaa/NR.png</value>
         <value condition="String.Contains(ListItem.MPAA,US:R) | String.Contains(ListItem.MPAA,United States:R) | String.Contains(ListItem.MPAA,USA:R) | String.IsEqual(ListItem.MPAA,Rated R) | String.IsEqual(ListItem.MPAA,R)">badges/mpaa/R.png</value>
         <value condition="String.Contains(ListItem.MPAA,US:X) | String.Contains(ListItem.MPAA,United States:X) | String.Contains(ListItem.MPAA,USA:X) | String.IsEqual(ListItem.MPAA,Rated X) | String.IsEqual(ListItem.MPAA,X)">badges/mpaa/X.png</value>
         <value condition="String.Contains(ListItem.MPAA,US:NC-17) | String.Contains(ListItem.MPAA,United States:NC-17) | String.Contains(ListItem.MPAA,USA:NC-17) | String.IsEqual(ListItem.MPAA,Rated NC-17) | String.IsEqual(ListItem.MPAA,NC-17)">badges/mpaa/NC-17.png</value>
@@ -639,8 +639,8 @@
         <value condition="String.Contains(ListItem.MPAA,Brazil:14) | String.Contains(ListItem.MPAA,14 anos) | String.IsEqual(ListItem.MPAA,Brazil:14) | String.IsEqual(ListItem.MPAA,classificação 14)">badges/mpaa/Brazil_14.png</value>
         <value condition="String.Contains(ListItem.MPAA,Brazil:16) | String.Contains(ListItem.MPAA,16 anos) | String.IsEqual(ListItem.MPAA,Brazil:16) | String.IsEqual(ListItem.MPAA,classificação 16)">badges/mpaa/Brazil_16.png</value>
         <value condition="String.Contains(ListItem.MPAA,Brazil:18) | String.Contains(ListItem.MPAA,18 anos) | String.IsEqual(ListItem.MPAA,Brazil:18) | String.IsEqual(ListItem.MPAA,classificação 18)">badges/mpaa/Brazil_18.png</value>
-        <value condition="String.Contains(ListItem.MPAA,Australia:MA15)">badges/mpaa/australia_MA15+.png</value>
-        <value condition="String.Contains(ListItem.MPAA,Australia:R18)">badges/mpaa/australia_R18+.png</value>
+        <value condition="String.Contains(ListItem.MPAA,Australia:MA15)">badges/mpaa/australia_MA15.png</value>
+        <value condition="String.Contains(ListItem.MPAA,Australia:R18)">badges/mpaa/australia_R18.png</value>
         <value condition="String.Contains(ListItem.MPAA,Australia:M)">badges/mpaa/Australia_M.png</value>
         <value condition="String.Contains(ListItem.MPAA,Australia:PG)">badges/mpaa/Australia_PG.png</value>
         <value condition="String.Contains(ListItem.MPAA,Australia:G)">badges/mpaa/Australia_G.png</value>
@@ -692,8 +692,8 @@
         <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Brazil:14) | String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),14 anos) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.MPAA),Brazil:14) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.MPAA),classificação 14)">badges/mpaa/Brazil_14.png</value>
         <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Brazil:16) | String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),16 anos) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.MPAA),Brazil:16) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.MPAA),classificação 16)">badges/mpaa/Brazil_16.png</value>
         <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Brazil:18) | String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),18 anos) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.MPAA),Brazil:18) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.MPAA),classificação 18)">badges/mpaa/Brazil_18.png</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Australia:MA15)">badges/mpaa/australia_MA15+.png</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Australia:R18)">badges/mpaa/australia_R18+.png</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Australia:MA15)">badges/mpaa/australia_MA15.png</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Australia:R18)">badges/mpaa/australia_R18.png</value>
         <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Australia:M)">badges/mpaa/Australia_M.png</value>
         <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Australia:PG)">badges/mpaa/Australia_PG.png</value>
         <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.MPAA),Australia:G)">badges/mpaa/Australia_G.png</value>
@@ -744,8 +744,8 @@
         <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),BR) + String.IsEqual(Container(10051).ListItem.MPAA,14)">badges/mpaa/Brazil_14.png</value>
         <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),BR) + String.IsEqual(Container(10051).ListItem.MPAA,16)">badges/mpaa/Brazil_16.png</value>
         <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),BR) + String.IsEqual(Container(10051).ListItem.MPAA,18)">badges/mpaa/Brazil_18.png</value>
-        <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),AU) + String.IsEqual(Container(10051).ListItem.MPAA,MA15)">badges/mpaa/australia_MA15+.png</value>
-        <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),AU) + String.IsEqual(Container(10051).ListItem.MPAA,R18)">badges/mpaa/australia_R18+.png</value>
+        <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),AU) + String.IsEqual(Container(10051).ListItem.MPAA,MA15)">badges/mpaa/australia_MA15.png</value>
+        <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),AU) + String.IsEqual(Container(10051).ListItem.MPAA,R18)">badges/mpaa/australia_R18.png</value>
         <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),AU) + String.IsEqual(Container(10051).ListItem.MPAA,M)">badges/mpaa/Australia_M.png</value>
         <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),AU) + String.IsEqual(Container(10051).ListItem.MPAA,PG)">badges/mpaa/Australia_PG.png</value>
         <value condition="String.IsEqual(Window(home).Property(script.embuary.info-country_code),AU) + String.IsEqual(Container(10051).ListItem.MPAA,G)">badges/mpaa/Australia_G.png</value>
@@ -797,8 +797,8 @@
         <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Brazil:14) | String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),14 anos) | String.IsEqual(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Brazil:14) | String.IsEqual(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),classificação 14)">badges/mpaa/Brazil_14.png</value>
         <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Brazil:16) | String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),16 anos) | String.IsEqual(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Brazil:16) | String.IsEqual(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),classificação 16)">badges/mpaa/Brazil_16.png</value>
         <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Brazil:18) | String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),18 anos) | String.IsEqual(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Brazil:18) | String.IsEqual(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),classificação 18)">badges/mpaa/Brazil_18.png</value>
-        <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Australia:MA15)">badges/mpaa/australia_MA15+.png</value>
-        <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Australia:R18)">badges/mpaa/australia_R18+.png</value>
+        <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Australia:MA15)">badges/mpaa/australia_MA15.png</value>
+        <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Australia:R18)">badges/mpaa/australia_R18.png</value>
         <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Australia:M)">badges/mpaa/Australia_M.png</value>
         <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Australia:PG)">badges/mpaa/Australia_PG.png</value>
         <value condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),Australia:G)">badges/mpaa/Australia_G.png</value>
@@ -909,7 +909,7 @@
     <variable name="TMDbCrewMembers">
         <value condition="[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + [!Skin.HasSetting(Disable.OnlineTMDbInfo) | !String.IsEmpty(ListItem.Property(tmdb_id))] + Skin.HasSetting(Enable.TMDbHelper)">plugin://plugin.video.themoviedb.helper/?info=crew&amp;type=$VAR[TMDbMediaType]&amp;$VAR[TMDbParam]&amp;nextpage=false</value>
     </variable>
-	
+
     <variable name="Info_Youtube">
         <value condition="!String.IsEmpty(ListItem.TvShowTitle) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.TvShowTitle,plugin://plugin.video.youtube/search/?q=,]</value>
         <value condition="!String.IsEmpty(ListItem.Artist) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Artist,plugin://plugin.video.youtube/search/?q=,]</value>
@@ -1151,21 +1151,23 @@
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Episodes))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Episodes)]</value>
 	</variable>
 
+    <!-- Begin Matrix change -->
     
     <variable name="VideoInfoButton8">
-		<value condition="[String.IsEmpty(ListItem.DBID) + !Skin.HasSetting(Enable.TMDbHelper)] | 
+        <value condition="[String.IsEmpty(ListItem.DBID) + !Skin.HasSetting(Enable.TMDbHelper)] | 
 		                  !String.IsEmpty(Window(home).Property(OSDinfodialogButtonActive)) | 
 						  String.Contains(ListItem.FolderPath,type=person)">$LOCALIZE[15067]</value>
 		<value condition="String.IsEqual(ListItem.DBType,season)">$LOCALIZE[20360]</value>
-		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$LOCALIZE[1024]</value>
-		<value condition="String.IsEqual(ListItem.DBType,set)">$LOCALIZE[342]</value>
+		<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,set)">$LOCALIZE[1024]</value>
 		<value condition="ListItem.IsResumable">$LOCALIZE[13404]</value>
 		<value condition="ListItem.IsFolder">$LOCALIZE[1024]</value>
 		<value>$LOCALIZE[208]</value>
 	</variable>
     
+	<!-- End Matrix change -->
+	
     <variable name="VideoInfoBackground">
-        <value condition="Skin.HasSetting(Enable.BlurredVideoInfo)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
+		<value condition="Skin.HasSetting(Enable.BlurredVideoInfo)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container(10051).ListItem.Art(fanart))">$INFO[Container(10051).ListItem.Art(fanart)]</value>
     </variable>    
@@ -1846,7 +1848,7 @@
 			        <visible>Container(50).IsUpdating | Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0) | Integer.IsGreater(Container(50).NumItems,0)</visible>
 			        <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container(50).NumItems,0) | Container(50).IsUpdating | !Integer.IsGreater(Container(90050).NumItems,0) | Container(90050).IsUpdating">Conditional</animation>
                     <onclick condition="!System.HasAddon(script.playalbum)">InstallAddon(script.playalbum)</onclick>
-					<onclick condition="System.HasAddon(script.playalbum)">RunScript(script.playalbum,albumid=$INFO[Window(Home).Property(AlbumDBID)]&amp;tracknr=$INFO[Container(90050).ListItem.Label2])</onclick>
+			 		<onclick condition="System.HasAddon(script.playalbum)">RunScript(script.playalbum,albumid=$INFO[Window(Home).Property(AlbumDBID)]&amp;tracknr=$INFO[Container(90050).ListItem.Label2])</onclick>
 			        <onclick condition="System.HasAddon(script.playalbum)">Action(Close)</onclick>
 			        <itemlayout height="62" width="590">
 				        <control type="label">
@@ -2298,7 +2300,295 @@
             <content limit="1">plugin://script.embuary.helper/?info=getbydbid&amp;dbid=$INFO[ListItem.DBID]&amp;type=tvshow&amp;idtype=episode</content>
         </control>
     </include>
+    
 	
+	<!-- Begin Matrix change -->
+	
+	<!-- Includes for Music Info Dialog -->
+	<include name="MusicInfoArtistInfo">
+		<item>
+			<label>$LOCALIZE[39027]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Sortname)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Sortname))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[39025]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Gender)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Gender))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[467]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Type)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Type))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21893]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Born)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21897]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Died)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Died))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21894]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Formed)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21896]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Disbanded)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21898]:</label>
+			<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[515]:</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<visible>!String.IsEmpty(ListItem.Genre)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[175]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Mood)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Mood))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[176]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Style)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Style))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21892]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Instrument))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[39026]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Disambiguation)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Disambiguation))</visible>
+		</item>
+	</include>
+	<include name="MusicInfoAlbumInfo">
+		<item>
+			<label>$LOCALIZE[557]:</label>
+			<label2>$INFO[ListItem.Artist]</label2>
+			<visible>!String.IsEmpty(ListItem.Artist)</visible>
+		</item>
+		<item>
+			<label>146</label>
+			<label2>$INFO[ListItem.Property(Album_Type)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Type))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[172]:</label>
+			<label2>$INFO[ListItem.ReleaseDate]</label2>
+			<visible>!String.IsEmpty(ListItem.ReleaseDate)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38079]:</label>
+			<label2>$INFO[ListItem.OriginalDate]</label2>
+			<visible>!String.IsEmpty(ListItem.OriginalDate) + !String.IsEqual(ListItem.ReleaseDate, ListItem.OriginalDate)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[562]:</label>
+			<label2>$INFO[ListItem.Year]</label2>
+			<visible>!String.IsEmpty(ListItem.Year) + String.IsEmpty(ListItem.ReleaseDate) + String.IsEmpty(ListItem.OriginalDate)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[180]:</label>
+			<label2>$INFO[ListItem.Property(album_duration)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Duration))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[515]:</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<visible>!String.IsEmpty(ListItem.Genre)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[175]:</label>
+			<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[176]:</label>
+			<label2>$INFO[ListItem.Property(Album_Style)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Style))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21895]:</label>
+			<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Theme))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21899]:</label>
+			<label2>$INFO[ListItem.Property(Album_Label)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38081]:</label>
+			<label2>$INFO[ListItem.AlbumStatus]</label2>
+			<visible>!String.IsEmpty(ListItem.AlbumStatus)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[563]:</label>
+			<label2>$INFO[ListItem.RatingAndVotes]</label2>
+			<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38018]:</label>
+			<label2>$INFO[ListItem.Userrating]</label2>
+			<visible>!String.IsEmpty(ListItem.Userrating)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[15311]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[567]</label>
+			<label2>$INFO[ListItem.PlayCount]</label2>
+			<visible>!String.IsEmpty(ListItem.PlayCount)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[568]</label>
+			<label2>$INFO[ListItem.LastPlayed]</label2>
+			<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
+		</item>
+	</include>
+	<include name="MusicInfoSongInfo">
+		<item>
+			<label>$LOCALIZE[568]</label>
+			<label2>$INFO[ListItem.LastPlayed]</label2>
+			<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[557]:</label>
+			<label2>$INFO[ListItem.Artist]</label2>
+			<visible>!String.IsEmpty(ListItem.Artist)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[558]:</label>
+			<label2>$INFO[ListItem.Album]$INFO[listitem.discnumber, - $LOCALIZE[427] ]</label2>
+			<visible>!String.IsEmpty(ListItem.Album)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[515]:</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<visible>!String.IsEmpty(ListItem.Genre)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[175]:</label>
+			<label2>$INFO[ListItem.Mood]</label2>
+			<visible>!String.IsEmpty(ListItem.Mood)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[172]:</label>
+			<label2>$INFO[ListItem.ReleaseDate]</label2>
+			<visible>!String.IsEmpty(ListItem.ReleaseDate)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38079]:</label>
+			<label2>$INFO[ListItem.OriginalDate]</label2>
+			<visible>!String.IsEmpty(ListItem.OriginalDate) + !String.IsEqual(ListItem.ReleaseDate, ListItem.OriginalDate)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[562]:</label>
+			<label2>$INFO[ListItem.Year]</label2>
+			<visible>!String.IsEmpty(ListItem.Year) + String.IsEmpty(ListItem.ReleaseDate) + String.IsEmpty(ListItem.OriginalDate)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[554]:</label>
+			<label2>$INFO[ListItem.TrackNumber]</label2>
+			<visible>!String.IsEmpty(ListItem.TrackNumber)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[427]:</label>
+			<label2>$INFO[ListItem.DiscNumber]$INFO[ListItem.DiscTitle, - ]</label2>
+			<visible>Integer.IsGreater(ListItem.TotalDiscs,1)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38080]:</label>
+			<label2>$INFO[ListItem.Bpm]</label2>
+			<visible>!String.IsEmpty(ListItem.Bpm)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[563]:</label>
+			<label2>$INFO[ListItem.RatingAndVotes]</label2>
+			<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38018]:</label>
+			<label2>$INFO[ListItem.Userrating]</label2>
+			<visible>!String.IsEmpty(ListItem.Userrating)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[29903]:</label>
+			<label2>$INFO[ListItem.Property(Role.Composer)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Composer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[29905]:</label>
+			<label2>$INFO[ListItem.Property(Role.Conductor)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Conductor))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38034]:</label>
+			<label2>$INFO[ListItem.Property(Role.Orchestra)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Orchestra))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38035]:</label>
+			<label2>$INFO[ListItem.Property(Role.Lyricist)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Lyricist))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38036]:</label>
+			<label2>$INFO[ListItem.Property(Role.Remixer)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Remixer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38037]:</label>
+			<label2>$INFO[ListItem.Property(Role.Arranger)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Arranger))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38038]:</label>
+			<label2>$INFO[ListItem.Property(Role.Engineer)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Engineer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38039]:</label>
+			<label2>$INFO[ListItem.Property(Role.Producer)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Producer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38040]:</label>
+			<label2>$INFO[ListItem.Property(Role.DJMixer)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.DJMixer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38041]:</label>
+			<label2>$INFO[ListItem.Property(Role.Mixer)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Mixer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[15311]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[567]</label>
+			<label2>$INFO[ListItem.PlayCount]</label2>
+			<visible>!String.IsEmpty(ListItem.PlayCount)</visible>
+		</item>
+	</include>
+	
+	<!-- End Matrix change -->
+    
 	<include name="VideoInfoPersonItems">
 	    <item>
             <label>$LOCALIZE[32082]:</label>
@@ -3039,6 +3329,5 @@
 							<visible>Skin.HasSetting(ShowRatingUser)</visible>
                         </item>
 	</include>
-    
-    
+	
 </includes>

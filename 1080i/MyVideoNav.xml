@@ -169,6 +169,7 @@
 		
 		<include condition="Skin.HasSetting(ShowSetCount)">SetCountList</include>
 		<include condition="Skin.HasSetting(ShowSpecialFanart)">SpecialFanartList</include>
+		<include condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(ShowRatingMain)">EmbuaryHelperDetailsList</include>
 		
 		<include>DefaultBackground</include>
 		
@@ -218,6 +219,8 @@
 		<include>View_600_Triple</include>
 		
 		<include>View_58_Logo</include>
+		
+		<include >View_502_RightList</include>
 		
 		<control type="group" description="Showcase trigger">
 			<animation effect="slide" easing="out" start="0,0" end="0,-90" time="350" delay="0" center="120,350" reversible="true" condition="!String.IsEmpty(Window.Property(gallery))">Conditional</animation>

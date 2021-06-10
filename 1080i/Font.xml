@@ -93,6 +93,12 @@
             <style>bold uppercase</style>
             <size>46</size>
         </font>
+		<font>
+            <name>font38_title</name>
+            <filename>UbuntuCondensed.ttf</filename>
+            <style>bold uppercase</style>
+            <size>49</size>
+        </font>
         <font>
             <name>Clock</name>
             <filename>UbuntuCondensed.ttf</filename>
@@ -164,6 +170,12 @@
             <filename>UbuntuCondensed.ttf</filename>
             <style>uppercase</style>
             <size>20</size>
+        </font>
+        <font>
+            <name>ListDetailsExtraSmall</name>
+            <filename>UbuntuCondensed.ttf</filename>
+            <style>uppercase</style>
+            <size>18</size>
         </font>        
         <font>
             <name>Details</name>
