@@ -1,3 +1,10 @@
+3.2.139 (12-06-2021)
+- Right List view
+- Rating Overlay
+- Choose artowrk for full screen/OSD
+- Add back use of skinhelper.skinbackup and skin.helper.colorpicker
+- Reorganize Media Views settings
+- Misc. fixes
 3.2.138 (12-05-2021)
 - Option to hide cast in video info
 - Misc. fixes
