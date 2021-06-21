@@ -1,3 +1,6 @@
+3.2.140 (21-06-2021)
+- Compact OSD
+- Misc. fixes
 3.2.139 (12-06-2021)
 - Right List view
 - Rating Overlay
